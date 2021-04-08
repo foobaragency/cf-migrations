@@ -1,0 +1,9 @@
+{
+  "name": "cf-migrations",
+  "version": "1.0.0",
+  "description": "A tool to manage Contentful migrations",
+  "main": "index.js",
+  "author": "foobar Agency GmbH",
+  "license": "MIT",
+  "private": false
+}
