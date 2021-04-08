@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Migration State generates a valid migration state update based on the pending migrations 1`] = `
+Array [
+  Object {
+    "fileName": Object {
+      "en-US": "0001-migration",
+    },
+  },
+  Object {
+    "fileName": Object {
+      "en-US": "0002-migration",
+    },
+  },
+]
+`;
