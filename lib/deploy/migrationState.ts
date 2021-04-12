@@ -25,21 +25,11 @@ export function getPendingMigrationFilePaths(
   deployedMigrations: string[],
   migrationFileNames: string[]
 ) {
-  const pendingMigrations = filterPendingMigrations(
-    migrationFileNames,
-    deployedMigrations
-  )
+  const pendingMigrations = difference(migrationFileNames, deployedMigrations)
   const pendingMigrationFilePaths = getMigrationFilePaths(
     migrationsDirectory,
     pendingMigrations
   )
 
   return { pendingMigrations, pendingMigrationFilePaths }
-}
-
-function filterPendingMigrations(
-  migrationFiles: string[],
-  deployedMigrations: string[]
-) {
-  return difference(migrationFiles, deployedMigrations)
 }
