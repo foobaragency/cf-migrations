@@ -4,7 +4,7 @@ import { config } from "../config"
 import { LocaleDependent } from "../contentful/types"
 import { MigrationOptions } from "../types"
 
-import { getMigrationsDirectoryPath } from "./migrationFiles"
+import { getMigrationFilePaths } from "./migrationFiles"
 
 export function generateMigrationStates(
   pendingMigrations: string[],
@@ -42,13 +42,4 @@ function filterPendingMigrations(
   deployedMigrations: string[]
 ) {
   return difference(migrationFiles, deployedMigrations)
-}
-
-function getMigrationFilePaths(
-  migrationsDirectory: string,
-  migrationNames: string[]
-) {
-  const directoryPath = getMigrationsDirectoryPath(migrationsDirectory)
-
-  return migrationNames.map(name => `${directoryPath}/${name}`)
 }

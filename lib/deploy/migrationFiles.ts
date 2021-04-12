@@ -15,13 +15,22 @@ export async function processMigrationFileNames(
   return migrationFileNames
 }
 
-export function getMigrationsDirectoryPath(migrationsDirectory: string) {
-  return path.join(process.cwd(), migrationsDirectory)
-}
-
 async function getMigrationFileNames(migrationsDirectory: string) {
   const pattern = `${getMigrationsDirectoryPath(migrationsDirectory)}/**/*.ts`
   const files = await globby(pattern)
 
   return files.map(file => path.basename(file))
+}
+
+export function getMigrationFilePaths(
+  migrationsDirectory: string,
+  migrationNames: string[]
+) {
+  const directoryPath = getMigrationsDirectoryPath(migrationsDirectory)
+
+  return migrationNames.map(name => `${directoryPath}/${name}`)
+}
+
+function getMigrationsDirectoryPath(migrationsDirectory: string) {
+  return path.join(process.cwd(), migrationsDirectory)
 }
