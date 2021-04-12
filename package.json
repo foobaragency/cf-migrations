@@ -16,7 +16,7 @@
     "clean": "rm -rf dist",
     "fix": "yarn lint:prettier --write && yarn lint --fix",
     "lint": "eslint --ext .ts --cache lib",
-    "lint:prettier": "prettier \"**/*.{js,ts,json,md,yml,css}\"",
+    "lint:prettier": "prettier \"**/*.{js,ts,json,md,yml}\"",
     "test": "jest",
     "test:cov": "jest --coverage"
   },
