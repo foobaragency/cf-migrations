@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "A tool to manage Contentful migrations",
   "files": [
+    "bin",
     "dist"
   ],
   "main": "dist",
   "types": "dist/index.d.ts",
+  "bin": {
+    "cf-migrations": "./bin/cf-migrations.js"
+  },
   "author": "foobar Agency GmbH",
   "license": "MIT",
   "private": false,
@@ -38,10 +42,12 @@
     "typescript-transform-paths": "^2.2.3"
   },
   "dependencies": {
+    "chalk": "^4.1.0",
     "contentful-management": "^7.14.0",
     "contentful-migration": "^4.0.14",
     "globby": "^11.0.3",
     "lodash": "^4.17.21",
-    "ts-node": "^9.1.1"
+    "ts-node": "^9.1.1",
+    "yargs": "^16.2.0"
   }
 }
