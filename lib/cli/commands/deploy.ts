@@ -1,4 +1,4 @@
-import { Argv } from "yargs"
+import yargs, { Argv } from "yargs"
 
 import { info, success, error } from "../logger"
 import { deployMigrations } from "../../deploy"
@@ -60,6 +60,8 @@ export const handler = async (args: DeployArgs) => {
     success("All migrations deployed successfuly!")
   } catch (e) {
     error((e as Error).message)
+
+    yargs.showHelp()
   }
 }
 
