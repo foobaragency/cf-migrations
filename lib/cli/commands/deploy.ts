@@ -1,21 +1,24 @@
 import { Argv } from "yargs"
 
-import { success, error } from "../logger"
+import { info, success, error } from "../logger"
 import { deployMigrations } from "../../deploy"
+import { MigrationOptions } from "../../types"
+import { validateRequiredArguments } from "../argumentValidation"
+import { argumentErrors } from "../argument-errors"
 
 type DeployArgs = {
-  env: string
-  space: string
-  token: string
-  migrations: string
+  env?: string
+  space?: string
+  token?: string
   locale?: string
+  migrationsPath?: string
   migrationName?: string
 }
 
 export const desc = "Create application"
 export const builder = (yargs: Argv<{}>) =>
   yargs
-    .option("migrations", {
+    .option("migrationsPath", {
       alias: "p",
       type: "string",
       description: "Migrations folder path",
@@ -45,21 +48,31 @@ export const builder = (yargs: Argv<{}>) =>
       type: "string",
       description: "Contentful locale",
     })
-    .demandOption(["env", "space", "token", "migrations"])
 export const handler = async (args: DeployArgs) => {
   try {
-    await deployMigrations(
-      {
-        accessToken: args.token,
-        environmentId: args.env,
-        migrationsDirectory: args.migrations,
-        spaceId: args.space,
-        locale: args.locale,
-      },
-      args.migrationName ? [args.migrationName] : undefined
-    )
-    success("🎉 All migrations deployed successfuly!")
+    const migrationOptions = processArgs(args)
+    const migrationNames = args.migrationName ? [args.migrationName] : undefined
+
+    migrationNames?.forEach(name => info(`Deploying the migration ${name}`))
+
+    await deployMigrations(migrationOptions, migrationNames)
+
+    success("All migrations deployed successfuly!")
   } catch (e) {
-    error(`❗️ ${(e as Error).message}`)
+    error((e as Error).message)
   }
+}
+
+function processArgs(args: DeployArgs): MigrationOptions {
+  const requiredArgs = validateRequiredArguments<MigrationOptions>(
+    {
+      accessToken: args.token || process.env.CONTENTFUL_TOKEN,
+      environmentId: args.env || process.env.CONTENTFUL_ENVIRONMENT_ID,
+      spaceId: args.space || process.env.CONTENTUL_SPACE_ID,
+      migrationsDirectory: args.migrationsPath || process.env.MIGRATIONS_PATH,
+    },
+    argumentErrors.deploy
+  )
+
+  return { ...requiredArgs, locale: args.locale }
 }
