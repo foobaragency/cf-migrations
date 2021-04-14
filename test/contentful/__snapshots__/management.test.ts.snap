@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contentful Management extracts deployed migration names from the Migration entries 1`] = `
+Array [
+  "0004-migration.ts",
+  "0003-migration.ts",
+  "0002-migration.ts",
+  "0001-migration.ts",
+]
+`;
