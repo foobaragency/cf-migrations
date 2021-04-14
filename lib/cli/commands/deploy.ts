@@ -5,48 +5,28 @@ import { deployMigrations } from "../../deploy"
 import { MigrationOptions } from "../../types"
 import { validateRequiredArguments } from "../argumentValidation"
 import { argumentErrors } from "../argument-errors"
+import {
+  ContentfulCredentials,
+  requireContentfulCredentialsOptions,
+} from "../contentful-credentials"
 
-type DeployArgs = {
-  env?: string
-  space?: string
-  token?: string
-  locale?: string
+type DeployArgs = ContentfulCredentials & {
   migrationsPath?: string
   migrationName?: string
 }
 
 export const desc = "Deploy migrations"
 export const builder = (yargs: Argv<{}>) =>
-  yargs
+  requireContentfulCredentialsOptions(yargs)
     .option("migrationsPath", {
       alias: "p",
       type: "string",
       description: "Migrations folder path",
     })
-    .option("env", {
-      alias: "e",
-      type: "string",
-      description: "Contentful environment ID",
-    })
-    .option("space", {
-      alias: "s",
-      type: "string",
-      description: "Contentful space ID",
-    })
-    .option("token", {
-      alias: "t",
-      type: "string",
-      description: "Contentful access token",
-    })
     .option("migrationName", {
       alias: "m",
       type: "string",
       description: "Migration name",
-    })
-    .option("locale", {
-      alias: "l",
-      type: "string",
-      description: "Contentful locale",
     })
 export const handler = async (args: DeployArgs) => {
   try {
