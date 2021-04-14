@@ -28,12 +28,10 @@ export function validateMigrations(migrationFileNames: string[]) {
 }
 
 function getSequencesFromFileNames(migrationFileNames: string[]) {
-  return migrationFileNames
-    .map(name => name.slice(0, 4))
-    .map((value, index) => ({
-      fileName: migrationFileNames[index],
-      value: Number(value),
-    }))
+  return migrationFileNames.map((name, index) => ({
+    fileName: migrationFileNames[index],
+    value: Number(name.split("-")[0]),
+  }))
 }
 
 function filterInvalidSNameFormat(sequences: MigrationSequence[]) {

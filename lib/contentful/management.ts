@@ -23,17 +23,17 @@ export async function getDeployedMigrations(
 ) {
   const migrationEntries = await getMigrationEntries(options)
 
-  return processMigrationEntries(options, migrationEntries)
+  return getDeployedMigrationNames(migrationEntries, options.locale)
 }
 
-export async function processMigrationEntries(
-  options: CTMigrationPartialOptions,
-  migrationEntries: CollectionProp<EntryProps>
+export function getDeployedMigrationNames(
+  migrationEntries: CollectionProp<EntryProps>,
+  contentfulLocale?: string
 ) {
-  const locale = options.locale || config.contentful.locale
-  const deployedFiles = migrationEntries.items
-    .map(item => item.fields as MigrationEntry)
-    .map(field => field.fileName[locale])
+  const locale = contentfulLocale || config.contentful.locale
+  const deployedFiles = migrationEntries.items.map(
+    item => (item.fields as MigrationEntry).fileName[locale]
+  )
 
   return deployedFiles
 }
