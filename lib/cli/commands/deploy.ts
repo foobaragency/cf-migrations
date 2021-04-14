@@ -1,6 +1,6 @@
-import yargs, { Argv } from "yargs"
+import { Argv } from "yargs"
 
-import { info, success, error } from "../logger"
+import { info, success } from "../logger"
 import { deployMigrations } from "../../deploy"
 import { MigrationOptions } from "../../types"
 import { validateRequiredArguments } from "../argumentValidation"
@@ -9,6 +9,7 @@ import {
   ContentfulCredentials,
   requireContentfulCredentialsOptions,
 } from "../contentful-credentials"
+import { executeHandler } from "../executeHandler"
 
 type DeployArgs = ContentfulCredentials & {
   migrationsPath?: string
@@ -29,8 +30,8 @@ export const builder = (yargs: Argv<{}>) =>
       description: "Migration name",
     })
 export const handler = async (args: DeployArgs) => {
-  try {
-    const migrationOptions = processArgs(args)
+  await executeHandler(async () => {
+    const migrationOptions = getMigrationOptions(args)
     const migrationNames = args.migrationName ? [args.migrationName] : undefined
 
     migrationNames?.forEach(name => info(`Deploying the migration ${name}`))
@@ -38,14 +39,10 @@ export const handler = async (args: DeployArgs) => {
     await deployMigrations(migrationOptions, migrationNames)
 
     success("All migrations deployed successfuly!")
-  } catch (e) {
-    error((e as Error).message)
-
-    yargs.showHelp()
-  }
+  })
 }
 
-function processArgs(args: DeployArgs): MigrationOptions {
+function getMigrationOptions(args: DeployArgs): MigrationOptions {
   const requiredArgs = validateRequiredArguments<MigrationOptions>(
     {
       accessToken: args.token || process.env.CONTENTFUL_TOKEN,
