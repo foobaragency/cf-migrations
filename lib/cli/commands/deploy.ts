@@ -15,7 +15,7 @@ type DeployArgs = {
   migrationName?: string
 }
 
-export const desc = "Create application"
+export const desc = "Deploy migrations"
 export const builder = (yargs: Argv<{}>) =>
   yargs
     .option("migrationsPath", {
