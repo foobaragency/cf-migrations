@@ -7,7 +7,7 @@ const { id, name } = config.contentful.contentType
 export = function (migration) {
   const fooType = migration.createContentType(id, {
     name,
-    description: "It's used to manage migration state",
+    description: "Migrations deployed in this environment",
     displayField: "fileName",
   })
 
