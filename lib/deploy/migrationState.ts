@@ -10,7 +10,7 @@ export function generateMigrationStates(
   pendingMigrations: string[],
   options?: MigrationOptions
 ) {
-  const locale = options?.locale || config.contentful.locale
+  const locale = options?.locale || config.contentful.defaultLocale
 
   return pendingMigrations.map(migrationFile => {
     const fileName: LocaleDependent = {}

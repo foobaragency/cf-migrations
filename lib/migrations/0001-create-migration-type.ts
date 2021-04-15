@@ -1,8 +1,12 @@
 import { MigrationFunction } from "contentful-migration"
 
+import { config } from "../config"
+
+const { id, name } = config.contentful.contentType
+
 export = function (migration) {
-  const fooType = migration.createContentType("migration", {
-    name: "Migration",
+  const fooType = migration.createContentType(id, {
+    name,
     description: "It's used to manage migration state",
     displayField: "fileName",
   })
