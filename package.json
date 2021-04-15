@@ -4,12 +4,13 @@
   "description": "A tool to manage Contentful migrations",
   "files": [
     "bin",
+    "lib",
     "dist"
   ],
   "main": "dist",
   "types": "dist/index.d.ts",
   "bin": {
-    "cf-migrations": "./bin/cf-migrations.js"
+    "cf-migrations": "bin/cf-migrations.js"
   },
   "author": "foobar Agency GmbH",
   "license": "MIT",
