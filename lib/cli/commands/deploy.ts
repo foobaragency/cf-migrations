@@ -1,8 +1,8 @@
 import { Argv } from "yargs"
 
-import { info, success } from "../logger"
+import { error, info, success } from "../logger"
 import { deployMigrations } from "../../deploy"
-import { MigrationOptions } from "../../types"
+import { ContentfulPartialOptions, MigrationOptions } from "../../types"
 import { validateRequiredArguments } from "../argumentValidation"
 import { argumentErrors } from "../argument-errors"
 import {
@@ -10,6 +10,7 @@ import {
   requireContentfulCredentialsOptions,
 } from "../contentful-credentials"
 import { executeHandler } from "../executeHandler"
+import { assessMigrationsTypeExistence } from "../../contentful/management"
 
 type DeployArgs = ContentfulCredentials & {
   migrationsPath?: string
@@ -32,6 +33,7 @@ export const builder = (yargs: Argv<{}>) =>
 export const handler = async (args: DeployArgs) => {
   await executeHandler(async () => {
     const migrationOptions = getMigrationOptions(args)
+    await assureEnvironmentIsInitialized(migrationOptions)
     const migrationNames = args.migrationName ? [args.migrationName] : undefined
 
     migrationNames?.forEach(name => info(`Deploying the migration ${name}`))
@@ -40,6 +42,19 @@ export const handler = async (args: DeployArgs) => {
 
     success("All migrations deployed successfuly!")
   })
+}
+
+async function assureEnvironmentIsInitialized(
+  options: ContentfulPartialOptions
+) {
+  const isEnvironmentInitialized = await assessMigrationsTypeExistence(options)
+
+  if (!isEnvironmentInitialized) {
+    error(
+      `Space ${options.spaceId} environment ${options.environmentId} was not initialized. Run cf-migrations init first.`
+    )
+    process.exit(1)
+  }
 }
 
 function getMigrationOptions(args: DeployArgs): MigrationOptions {
