@@ -1,5 +1,9 @@
 export const config = {
   contentful: {
-    locale: "en-US",
+    defaultLocale: "en-US",
+    contentType: {
+      name: "Migrations",
+      id: "migrations",
+    },
   },
 } as const

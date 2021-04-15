@@ -2,13 +2,13 @@ import Migration from "contentful-migration"
 
 export { Migration }
 
-export type CTMigrationPartialOptions = {
+export type ContentfulPartialOptions = {
   environmentId: string
   spaceId: string
   accessToken: string
   locale?: string
 }
 
-export type MigrationOptions = CTMigrationPartialOptions & {
+export type MigrationOptions = ContentfulPartialOptions & {
   migrationsDirectory: string
 }
