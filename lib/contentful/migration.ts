@@ -15,7 +15,7 @@ export async function runMigrations(
 
 export async function initEnvironment(options: CTMigrationPartialOptions) {
   const filePath = path.normalize(
-    `${process.cwd()}/node_modules/cf-migrations/migrations/0001-create-migration-type.js`
+    `${process.cwd()}/node_modules/cf-migrations/dist/migrations/0001-create-migration-type.js`
   )
   await runMigration({
     ...options,
