@@ -4,13 +4,17 @@ import {
 } from "contentful-management/dist/typings/export-types"
 
 import { config } from "../config"
-import { CTMigrationPartialOptions } from "../types"
+import { ContentfulPartialOptions } from "../types"
 
-import { createMigrationEntries, getMigrationEntries } from "./migrationEntries"
+import {
+  createMigrationEntries,
+  getContentTypes,
+  getMigrationEntries,
+} from "./migrationEntries"
 import { MigrationEntry } from "./types"
 
 export async function updateMigrationState(
-  options: CTMigrationPartialOptions,
+  options: ContentfulPartialOptions,
   migrationStates: MigrationEntry[]
 ) {
   for (const stateFields of migrationStates) {
@@ -18,9 +22,7 @@ export async function updateMigrationState(
   }
 }
 
-export async function getDeployedMigrations(
-  options: CTMigrationPartialOptions
-) {
+export async function getDeployedMigrations(options: ContentfulPartialOptions) {
   const migrationEntries = await getMigrationEntries(options)
 
   return getDeployedMigrationNames(migrationEntries, options.locale)
@@ -30,10 +32,20 @@ export function getDeployedMigrationNames(
   migrationEntries: CollectionProp<EntryProps>,
   contentfulLocale?: string
 ) {
-  const locale = contentfulLocale || config.contentful.locale
+  const locale = contentfulLocale || config.contentful.defaultLocale
   const deployedFiles = migrationEntries.items.map(
     item => (item.fields as MigrationEntry).fileName[locale]
   )
 
   return deployedFiles
+}
+
+export async function assessMigrationsTypeExistence(
+  options: ContentfulPartialOptions
+) {
+  const contentTypes = await getContentTypes(options)
+
+  return contentTypes.items.some(
+    contentType => contentType.name === config.contentful.contentType.name
+  )
 }
