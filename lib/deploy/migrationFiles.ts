@@ -16,7 +16,9 @@ export async function processMigrationFileNames(
 }
 
 async function getMigrationFileNames(migrationsDirectory: string) {
-  const pattern = `${getMigrationsDirectoryPath(migrationsDirectory)}/**/*.ts`
+  const pattern = `${getMigrationsDirectoryPath(
+    migrationsDirectory
+  )}/**/*.{ts,js}`
   const files = await globby(pattern)
 
   return files.map(file => path.basename(file))
