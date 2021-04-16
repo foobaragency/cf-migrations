@@ -3,8 +3,6 @@ import { Argv } from "yargs"
 import { error, info, success } from "../logger"
 import { deployMigrations } from "../../deploy"
 import { ContentfulPartialOptions, MigrationOptions } from "../../types"
-import { validateRequiredArguments } from "../argumentValidation"
-import { argumentErrors } from "../argument-errors"
 import {
   ContentfulCredentials,
   requireContentfulCredentialsOptions,
@@ -13,7 +11,7 @@ import { executeHandler } from "../executeHandler"
 import { assessMigrationsTypeExistence } from "../../contentful/management"
 
 type DeployArgs = ContentfulCredentials & {
-  migrationsPath?: string
+  migrationsPath: string
   migrationName?: string
 }
 
@@ -21,15 +19,16 @@ export const desc = "Deploy migrations"
 export const builder = (yargs: Argv<{}>) =>
   requireContentfulCredentialsOptions(yargs)
     .option("migrationsPath", {
-      alias: "p",
+      alias: ["p"],
       type: "string",
       description: "Migrations folder path",
     })
     .option("migrationName", {
-      alias: "m",
+      alias: ["m"],
       type: "string",
       description: "Migration name",
     })
+    .demandOption(["migrationsPath"])
 export const handler = async (args: DeployArgs) => {
   await executeHandler(async () => {
     const migrationOptions = getMigrationOptions(args)
@@ -58,15 +57,11 @@ async function assureEnvironmentIsInitialized(
 }
 
 function getMigrationOptions(args: DeployArgs): MigrationOptions {
-  const requiredArgs = validateRequiredArguments<MigrationOptions>(
-    {
-      accessToken: args.token || process.env.CONTENTFUL_TOKEN,
-      environmentId: args.env || process.env.CONTENTFUL_ENVIRONMENT_ID,
-      spaceId: args.space || process.env.CONTENTUL_SPACE_ID,
-      migrationsDirectory: args.migrationsPath || process.env.MIGRATIONS_PATH,
-    },
-    argumentErrors.deploy
-  )
-
-  return { ...requiredArgs, locale: args.locale }
+  return {
+    accessToken: args.token,
+    environmentId: args.env,
+    spaceId: args.space,
+    migrationsDirectory: args.migrationsPath,
+    locale: args.locale,
+  }
 }
