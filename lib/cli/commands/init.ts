@@ -10,8 +10,10 @@ import { executeHandler } from "../executeHandler"
 import { info } from "../logger"
 
 export const desc = "Init Contentful environment to support migrations"
+
 export const builder = (yargs: Argv<{}>) =>
   requireContentfulCredentialsOptions(yargs)
+
 export const handler = async (args: ContentfulCredentials) => {
   await executeHandler(async () => {
     const options = mapMigrationOptions(args)

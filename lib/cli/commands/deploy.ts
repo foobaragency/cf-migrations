@@ -16,6 +16,7 @@ type DeployArgs = ContentfulCredentials & {
 }
 
 export const desc = "Deploy migrations"
+
 export const builder = (yargs: Argv<{}>) =>
   requireContentfulCredentialsOptions(yargs)
     .option("migrationsPath", {
@@ -29,6 +30,7 @@ export const builder = (yargs: Argv<{}>) =>
       description: "Migration name",
     })
     .demandOption(["migrationsPath"])
+
 export const handler = async (args: DeployArgs) => {
   await executeHandler(async () => {
     const migrationOptions = getMigrationOptions(args)
