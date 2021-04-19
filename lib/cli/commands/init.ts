@@ -7,7 +7,7 @@ import {
   requireContentfulCredentialsOptions,
 } from "../contentful-credentials"
 import { executeHandler } from "../executeHandler"
-import { info } from "../logger"
+import { info, success } from "../logger"
 
 export const desc = "Init Contentful environment to support migrations"
 
@@ -29,6 +29,10 @@ export const handler = async (args: ContentfulCredentials) => {
     }
 
     await initEnvironment(options)
+
+    success(
+      `Space ${options.spaceId} environment ${options.environmentId} was initialized.`
+    )
   })
 }
 
