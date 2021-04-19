@@ -6,7 +6,7 @@ export async function executeHandler(handler: () => Promise<unknown>) {
   try {
     await handler()
   } catch (e) {
-    error((e as Error).message)
+    error((e as Error).stack || (e as Error).message)
 
     yargs.showHelp()
   }
