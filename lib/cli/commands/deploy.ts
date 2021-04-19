@@ -35,11 +35,12 @@ export const handler = async (args: DeployArgs) => {
     await assureEnvironmentIsInitialized(migrationOptions)
     const migrationNames = args.migrationName ? [args.migrationName] : undefined
 
-    migrationNames?.forEach(name => info(`Deploying the migration ${name}`))
-
-    await deployMigrations(migrationOptions, migrationNames)
-
-    success("All migrations deployed successfuly!")
+    logMigrationPlan(migrationNames)
+    const deployedMigrations = await deployMigrations(
+      migrationOptions,
+      migrationNames
+    )
+    logMigrationResult(deployedMigrations)
   })
 }
 
@@ -64,4 +65,28 @@ function getMigrationOptions(args: DeployArgs): MigrationOptions {
     migrationsDirectory: args.migrationsPath,
     locale: args.locale,
   }
+}
+
+function logMigrationPlan(migrationNames?: string[]) {
+  if (!migrationNames) {
+    info("Planning to deploy all pending migrations...")
+
+    return
+  }
+
+  migrationNames.forEach(name =>
+    info(`Planning to deploy the migration ${name}...`)
+  )
+}
+
+function logMigrationResult(deployedMigrations: string[]) {
+  if (deployedMigrations.length === 0) {
+    success("All migrations were already deployed!")
+
+    return
+  }
+
+  deployedMigrations.forEach(migration =>
+    success(`Migration ${migration} deployed successfuly!`)
+  )
 }

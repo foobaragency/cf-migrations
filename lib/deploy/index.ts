@@ -36,4 +36,6 @@ export async function deployMigrations(
 
   await runMigrations(pendingMigrationFilePaths, options)
   await updateMigrationState(options, migrationStates)
+
+  return pendingMigrations
 }
