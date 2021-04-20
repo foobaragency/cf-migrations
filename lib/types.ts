@@ -1,7 +1,3 @@
-import Migration from "contentful-migration"
-
-export { Migration }
-
 export type ContentfulPartialOptions = {
   environmentId: string
   spaceId: string
