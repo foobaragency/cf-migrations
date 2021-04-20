@@ -10,5 +10,6 @@ export type ContentfulPartialOptions = {
 }
 
 export type MigrationOptions = ContentfulPartialOptions & {
+  yes?: boolean
   migrationsDirectory: string
 }

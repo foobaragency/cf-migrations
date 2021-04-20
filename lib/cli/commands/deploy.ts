@@ -12,6 +12,7 @@ import { assessMigrationsTypeExistence } from "../../contentful/management"
 
 type DeployArgs = ContentfulCredentials & {
   migrationsPath: string
+  yes?: boolean
   migrationName?: string
 }
 
@@ -28,6 +29,13 @@ export const builder = (yargs: Argv<{}>) =>
       alias: ["m"],
       type: "string",
       description: "Migration name",
+    })
+    .option("yes", {
+      alias: ["y"],
+      type: "boolean",
+      default: true,
+      description:
+        "Automatically confirm migration plans and deploy migrations",
     })
     .demandOption(["migrationsPath"])
 
@@ -66,6 +74,7 @@ function getMigrationOptions(args: DeployArgs): MigrationOptions {
     spaceId: args.space,
     migrationsDirectory: args.migrationsPath,
     locale: args.locale,
+    yes: args.yes,
   }
 }
 
