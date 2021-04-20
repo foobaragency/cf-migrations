@@ -17,6 +17,7 @@
   "private": false,
   "scripts": {
     "build": "ttsc --project tsconfig.lib.json",
+    "generate:apidocs": "bash scripts/generate-api-docs.sh",
     "dev": "ttsc --project tsconfig.lib.json --watch",
     "clean": "rm -rf dist",
     "fix": "yarn lint:prettier --write && yarn lint --fix",
@@ -43,6 +44,8 @@
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
     "ttypescript": "^1.5.12",
+    "typedoc": "^0.20.35",
+    "typedoc-plugin-markdown": "^3.7.1",
     "typescript": "^4.2.4",
     "typescript-transform-paths": "^2.2.3"
   },
