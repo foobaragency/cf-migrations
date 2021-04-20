@@ -10,5 +10,5 @@ export function success(message: string) {
 }
 
 export function error(message: string) {
-  console.log(`🛑 ️ ${chalk.redBright(message)}`)
+  console.log(`🚨 ️ ${chalk.redBright(message)}`)
 }
