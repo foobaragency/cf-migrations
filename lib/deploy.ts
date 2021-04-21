@@ -1,23 +1,22 @@
 import {
   getDeployedMigrations,
   updateMigrationState,
-} from "../contentful/management"
-import { runMigrations } from "../contentful/migration"
-import { MigrationOptions } from "../types"
-
-import { processMigrationFileNames } from "./migrationFiles"
+} from "./contentful/management"
+import { runMigrations } from "./contentful/migration"
+import { MigrationOptions } from "./types"
+import { processMigrationFileNames } from "./migrationManagement/migrationFiles"
 import {
   generateMigrationStates,
   getPendingMigrationFilePaths,
-} from "./migrationState"
-import { validateMigrations } from "./migrationValidations"
+} from "./migrationManagement/migrationState"
+import { validateMigrations } from "./migrationManagement/migrationValidations"
 
 export async function deployMigrations(
   options: MigrationOptions,
   migrationNames?: string[]
 ) {
   const migrationFileNames = await processMigrationFileNames(
-    options,
+    options.migrationsDirectory,
     migrationNames
   )
 

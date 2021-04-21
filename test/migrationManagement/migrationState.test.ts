@@ -1,7 +1,7 @@
 import {
   generateMigrationStates,
   getPendingMigrationFilePaths,
-} from "../../lib/deploy/migrationState"
+} from "../../lib/migrationManagement/migrationState"
 import { config } from "../config"
 
 describe("Migration State", () => {
