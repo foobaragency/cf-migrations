@@ -1,12 +1,14 @@
 import { errorMessages } from "../../lib/errorMessages"
-import { validateMigrations } from "../../lib/migrationManagement/migrationValidations"
+import { getMigrationDetailsAndValidate } from "../../lib/migrationManagement/migrationValidations"
 
 describe("Migration Validation", () => {
   describe("when all the migration names are correct", () => {
     const migrations = ["0001-migration", "0002-migration", "0003-migration"]
 
     it("throws no error", () => {
-      expect(() => validateMigrations(migrations)).not.toThrowError()
+      expect(() =>
+        getMigrationDetailsAndValidate(migrations)
+      ).not.toThrowError()
     })
   })
 
@@ -18,7 +20,7 @@ describe("Migration Validation", () => {
         "0003-migration",
       ]
 
-      expect(() => validateMigrations(migrations)).toThrowError(
+      expect(() => getMigrationDetailsAndValidate(migrations)).toThrowError(
         errorMessages.migration.invalidNameFormat("invalid-migration")
       )
     })
@@ -31,7 +33,7 @@ describe("Migration Validation", () => {
           "0003-migration",
         ]
 
-        expect(() => validateMigrations(migrations)).toThrowError(
+        expect(() => getMigrationDetailsAndValidate(migrations)).toThrowError(
           [
             errorMessages.migration.invalidNameFormat("invalid-migration"),
             errorMessages.migration.invalidNameFormat(
@@ -47,7 +49,7 @@ describe("Migration Validation", () => {
     it("thows an error", () => {
       const migrations = ["0001-migration", "0003-migration"]
 
-      expect(() => validateMigrations(migrations)).toThrowError(
+      expect(() => getMigrationDetailsAndValidate(migrations)).toThrowError(
         errorMessages.migration.sequenceGap("0003-migration")
       )
     })
@@ -56,7 +58,7 @@ describe("Migration Validation", () => {
       const migrations = ["0001-migration", "0004-migration"]
 
       it("throws an error showing the migration next to the gap", () => {
-        expect(() => validateMigrations(migrations)).toThrowError(
+        expect(() => getMigrationDetailsAndValidate(migrations)).toThrowError(
           errorMessages.migration.sequenceGap("0004-migration")
         )
       })
@@ -66,7 +68,7 @@ describe("Migration Validation", () => {
       const migrations = ["0001-migration", "0003-migration", "0005-migration"]
 
       it("throws an error listing the migration files next to the gaps", () => {
-        expect(() => validateMigrations(migrations)).toThrowError(
+        expect(() => getMigrationDetailsAndValidate(migrations)).toThrowError(
           [
             errorMessages.migration.sequenceGap("0003-migration"),
             errorMessages.migration.sequenceGap("0005-migration"),
@@ -84,7 +86,7 @@ describe("Migration Validation", () => {
     ]
 
     it("throws an error showing the duplicated migration sequence", () => {
-      expect(() => validateMigrations(migrations)).toThrowError(
+      expect(() => getMigrationDetailsAndValidate(migrations)).toThrowError(
         errorMessages.migration.duplicatedSequence(
           "0003-duplicated-migration-sequence"
         )
