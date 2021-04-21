@@ -1,24 +1,24 @@
 import { errorMessages } from "../errorMessages"
 
-export type MigrationFileInformation = {
+type MigrationDetails = {
   sequence: number
   fileName: string
 }
 
 /**
- * Validate migrations based on their file names. The names should be sorted.
+ * Get migrations sequences and file names while validating them. The names should be sorted.
  */
-export function validateMigrations(migrationFileNames: string[]) {
-  const migrationsInfo = getSequencesFromFileNames(migrationFileNames)
+export function getMigrationDetailsAndValidate(migrationFileNames: string[]) {
+  const migrationsDetails = getMigrationsDetails(migrationFileNames)
   const messages: string[] = []
 
-  filterInvalidSNameFormat(migrationsInfo).forEach(({ fileName }) =>
+  filterInvalidNameFormat(migrationsDetails).forEach(({ fileName }) =>
     messages.push(errorMessages.migration.invalidNameFormat(fileName))
   )
-  filterSequenceGap(migrationsInfo).forEach(({ fileName }) =>
+  filterSequenceGap(migrationsDetails).forEach(({ fileName }) =>
     messages.push(errorMessages.migration.sequenceGap(fileName))
   )
-  filterDuplicatedSequence(migrationsInfo).forEach(({ fileName }) =>
+  filterDuplicatedSequence(migrationsDetails).forEach(({ fileName }) =>
     messages.push(errorMessages.migration.duplicatedSequence(fileName))
   )
 
@@ -26,21 +26,21 @@ export function validateMigrations(migrationFileNames: string[]) {
     throw new Error(messages.join("\n"))
   }
 
-  return migrationsInfo
+  return migrationsDetails
 }
 
-function getSequencesFromFileNames(migrationFileNames: string[]) {
+function getMigrationsDetails(migrationFileNames: string[]) {
   return migrationFileNames.map((name, index) => ({
     fileName: migrationFileNames[index],
     sequence: Number(name.split("-")[0]),
   }))
 }
 
-function filterInvalidSNameFormat(migrationsInfo: MigrationFileInformation[]) {
+function filterInvalidNameFormat(migrationsInfo: MigrationDetails[]) {
   return migrationsInfo.filter(({ sequence: value }) => isNaN(value))
 }
 
-function filterSequenceGap(migrationsInfo: MigrationFileInformation[]) {
+function filterSequenceGap(migrationsInfo: MigrationDetails[]) {
   return migrationsInfo.filter((info, index) => {
     if (index === 0) {
       return false
@@ -50,7 +50,7 @@ function filterSequenceGap(migrationsInfo: MigrationFileInformation[]) {
   })
 }
 
-function filterDuplicatedSequence(migrationsInfo: MigrationFileInformation[]) {
+function filterDuplicatedSequence(migrationsInfo: MigrationDetails[]) {
   const existingSequences: number[] = []
 
   return migrationsInfo.filter(({ sequence: value }) => {

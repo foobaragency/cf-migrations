@@ -4,7 +4,7 @@ import last from "lodash/last"
 import { paramCase } from "change-case"
 import globby from "globby"
 
-import { validateMigrations } from "./migrationValidations"
+import { getMigrationDetailsAndValidate } from "./migrationValidations"
 
 export async function processMigrationFileNames(
   migrationsPath: string,
@@ -43,7 +43,9 @@ export function getNextMigrationFileName(
   name: string,
   migrationFileNames: string[]
 ) {
-  const lastValidMigration = last(validateMigrations(migrationFileNames))
+  const lastValidMigration = last(
+    getMigrationDetailsAndValidate(migrationFileNames)
+  )
   const lastSequence = lastValidMigration?.sequence
   const sequence = lastSequence ? lastSequence + 1 : 1
   const sequenceString = String(sequence).padStart(4, "0")
