@@ -1,20 +1,19 @@
 import { Argv } from "yargs"
 
-import { initEnvironment } from "../../contentful/initEnvironment"
+import { initEnvironment } from "../../initEnvironment"
 import { assessMigrationsTypeExistence } from "../../contentful/management"
 import {
-  ContentfulCredentials,
-  requireContentfulCredentialsOptions,
-} from "../contentful-credentials"
+  ContentfulCredentialArgs,
+  contentfulCredentialOptions,
+} from "../options/contentful-credentials"
 import { executeHandler } from "../executeHandler"
 import { info, success } from "../logger"
 
 export const desc = "Init Contentful environment to support migrations"
 
-export const builder = (yargs: Argv<{}>) =>
-  requireContentfulCredentialsOptions(yargs)
+export const builder = (yargs: Argv<{}>) => contentfulCredentialOptions(yargs)
 
-export const handler = async (args: ContentfulCredentials) => {
+export const handler = async (args: ContentfulCredentialArgs) => {
   await executeHandler(async () => {
     const options = mapMigrationOptions(args)
     const isEnvironmentInitialized = await assessMigrationsTypeExistence(
@@ -36,7 +35,7 @@ export const handler = async (args: ContentfulCredentials) => {
   })
 }
 
-function mapMigrationOptions(args: ContentfulCredentials) {
+function mapMigrationOptions(args: ContentfulCredentialArgs) {
   return {
     accessToken: args.token,
     environmentId: args.env,

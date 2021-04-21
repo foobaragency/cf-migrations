@@ -2,7 +2,7 @@ import path from "path"
 
 import { runMigration } from "contentful-migration"
 
-import { ContentfulPartialOptions } from "../types"
+import { ContentfulPartialOptions } from "./types"
 
 export async function initEnvironment(options: ContentfulPartialOptions) {
   const filePath = path.resolve(

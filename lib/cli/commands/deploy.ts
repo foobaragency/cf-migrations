@@ -4,13 +4,14 @@ import { error, info, success } from "../logger"
 import { deployMigrations } from "../../deploy"
 import { ContentfulPartialOptions, MigrationOptions } from "../../types"
 import {
-  ContentfulCredentials,
-  requireContentfulCredentialsOptions,
-} from "../contentful-credentials"
+  ContentfulCredentialArgs,
+  contentfulCredentialOptions,
+} from "../options/contentful-credentials"
 import { executeHandler } from "../executeHandler"
 import { assessMigrationsTypeExistence } from "../../contentful/management"
+import { migrationsPathOptions } from "../options/migrations"
 
-type DeployArgs = ContentfulCredentials & {
+type DeployArgs = ContentfulCredentialArgs & {
   migrationsPath: string
   yes?: boolean
   migrationName?: string
@@ -19,12 +20,7 @@ type DeployArgs = ContentfulCredentials & {
 export const desc = "Deploy migrations"
 
 export const builder = (yargs: Argv<{}>) =>
-  requireContentfulCredentialsOptions(yargs)
-    .option("migrationsPath", {
-      alias: ["p"],
-      type: "string",
-      description: "Migrations folder path",
-    })
+  contentfulCredentialOptions(migrationsPathOptions(yargs))
     .option("migrationName", {
       alias: ["m"],
       type: "string",
@@ -37,7 +33,6 @@ export const builder = (yargs: Argv<{}>) =>
       description:
         "Automatically confirm migration plans and deploy migrations",
     })
-    .demandOption(["migrationsPath"])
 
 export const handler = async (args: DeployArgs) => {
   await executeHandler(async () => {

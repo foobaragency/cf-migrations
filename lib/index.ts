@@ -1,3 +1,3 @@
 export * from "./deploy"
-export { initEnvironment } from "./contentful/initEnvironment"
+export * from "./initEnvironment"
 export * from "./types"

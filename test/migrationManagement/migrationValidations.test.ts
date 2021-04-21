@@ -1,5 +1,5 @@
 import { errorMessages } from "../../lib/errorMessages"
-import { validateMigrations } from "../../lib/deploy/migrationValidations"
+import { validateMigrations } from "../../lib/migrationManagement/migrationValidations"
 
 describe("Migration Validation", () => {
   describe("when all the migration names are correct", () => {

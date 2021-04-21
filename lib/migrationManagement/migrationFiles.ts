@@ -1,15 +1,17 @@
 import path from "path"
 
+import last from "lodash/last"
+import { paramCase } from "change-case"
 import globby from "globby"
 
-import { MigrationOptions } from "../types"
+import { validateMigrations } from "./migrationValidations"
 
 export async function processMigrationFileNames(
-  options: MigrationOptions,
+  migrationsPath: string,
   migrationNames?: string[]
 ) {
   const migrationFileNames =
-    migrationNames || (await getMigrationFileNames(options.migrationsDirectory))
+    migrationNames || (await getMigrationFileNames(migrationsPath))
   migrationFileNames.sort((a, b) => a.localeCompare(b))
 
   return migrationFileNames
@@ -33,6 +35,18 @@ export function getMigrationFilePaths(
   return migrationNames.map(name => `${directoryPath}/${name}`)
 }
 
-function getMigrationsDirectoryPath(migrationsDirectory: string) {
+export function getMigrationsDirectoryPath(migrationsDirectory: string) {
   return path.join(process.cwd(), migrationsDirectory)
+}
+
+export function getNextMigrationFileName(
+  name: string,
+  migrationFileNames: string[]
+) {
+  const lastValidMigration = last(validateMigrations(migrationFileNames))
+  const lastSequence = lastValidMigration?.sequence
+  const sequence = lastSequence ? lastSequence + 1 : 1
+  const sequenceString = String(sequence).padStart(4, "0")
+
+  return `${sequenceString}-${paramCase(name)}`
 }

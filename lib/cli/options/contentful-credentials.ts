@@ -1,13 +1,13 @@
 import { Argv } from "yargs"
 
-export type ContentfulCredentials = {
+export type ContentfulCredentialArgs = {
   env: string
   space: string
   token: string
   locale?: string
 }
 
-export function requireContentfulCredentialsOptions(yargs: Argv<{}>) {
+export function contentfulCredentialOptions(yargs: Argv<{}>) {
   return yargs
     .env()
     .option("env", {
