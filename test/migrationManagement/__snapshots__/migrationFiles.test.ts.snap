@@ -11,6 +11,7 @@ exports[`Migration Files when getting migration file data when creating a javasc
 exports[`Migration Files when getting migration file data when creating a typescript migration file returns the expected data 1`] = `
 "import { MigrationFunction } from \\"contentful-migration\\"
 
+<<<<<<< HEAD
 import { MigrationFunction } from \\"contentful-migration\\";
 
 const up: MigrationFunction = (migration, context) => {
@@ -18,6 +19,11 @@ const up: MigrationFunction = (migration, context) => {
 }
 
 export default up
+=======
+export = function (migration) {
+  // Write your migration here
+} as MigrationFunction
+>>>>>>> cf3a5b8... feature(create-migration): add javascript support
 
 "
 `;

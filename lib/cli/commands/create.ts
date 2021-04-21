@@ -7,18 +7,25 @@ import { migrationsPathOptions } from "../options/migrations"
 type CreateArgs = {
   name: string
   migrationsPath: string
+  useJavascript?: boolean
 }
 
 export const command = "create <name>"
 export const desc = "Create an empty migration file"
 
 export const builder = (yargs: Argv<{}>) =>
-  migrationsPathOptions(yargs).positional("name", {
-    describe: "Migration's name",
-    type: "string",
-  })
+  migrationsPathOptions(yargs)
+    .positional("name", {
+      describe: "Migration's name",
+      type: "string",
+    })
+    .option("useJavascript", {
+      alias: ["js"],
+      description: "Generate a javascript migration file",
+      type: "boolean",
+    })
 
 export const handler = async (args: CreateArgs) =>
   executeHandler(async () =>
-    createMigrationFile(args.migrationsPath, args.name)
+    createMigrationFile(args.migrationsPath, args.name, args.useJavascript)
   )

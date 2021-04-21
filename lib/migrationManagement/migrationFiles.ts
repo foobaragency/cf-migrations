@@ -5,6 +5,7 @@ import { paramCase } from "change-case"
 import globby from "globby"
 
 import { getMigrationDetailsAndValidate } from "./migrationValidations"
+import { jsMigrationTemplate, tsMigrationTemplate } from "./fileTemplates"
 
 export async function processMigrationFileNames(
   migrationsPath: string,
@@ -51,4 +52,18 @@ export function getNextMigrationFileName(
   const sequenceString = String(sequence).padStart(4, "0")
 
   return `${sequenceString}-${paramCase(name)}`
+}
+
+export function getMigrationFileData(
+  migrationsPath: string,
+  migrationFileName: string,
+  useJavascript: boolean
+) {
+  const fileExtension = useJavascript ? "js" : "ts"
+  const path = `${getMigrationsDirectoryPath(
+    migrationsPath
+  )}/${migrationFileName}.${fileExtension}`
+  const content = useJavascript ? jsMigrationTemplate : tsMigrationTemplate
+
+  return { content, path }
 }
