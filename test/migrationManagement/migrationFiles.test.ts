@@ -1,8 +1,10 @@
 import {
+  getMigrationFileData,
   getNextMigrationFileName,
   processMigrationFileNames,
 } from "../../lib/migrationManagement/migrationFiles"
 import { config } from "../config"
+import { basename } from "path"
 
 describe("Migration Files", () => {
   it("assure migration files are sorted accordingly to the migration numbers", async () => {
@@ -45,6 +47,41 @@ describe("Migration Files", () => {
         expect(() =>
           getNextMigrationFileName("migration", migrationFileNames)
         ).toThrowError()
+      })
+    })
+  })
+
+  describe("when getting migration file data", () => {
+    const migrationsPath = "migrations"
+    const migrationFileName = "0001-migration"
+
+    describe("when creating a javascript migration file", () => {
+      const useJavascript = true
+
+      it("returns the expected data", () => {
+        const migrationData = getMigrationFileData(
+          migrationsPath,
+          migrationFileName,
+          useJavascript
+        )
+
+        expect(migrationData.content).toMatchSnapshot()
+        expect(basename(migrationData.path)).toEqual("0001-migration.js")
+      })
+    })
+
+    describe("when creating a typescript migration file", () => {
+      const useJavascript = false
+
+      it("returns the expected data", () => {
+        const migrationData = getMigrationFileData(
+          migrationsPath,
+          migrationFileName,
+          useJavascript
+        )
+
+        expect(migrationData.content).toMatchSnapshot()
+        expect(basename(migrationData.path)).toEqual("0001-migration.ts")
       })
     })
   })

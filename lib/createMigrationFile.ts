@@ -1,34 +1,29 @@
 import { outputFile } from "fs-extra"
 
 import {
-  getMigrationsDirectoryPath,
+  getMigrationFileData,
   getNextMigrationFileName,
   processMigrationFileNames,
 } from "./migrationManagement/migrationFiles"
 import { success } from "./cli/logger"
 
-const tsMigrationTemplate = `import { MigrationFunction } from "contentful-migration"
-
-export = function (migration) {
-  // Write your migration here
-} as MigrationFunction
-
-`
-
 export async function createMigrationFile(
   migrationsPath: string,
-  name: string
+  name: string,
+  useJavascript = false
 ) {
   const migrationFileNames = await processMigrationFileNames(migrationsPath)
   const nextMigrationFileName = getNextMigrationFileName(
     name,
     migrationFileNames
   )
-  const migrationFilePath = `${getMigrationsDirectoryPath(
-    migrationsPath
-  )}/${nextMigrationFileName}.ts`
+  const migrationData = getMigrationFileData(
+    migrationsPath,
+    nextMigrationFileName,
+    useJavascript
+  )
 
-  await outputFile(tsMigrationTemplate, migrationFilePath)
+  await outputFile(migrationData.path, migrationData.content)
 
-  success(`New migration created at ${migrationFilePath}`)
+  success(`New migration created at ${migrationData.path}`)
 }
