@@ -22,16 +22,13 @@ export const handler = async (args: ContentfulCredentialArgs) => {
 
     if (isEnvironmentInitialized) {
       info(
-        `Space ${options.spaceId} environment ${options.environmentId} was already initialized.`
+        `Skipping initialization since the environment '${args.env}' was already initialized.`
       )
-      process.exit(0)
     }
 
     await initEnvironment(options)
 
-    success(
-      `Space ${options.spaceId} environment ${options.environmentId} was initialized.`
-    )
+    success(`Space '${args.space}' environment '${args.env}' was initialized.`)
   })
 }
 

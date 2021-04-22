@@ -5,7 +5,6 @@ import {
   getNextMigrationFileName,
   processMigrationFileNames,
 } from "./migrationManagement/migrationFiles"
-import { success } from "./cli/logger"
 
 export async function createMigrationFile(
   migrationsPath: string,
@@ -25,5 +24,5 @@ export async function createMigrationFile(
 
   await outputFile(migrationData.path, migrationData.content)
 
-  success(`New migration created at ${migrationData.path}`)
+  return migrationData.path
 }

@@ -2,6 +2,7 @@ import { Argv } from "yargs"
 
 import { createMigrationFile } from "../../createMigrationFile"
 import { executeHandler } from "../executeHandler"
+import { success } from "../logger"
 import { migrationsPathOptions } from "../options/migrations"
 
 type CreateArgs = {
@@ -26,6 +27,11 @@ export const builder = (yargs: Argv<{}>) =>
     })
 
 export const handler = async (args: CreateArgs) =>
-  executeHandler(async () =>
-    createMigrationFile(args.migrationsPath, args.name, args.useJavascript)
-  )
+  executeHandler(async () => {
+    const migrationPath = await createMigrationFile(
+      args.migrationsPath,
+      args.name,
+      args.useJavascript
+    )
+    success(`New migration created at '${migrationPath}'`)
+  })
