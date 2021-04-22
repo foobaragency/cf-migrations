@@ -12,3 +12,7 @@ export function success(message: string) {
 export function error(message: string) {
   console.log(`🚨 ️ ${chalk.redBright(message)}`)
 }
+
+export function warn(message: string) {
+  console.log(`⚠️  ${chalk.yellowBright(message)}`)
+}
