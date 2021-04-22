@@ -1,10 +1,30 @@
 import difference from "lodash/difference"
 
 import { config } from "../config"
+import { getDeployedMigrations } from "../contentful/management"
 import { LocaleDependent } from "../contentful/types"
 import { MigrationOptions } from "../types"
 
-import { getMigrationFilePaths } from "./migrationFiles"
+import {
+  getMigrationFilePaths,
+  processMigrationFileNames,
+} from "./migrationFiles"
+
+export async function assessPendingMigrations(options: MigrationOptions) {
+  const migrationFileNames = await processMigrationFileNames(
+    options.migrationsDirectory
+  )
+
+  const deployedMigrations = await getDeployedMigrations(options)
+
+  const { pendingMigrations } = getPendingMigrationFilePaths(
+    options.migrationsDirectory,
+    deployedMigrations,
+    migrationFileNames
+  )
+
+  return pendingMigrations.length > 0
+}
 
 export function generateMigrationStates(
   pendingMigrations: string[],
