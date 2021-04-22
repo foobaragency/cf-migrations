@@ -75,24 +75,22 @@ function getMigrationOptions(args: DeployArgs): MigrationOptions {
 
 function logMigrationPlan(migrationNames?: string[]) {
   if (!migrationNames) {
-    info("Planning to deploy all pending migrations...")
+    info("Deploying all migrations...")
 
     return
   }
 
-  migrationNames.forEach(name =>
-    info(`Planning to deploy the migration ${name}...`)
-  )
+  migrationNames.forEach(name => info(`Deploying the migration ${name}...`))
 }
 
 function logMigrationResult(deployedMigrations: string[]) {
   if (deployedMigrations.length === 0) {
-    success("All migrations were already deployed!")
+    info("Skipping deploy since all migrations were already deployed!")
 
     return
   }
 
   deployedMigrations.forEach(migration =>
-    success(`Migration ${migration} deployed successfuly!`)
+    success(`Migration '${migration}' was deployed!`)
   )
 }
