@@ -5,7 +5,7 @@ import {
   ReleaseOptions,
 } from "../../releaseDeployment"
 import { executeHandler } from "../executeHandler"
-import { info, success } from "../logger"
+import { info, success, warn } from "../logger"
 import {
   ContentfulCredentialArgs,
   contentfulCredentialOptions,
@@ -42,6 +42,12 @@ export const builder = (yargs: Argv<{}>) =>
 
 export const handler = async (args: ReleaseArgs) => {
   await executeHandler(async () => {
+    if (args.env !== "master") {
+      warn(
+        `Releases are intented to work with 'master' aliases. It might no work when running it against another environment.`
+      )
+    }
+
     const releaseOptions = getReleaseOptions(args)
     const releaseEnvironmentId = await createDeploymentRelease(releaseOptions)
 
