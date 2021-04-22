@@ -53,10 +53,12 @@ export const handler = async (args: ReleaseArgs) => {
 
     if (releaseEnvironmentId) {
       success(
-        `A release ${releaseEnvironmentId} for the environment ${args.env} space ${args.space}`
+        `Release '${releaseEnvironmentId}' based on the '${args.env}' environment in the space id '${args.space}' was created.`
       )
     } else {
-      info(`Skipping release since no pending migration was found`)
+      info(
+        `Skipping release since no pending migration was found. You can use --ignoreMigrationCheck to create a new release regardless.`
+      )
     }
   })
 }
