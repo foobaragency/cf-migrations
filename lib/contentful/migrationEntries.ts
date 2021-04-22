@@ -1,11 +1,8 @@
-import { createClient, PlainClientAPI } from "contentful-management"
-
 import { config } from "../config"
 import { ContentfulPartialOptions } from "../types"
 
+import { getClient } from "./client"
 import { MigrationEntry } from "./types"
-
-let client: PlainClientAPI | undefined
 
 export async function createMigrationEntries(
   fields: MigrationEntry,
@@ -29,12 +26,4 @@ export async function getMigrationEntries(options: ContentfulPartialOptions) {
 
 export async function getContentTypes(options: ContentfulPartialOptions) {
   return getClient(options).contentType.getMany(options)
-}
-
-function getClient(options: ContentfulPartialOptions) {
-  if (!client) {
-    client = createClient(options, { type: "plain" })
-  }
-
-  return client
 }
