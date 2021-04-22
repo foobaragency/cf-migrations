@@ -14,17 +14,21 @@ import { MigrationOptions } from "./types"
 export type ReleaseOptions = {
   releasePrefix: string
   availableEnvironments: number
+  ignoreMigrationCheck?: boolean
   options: MigrationOptions
 }
 
 export async function createDeploymentRelease({
   releasePrefix,
   availableEnvironments,
+  ignoreMigrationCheck = false,
   options,
 }: ReleaseOptions) {
-  const hasPendingMigrations = await assessPendingMigrations(options)
-  if (!hasPendingMigrations) {
-    return false
+  if (!ignoreMigrationCheck) {
+    const hasPendingMigrations = await assessPendingMigrations(options)
+    if (!hasPendingMigrations) {
+      return
+    }
   }
 
   const environments = await getAllEnvironments(options)
@@ -43,5 +47,5 @@ export async function createDeploymentRelease({
     options
   )
 
-  return true
+  return releaseEnvironmentId
 }
