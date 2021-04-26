@@ -7,7 +7,7 @@ import { migrationsPathOptions } from "../options/migrations"
 
 type CreateArgs = {
   name: string
-  migrationsPath: string
+  migrationsDir: string
   useJavascript?: boolean
 }
 
@@ -29,7 +29,7 @@ export const builder = (yargs: Argv<{}>) =>
 export const handler = async (args: CreateArgs) =>
   executeHandler(async () => {
     const migrationPath = await createMigrationFile(
-      args.migrationsPath,
+      args.migrationsDir,
       args.name,
       args.useJavascript
     )

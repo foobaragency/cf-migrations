@@ -7,17 +7,17 @@ import {
 } from "./migrationManagement/migrationFiles"
 
 export async function createMigrationFile(
-  migrationsPath: string,
+  migrationsDir: string,
   name: string,
   useJavascript = false
 ) {
-  const migrationFileNames = await processMigrationFileNames(migrationsPath)
+  const migrationFileNames = await processMigrationFileNames(migrationsDir)
   const nextMigrationFileName = getNextMigrationFileName(
     name,
     migrationFileNames
   )
   const migrationData = getMigrationFileData(
-    migrationsPath,
+    migrationsDir,
     nextMigrationFileName,
     useJavascript
   )
