@@ -12,7 +12,7 @@ import { assessMigrationsTypeExistence } from "../../contentful/management"
 import { migrationsPathOptions } from "../options/migrations"
 
 type DeployArgs = ContentfulCredentialArgs & {
-  migrationsPath: string
+  migrationsDir: string
   yes?: boolean
   migrationName?: string
 }
@@ -67,7 +67,7 @@ function getMigrationOptions(args: DeployArgs): MigrationOptions {
     accessToken: args.token,
     environmentId: args.env,
     spaceId: args.space,
-    migrationsDirectory: args.migrationsPath,
+    migrationsDirectory: args.migrationsDir,
     locale: args.locale,
     yes: args.yes,
   }

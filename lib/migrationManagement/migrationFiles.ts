@@ -8,11 +8,11 @@ import { getMigrationDetailsAndValidate } from "./migrationValidations"
 import { jsMigrationTemplate, tsMigrationTemplate } from "./fileTemplates"
 
 export async function processMigrationFileNames(
-  migrationsPath: string,
+  migrationsDir: string,
   migrationNames?: string[]
 ) {
   const migrationFileNames =
-    migrationNames || (await getMigrationFileNames(migrationsPath))
+    migrationNames || (await getMigrationFileNames(migrationsDir))
   migrationFileNames.sort((a, b) => a.localeCompare(b))
 
   return migrationFileNames
@@ -55,13 +55,13 @@ export function getNextMigrationFileName(
 }
 
 export function getMigrationFileData(
-  migrationsPath: string,
+  migrationsDir: string,
   migrationFileName: string,
   useJavascript: boolean
 ) {
   const fileExtension = useJavascript ? "js" : "ts"
   const path = `${getMigrationsDirectoryPath(
-    migrationsPath
+    migrationsDir
   )}/${migrationFileName}.${fileExtension}`
   const content = useJavascript ? jsMigrationTemplate : tsMigrationTemplate
 

@@ -52,7 +52,7 @@ describe("Migration Files", () => {
   })
 
   describe("when getting migration file data", () => {
-    const migrationsPath = "migrations"
+    const migrationsDir = "migrations"
     const migrationFileName = "0001-migration"
 
     describe("when creating a javascript migration file", () => {
@@ -60,7 +60,7 @@ describe("Migration Files", () => {
 
       it("returns the expected data", () => {
         const migrationData = getMigrationFileData(
-          migrationsPath,
+          migrationsDir,
           migrationFileName,
           useJavascript
         )
@@ -75,7 +75,7 @@ describe("Migration Files", () => {
 
       it("returns the expected data", () => {
         const migrationData = getMigrationFileData(
-          migrationsPath,
+          migrationsDir,
           migrationFileName,
           useJavascript
         )
