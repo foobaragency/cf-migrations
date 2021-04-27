@@ -4,7 +4,7 @@ const up: MigrationFunction = (migration, context) => {
   // Write your migration here
 }
 
-export default up
+export = up
 
 `
 
