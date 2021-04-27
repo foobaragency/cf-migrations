@@ -19,10 +19,11 @@ type DeployArgs = ContentfulCredentialArgs & {
 
 export const desc = "Deploy migrations"
 
+export const command = "deploy [migrationName]"
+
 export const builder = (yargs: Argv<{}>) =>
   contentfulCredentialOptions(migrationsPathOptions(yargs))
-    .option("migrationName", {
-      alias: ["m"],
+    .positional("migrationName", {
       type: "string",
       description: "Migration name",
     })
