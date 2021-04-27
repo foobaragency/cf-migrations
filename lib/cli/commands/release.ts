@@ -13,7 +13,7 @@ import {
 import { migrationsPathOptions } from "../options/migrations"
 
 type ReleaseArgs = ContentfulCredentialArgs & {
-  migrationsPath: string
+  migrationsDir: string
   prefix: string
   availableEnvironments: number
   ignoreMigrationCheck?: boolean
@@ -24,7 +24,7 @@ export const desc = "Deploy migrations"
 export const builder = (yargs: Argv<{}>) =>
   contentfulCredentialOptions(migrationsPathOptions(yargs))
     .option("prefix", {
-      alias: ["cf-release-prefix", "rp"],
+      alias: ["contentful-release-prefix", "rp"],
       type: "string",
       description: "Prefix of the release environments",
     })
@@ -72,7 +72,7 @@ function getReleaseOptions(args: ReleaseArgs): ReleaseOptions {
       accessToken: args.token,
       environmentId: args.env,
       spaceId: args.space,
-      migrationsDirectory: args.migrationsPath,
+      migrationsDirectory: args.migrationsDir,
       locale: args.locale,
     },
   }
