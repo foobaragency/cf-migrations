@@ -29,7 +29,7 @@ export const builder = (yargs: Argv<{}>) =>
       description: "Prefix of the release environments",
     })
     .option("availableEnvironments", {
-      alias: ["contentful-available-environments", "me"],
+      alias: ["contentful-available-environments", "ae"],
       type: "number",
       description: "Number of available Contentful Environments",
     })
