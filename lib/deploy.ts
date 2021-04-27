@@ -11,10 +11,17 @@ import {
 } from "./migrationManagement/migrationState"
 import { getMigrationDetailsAndValidate } from "./migrationManagement/migrationValidations"
 
-export async function deployMigrations(
-  options: MigrationOptions,
+export type DeployOptions = {
+  options: MigrationOptions
   migrationNames?: string[]
-) {
+  deployedMigrations?: string[]
+}
+
+export async function deployMigrations({
+  options,
+  migrationNames,
+  deployedMigrations,
+}: DeployOptions) {
   const migrationFileNames = await processMigrationFileNames(
     options.migrationsDirectory,
     migrationNames
@@ -22,13 +29,14 @@ export async function deployMigrations(
 
   getMigrationDetailsAndValidate(migrationFileNames)
 
-  const deployedMigrations = await getDeployedMigrations(options)
+  const deployedMigrationNames =
+    deployedMigrations || (await getDeployedMigrations(options))
   const {
     pendingMigrationFilePaths,
     pendingMigrations,
   } = getPendingMigrationFilePaths(
     options.migrationsDirectory,
-    deployedMigrations,
+    deployedMigrationNames,
     migrationFileNames
   )
   const migrationStates = generateMigrationStates(pendingMigrations)

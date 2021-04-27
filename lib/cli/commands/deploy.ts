@@ -41,10 +41,10 @@ export const handler = async (args: DeployArgs) => {
     const migrationNames = args.migrationName ? [args.migrationName] : undefined
 
     logMigrationPlan(migrationNames)
-    const deployedMigrations = await deployMigrations(
-      migrationOptions,
-      migrationNames
-    )
+    const deployedMigrations = await deployMigrations({
+      options: migrationOptions,
+      migrationNames,
+    })
     logMigrationResult(deployedMigrations)
   })
 }
