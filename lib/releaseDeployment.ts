@@ -3,6 +3,7 @@ import {
   getAllEnvironments,
   updateEnvironmentAlias,
 } from "./contentful/environments"
+import { getDeployedMigrations } from "./contentful/management"
 import {
   freeUpEnvironmentIfNeeded,
   getNextReleaseEnvId,
@@ -24,8 +25,12 @@ export async function createDeploymentRelease({
   ignoreMigrationCheck = false,
   options,
 }: ReleaseOptions) {
+  const deployedMigrations = await getDeployedMigrations(options)
   if (!ignoreMigrationCheck) {
-    const hasPendingMigrations = await assessPendingMigrations(options)
+    const hasPendingMigrations = await assessPendingMigrations(
+      options.migrationsDirectory,
+      deployedMigrations
+    )
     if (!hasPendingMigrations) {
       return
     }
@@ -40,7 +45,8 @@ export async function createDeploymentRelease({
   )
   const releaseEnvironmentId = getNextReleaseEnvId(releasePrefix, environments)
   await createEnvironment({ ...options, environmentId: releaseEnvironmentId })
-  await deployMigrations({ ...options, environmentId: releaseEnvironmentId })
+  const deployOptions = { ...options, environmentId: releaseEnvironmentId }
+  await deployMigrations({ options: deployOptions, deployedMigrations })
   await updateEnvironmentAlias(
     options.environmentId,
     releaseEnvironmentId,
