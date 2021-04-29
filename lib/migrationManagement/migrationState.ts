@@ -2,7 +2,6 @@ import difference from "lodash/difference"
 
 import { config } from "../config"
 import { LocaleDependent } from "../contentful/types"
-import { MigrationOptions } from "../types"
 
 import {
   getMigrationFilePaths,
@@ -28,13 +27,13 @@ export async function assessPendingMigrations(
 
 export function generateMigrationStates(
   pendingMigrations: string[],
-  options?: MigrationOptions
+  locale?: string
 ) {
-  const locale = options?.locale || config.contentful.defaultLocale
+  const migrationLocale = locale || config.contentful.defaultLocale
 
   return pendingMigrations.map(migrationFile => {
     const fileName: LocaleDependent = {}
-    fileName[locale] = migrationFile
+    fileName[migrationLocale] = migrationFile
 
     return { fileName }
   })

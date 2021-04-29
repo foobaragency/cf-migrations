@@ -39,7 +39,10 @@ export async function deployMigrations({
     deployedMigrationNames,
     migrationFileNames
   )
-  const migrationStates = generateMigrationStates(pendingMigrations)
+  const migrationStates = generateMigrationStates(
+    pendingMigrations,
+    options.locale
+  )
 
   await runMigrations(pendingMigrationFilePaths, options)
   await updateMigrationState(options, migrationStates)
