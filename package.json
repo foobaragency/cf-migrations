@@ -30,6 +30,7 @@
     "dev": "ttsc --project tsconfig.lib.json --watch",
     "clean": "rm -rf dist",
     "fix": "yarn lint:prettier --write && yarn lint --fix",
+    "prepare": "yarn clean && yarn test && yarn build",
     "lint": "eslint --ext .ts --cache lib",
     "lint:prettier": "prettier \"**/*.{js,ts,json,md,yml}\"",
     "test": "jest",
