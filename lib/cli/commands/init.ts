@@ -24,6 +24,8 @@ export const handler = async (args: ContentfulCredentialArgs) => {
       info(
         `Skipping initialization since the environment '${args.env}' was already initialized.`
       )
+
+      return
     }
 
     await initEnvironment(options)
