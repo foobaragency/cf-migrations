@@ -9,12 +9,21 @@
   ],
   "main": "dist",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/foobaragency/cf-migrations"
+  },
   "bin": {
     "cf-migrations": "bin/cf-migrations.js"
   },
   "author": "foobar Agency GmbH",
   "license": "MIT",
   "private": false,
+  "keywords": [
+    "contentful",
+    "migrations",
+    "management"
+  ],
   "scripts": {
     "build": "ttsc --project tsconfig.lib.json",
     "generate:apidocs": "bash scripts/generate-api-docs.sh",

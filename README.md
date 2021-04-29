@@ -74,7 +74,7 @@ The API documentation can be found [here](docs/generated/modules.md).
 
 ## 🎖 Typescript support
 
-You can use typescript to write the migrations but you'll need to use tools such as ts-node or have compiling tooling for your migrations.
+You can use typescript to write the migrations but you'll need to use tools such as [ts-node](https://github.com/TypeStrong/ts-node) or have compiling tooling for your migrations.
 
 Suppose you have the following project where there is a typescript compilation tooling:
 
