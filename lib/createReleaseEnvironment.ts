@@ -19,7 +19,7 @@ export type ReleaseOptions = {
   options: MigrationOptions
 }
 
-export async function createDeploymentRelease({
+export async function createReleaseEnvironment({
   releasePrefix,
   availableEnvironments,
   ignoreMigrationCheck = false,

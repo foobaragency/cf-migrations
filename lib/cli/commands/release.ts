@@ -1,9 +1,9 @@
 import { Argv } from "yargs"
 
 import {
-  createDeploymentRelease,
+  createReleaseEnvironment,
   ReleaseOptions,
-} from "../../releaseDeployment"
+} from "../../createReleaseEnvironment"
 import { executeHandler } from "../executeHandler"
 import { info, success, warn } from "../logger"
 import {
@@ -49,7 +49,7 @@ export const handler = async (args: ReleaseArgs) => {
     }
 
     const releaseOptions = getReleaseOptions(args)
-    const releaseEnvironmentId = await createDeploymentRelease(releaseOptions)
+    const releaseEnvironmentId = await createReleaseEnvironment(releaseOptions)
 
     if (releaseEnvironmentId) {
       success(
