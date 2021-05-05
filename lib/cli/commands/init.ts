@@ -7,7 +7,7 @@ import {
   contentfulCredentialOptions,
 } from "../options/contentful-credentials"
 import { executeHandler } from "../executeHandler"
-import { info, success } from "../logger"
+import { info, success } from "../../logger"
 
 export const desc = "Init Contentful environment to support migrations"
 

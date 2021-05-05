@@ -1,6 +1,6 @@
 import yargs from "yargs"
 
-import { error } from "./logger"
+import { error } from "../logger"
 
 export async function executeHandler(handler: () => Promise<unknown>) {
   try {
