@@ -1,6 +1,6 @@
 {
   "name": "cf-migrations",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A tool to manage Contentful migrations",
   "files": [
     "bin",
