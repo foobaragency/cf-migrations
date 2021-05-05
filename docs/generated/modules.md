@@ -11,7 +11,7 @@
 
 ### Functions
 
-- [createDeploymentRelease](modules.md#createdeploymentrelease)
+- [createReleaseEnvironment](modules.md#createreleaseenvironment)
 - [deployMigrations](modules.md#deploymigrations)
 - [initEnvironment](modules.md#initenvironment)
 
@@ -30,7 +30,7 @@
 | `locale?`       | _string_ |
 | `spaceId`       | _string_ |
 
-Defined in: [types.ts:1](https://github.com/foobaragency/cf-migrations/blob/d5f266f/lib/types.ts#L1)
+Defined in: [types.ts:1](https://github.com/foobaragency/cf-migrations/blob/14c0f58/lib/types.ts#L1)
 
 ---
 
@@ -46,7 +46,7 @@ Defined in: [types.ts:1](https://github.com/foobaragency/cf-migrations/blob/d5f2
 | `migrationNames?`     | _string_[]                                        |
 | `options`             | [_MigrationOptions_](modules.md#migrationoptions) |
 
-Defined in: [deploy.ts:14](https://github.com/foobaragency/cf-migrations/blob/d5f266f/lib/deploy.ts#L14)
+Defined in: [deploy.ts:15](https://github.com/foobaragency/cf-migrations/blob/14c0f58/lib/deploy.ts#L15)
 
 ---
 
@@ -54,7 +54,7 @@ Defined in: [deploy.ts:14](https://github.com/foobaragency/cf-migrations/blob/d5
 
 Ƭ **MigrationOptions**: [_ContentfulPartialOptions_](modules.md#contentfulpartialoptions) & { `migrationsDirectory`: _string_ ; `yes?`: _boolean_ }
 
-Defined in: [types.ts:8](https://github.com/foobaragency/cf-migrations/blob/d5f266f/lib/types.ts#L8)
+Defined in: [types.ts:8](https://github.com/foobaragency/cf-migrations/blob/14c0f58/lib/types.ts#L8)
 
 ---
 
@@ -71,13 +71,13 @@ Defined in: [types.ts:8](https://github.com/foobaragency/cf-migrations/blob/d5f2
 | `options`               | [_MigrationOptions_](modules.md#migrationoptions) |
 | `releasePrefix`         | _string_                                          |
 
-Defined in: [releaseDeployment.ts:15](https://github.com/foobaragency/cf-migrations/blob/d5f266f/lib/releaseDeployment.ts#L15)
+Defined in: [createReleaseEnvironment.ts:16](https://github.com/foobaragency/cf-migrations/blob/14c0f58/lib/createReleaseEnvironment.ts#L16)
 
 ## Functions
 
-### createDeploymentRelease
+### createReleaseEnvironment
 
-▸ **createDeploymentRelease**(`__namedParameters`: [_ReleaseOptions_](modules.md#releaseoptions)): _Promise_<undefined \| string\>
+▸ **createReleaseEnvironment**(`__namedParameters`: [_ReleaseOptions_](modules.md#releaseoptions)): _Promise_<undefined \| string\>
 
 #### Parameters:
 
@@ -87,13 +87,13 @@ Defined in: [releaseDeployment.ts:15](https://github.com/foobaragency/cf-migrati
 
 **Returns:** _Promise_<undefined \| string\>
 
-Defined in: [releaseDeployment.ts:22](https://github.com/foobaragency/cf-migrations/blob/d5f266f/lib/releaseDeployment.ts#L22)
+Defined in: [createReleaseEnvironment.ts:23](https://github.com/foobaragency/cf-migrations/blob/14c0f58/lib/createReleaseEnvironment.ts#L23)
 
 ---
 
 ### deployMigrations
 
-▸ **deployMigrations**(`__namedParameters`: [_DeployOptions_](modules.md#deployoptions)): _Promise_<string[]\>
+▸ **deployMigrations**(`__namedParameters`: [_DeployOptions_](modules.md#deployoptions)): _Promise_<PendingMigration[]\>
 
 #### Parameters:
 
@@ -101,9 +101,9 @@ Defined in: [releaseDeployment.ts:22](https://github.com/foobaragency/cf-migrati
 | :------------------ | :------------------------------------------ |
 | `__namedParameters` | [_DeployOptions_](modules.md#deployoptions) |
 
-**Returns:** _Promise_<string[]\>
+**Returns:** _Promise_<PendingMigration[]\>
 
-Defined in: [deploy.ts:20](https://github.com/foobaragency/cf-migrations/blob/d5f266f/lib/deploy.ts#L20)
+Defined in: [deploy.ts:21](https://github.com/foobaragency/cf-migrations/blob/14c0f58/lib/deploy.ts#L21)
 
 ---
 
@@ -119,4 +119,4 @@ Defined in: [deploy.ts:20](https://github.com/foobaragency/cf-migrations/blob/d5
 
 **Returns:** _Promise_<void\>
 
-Defined in: [initEnvironment.ts:7](https://github.com/foobaragency/cf-migrations/blob/d5f266f/lib/initEnvironment.ts#L7)
+Defined in: [initEnvironment.ts:7](https://github.com/foobaragency/cf-migrations/blob/14c0f58/lib/initEnvironment.ts#L7)
