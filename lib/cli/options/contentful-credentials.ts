@@ -21,7 +21,7 @@ export function contentfulCredentialOptions(yargs: Argv<{}>) {
       description: "Contentful space ID",
     })
     .option("token", {
-      alias: ["contentful-token", "t"],
+      alias: ["contentful-management-token", "t"],
       type: "string",
       description: "Contentful access token",
     })
