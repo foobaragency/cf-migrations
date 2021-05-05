@@ -5,7 +5,7 @@ import {
   ReleaseOptions,
 } from "../../createReleaseEnvironment"
 import { executeHandler } from "../executeHandler"
-import { info, success, warn } from "../logger"
+import { info } from "../../logger"
 import {
   ContentfulCredentialArgs,
   contentfulCredentialOptions,
@@ -42,22 +42,12 @@ export const builder = (yargs: Argv<{}>) =>
 
 export const handler = async (args: ReleaseArgs) => {
   await executeHandler(async () => {
-    if (args.env !== "master") {
-      warn(
-        `Releases are intented to work with 'master' aliases. It might no work when running it against another environment.`
-      )
-    }
-
     const releaseOptions = getReleaseOptions(args)
     const releaseEnvironmentId = await createReleaseEnvironment(releaseOptions)
 
-    if (releaseEnvironmentId) {
-      success(
-        `Release '${releaseEnvironmentId}' based on the '${args.env}' environment in the space id '${args.space}' was created.`
-      )
-    } else {
+    if (!releaseEnvironmentId) {
       info(
-        `Skipping release since no pending migration was found. You can use --ignoreMigrationCheck to create a new release regardless.`
+        `You can use --ignoreMigrationCheck to create a new release regardless`
       )
     }
   })

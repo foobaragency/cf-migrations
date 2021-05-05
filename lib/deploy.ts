@@ -7,9 +7,10 @@ import { MigrationOptions } from "./types"
 import { processMigrationFileNames } from "./migrationManagement/migrationFiles"
 import {
   generateMigrationStates,
-  getPendingMigrationFilePaths,
+  getPendingMigrations,
 } from "./migrationManagement/migrationState"
 import { getMigrationDetailsAndValidate } from "./migrationManagement/migrationValidations"
+import { info } from "./logger"
 
 export type DeployOptions = {
   options: MigrationOptions
@@ -36,6 +37,13 @@ export async function deployMigrations({
     deployedMigrationNames,
     migrationFileNames
   )
+
+  if (pendingMigrations.length === 0) {
+    info(`Skipping migration deploy since there's no pending migrations`)
+
+    return pendingMigrations
+  }
+
   const migrationStates = generateMigrationStates(
     pendingMigrations.map(({ fileName }) => fileName),
     options.locale

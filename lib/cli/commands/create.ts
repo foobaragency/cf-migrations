@@ -2,7 +2,7 @@ import { Argv } from "yargs"
 
 import { createMigrationFile } from "../../createMigrationFile"
 import { executeHandler } from "../executeHandler"
-import { success } from "../logger"
+import { success } from "../../logger"
 import { migrationsPathOptions } from "../options/migrations"
 
 type CreateArgs = {

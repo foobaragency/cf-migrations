@@ -1,5 +1,6 @@
 import { EnvironmentProps } from "contentful-management/dist/typings/export-types"
 
+import { info } from "../logger"
 import { ContentfulPartialOptions } from "../types"
 
 import { deleteEnvironment } from "./environments"
@@ -73,4 +74,6 @@ export async function freeUpEnvironmentIfNeeded(
   }
 
   await deleteEnvironment({ ...options, environmentId: envIdToDelete })
+
+  info(`Environment ${envIdToDelete} was removed`)
 }

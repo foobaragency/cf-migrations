@@ -41,12 +41,11 @@ export const handler = async (args: DeployArgs) => {
     await assureEnvironmentIsInitialized(migrationOptions)
     const migrationNames = args.migrationName ? [args.migrationName] : undefined
 
-    logMigrationPlan(migrationNames)
-    logMigrationResult(deployedMigrations)
     await deployMigrations({ options: migrationOptions, migrationNames })
   })
 }
 
+// TODO this verification should be executed when deploying as well
 async function assureEnvironmentIsInitialized(
   options: ContentfulPartialOptions
 ) {
@@ -69,26 +68,4 @@ function getMigrationOptions(args: DeployArgs): MigrationOptions {
     locale: args.locale,
     yes: args.yes,
   }
-}
-
-function logMigrationPlan(migrationNames?: string[]) {
-  if (!migrationNames) {
-    info("Deploying all migrations...")
-
-    return
-  }
-
-  migrationNames.forEach(name => info(`Deploying the migration ${name}...`))
-}
-
-function logMigrationResult(deployedMigrations: string[]) {
-  if (deployedMigrations.length === 0) {
-    info("Skipping deploy since all migrations were already deployed!")
-
-    return
-  }
-
-  deployedMigrations.forEach(migration =>
-    success(`Migration '${migration}' was deployed!`)
-  )
 }
