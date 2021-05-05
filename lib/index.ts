@@ -1,4 +1,4 @@
 export * from "./deploy"
 export * from "./initEnvironment"
-export * from "./types"
+export { ContentfulPartialOptions, MigrationOptions } from "./types"
 export * from "./createReleaseEnvironment"

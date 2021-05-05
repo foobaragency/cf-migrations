@@ -1,6 +1,6 @@
 import {
   generateMigrationStates,
-  getPendingMigrationFilePaths,
+  getPendingMigrations,
 } from "../../lib/migrationManagement/migrationState"
 import { config } from "../config"
 
@@ -18,12 +18,14 @@ describe("Migration State", () => {
     const deployedMigrations = ["0001-migration", "0002-migration"]
     const migrationFileNames = [...deployedMigrations, "0003-migration"]
 
-    const { pendingMigrations } = getPendingMigrationFilePaths(
+    const pendingMigrations = getPendingMigrations(
       config.migrationsDirectory,
       deployedMigrations,
       migrationFileNames
     )
 
-    expect(pendingMigrations).toEqual(["0003-migration"])
+    expect(pendingMigrations.map(({ fileName }) => fileName)).toEqual([
+      "0003-migration",
+    ])
   })
 })

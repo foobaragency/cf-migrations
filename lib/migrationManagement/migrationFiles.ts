@@ -29,11 +29,11 @@ async function getMigrationFileNames(migrationsDirectory: string) {
 
 export function getMigrationFilePaths(
   migrationsDirectory: string,
-  migrationNames: string[]
+  migrationName: string
 ) {
   const directoryPath = getMigrationsDirectoryPath(migrationsDirectory)
 
-  return migrationNames.map(name => `${directoryPath}/${name}`)
+  return `${directoryPath}/${migrationName}`
 }
 
 export function getMigrationsDirectoryPath(migrationsDirectory: string) {

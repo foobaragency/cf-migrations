@@ -1,6 +1,6 @@
 import { Argv } from "yargs"
 
-import { error, info, success } from "../logger"
+import { error } from "../../logger"
 import { deployMigrations } from "../../deploy"
 import { ContentfulPartialOptions, MigrationOptions } from "../../types"
 import {
@@ -42,11 +42,8 @@ export const handler = async (args: DeployArgs) => {
     const migrationNames = args.migrationName ? [args.migrationName] : undefined
 
     logMigrationPlan(migrationNames)
-    const deployedMigrations = await deployMigrations({
-      options: migrationOptions,
-      migrationNames,
-    })
     logMigrationResult(deployedMigrations)
+    await deployMigrations({ options: migrationOptions, migrationNames })
   })
 }
 

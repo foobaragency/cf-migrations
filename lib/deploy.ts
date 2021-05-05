@@ -31,20 +31,17 @@ export async function deployMigrations({
 
   const deployedMigrationNames =
     deployedMigrations || (await getDeployedMigrations(options))
-  const {
-    pendingMigrationFilePaths,
-    pendingMigrations,
-  } = getPendingMigrationFilePaths(
+  const pendingMigrations = getPendingMigrations(
     options.migrationsDirectory,
     deployedMigrationNames,
     migrationFileNames
   )
   const migrationStates = generateMigrationStates(
-    pendingMigrations,
+    pendingMigrations.map(({ fileName }) => fileName),
     options.locale
   )
 
-  await runMigrations(pendingMigrationFilePaths, options)
+  await runMigrations(pendingMigrations, options)
   await updateMigrationState(options, migrationStates)
 
   return pendingMigrations
