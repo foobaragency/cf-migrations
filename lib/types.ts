@@ -9,3 +9,8 @@ export type MigrationOptions = ContentfulPartialOptions & {
   yes?: boolean
   migrationsDirectory: string
 }
+
+export type PendingMigration = {
+  fileName: string
+  filePath: string
+}

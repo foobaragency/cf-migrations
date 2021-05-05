@@ -1,13 +1,13 @@
 import { runMigration } from "contentful-migration"
 
-import { MigrationOptions } from "../types"
+import { MigrationOptions, PendingMigration } from "../types"
 
 export async function runMigrations(
-  migrationFilePaths: string[],
+  pendingMigrations: PendingMigration[],
   options: MigrationOptions
 ) {
   const yes = options.yes !== undefined ? options.yes : true
-  for (const filePath of migrationFilePaths) {
+  for (const { filePath } of pendingMigrations) {
     await runMigration({ ...options, filePath, yes })
   }
 }
