@@ -1,0 +1,16 @@
+# https://kodiakhq.com/docs/config-reference
+version = 1
+
+merge.automerge_label = "automerge"
+merge.require_automerge_label = false
+merge.method = "rebase"
+merge.delete_branch_on_merge = true
+merge.prioritize_ready_to_merge = true
+
+[merge.automerge_dependencies]
+# only auto merge "minor" and "patch" version upgrades.
+# do not automerge "major" version upgrades.
+versions = ["minor", "patch"]
+
+# only automerge by upgrade version for pull requests authored by dependabot.
+usernames = ["dependabot"]
