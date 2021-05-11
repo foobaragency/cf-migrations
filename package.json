@@ -64,7 +64,7 @@
     "change-case": "^4.1.2",
     "contentful-management": "^7.14.0",
     "contentful-migration": "^4.0.14",
-    "dotenv": "^8.2.0",
+    "dotenv": "^9.0.2",
     "fs-extra": "^10.0.0",
     "globby": "^11.0.3",
     "lodash": "^4.17.21",
