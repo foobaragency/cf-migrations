@@ -65,9 +65,9 @@
     "contentful-management": "^7.14.0",
     "contentful-migration": "^4.0.14",
     "dotenv": "^8.2.0",
-    "fs-extra": "^9.1.0",
+    "fs-extra": "^10.0.0",
     "globby": "^11.0.3",
     "lodash": "^4.17.21",
-    "yargs": "^16.2.0"
+    "yargs": "^17.0.1"
   }
 }
