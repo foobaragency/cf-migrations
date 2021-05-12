@@ -1,13 +1,12 @@
+import path from "path"
+
 import difference from "lodash/difference"
 
 import { config } from "../config"
 import { LocaleDependent } from "../contentful/types"
 import { PendingMigration } from "../types"
 
-import {
-  getMigrationFilePaths,
-  processMigrationFileNames,
-} from "./migrationFiles"
+import { processMigrationFileNames } from "./migrationFiles"
 
 export async function assessPendingMigrations(
   migrationsDirectory: string,
@@ -49,6 +48,6 @@ export function getPendingMigrations(
 
   return pendingMigrations.map(fileName => ({
     fileName,
-    filePath: getMigrationFilePaths(migrationsDirectory, fileName),
+    filePath: path.resolve(`${migrationsDirectory}/${fileName}`),
   }))
 }
