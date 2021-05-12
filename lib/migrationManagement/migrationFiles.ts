@@ -19,25 +19,10 @@ export async function processMigrationFileNames(
 }
 
 async function getMigrationFileNames(migrationsDirectory: string) {
-  const pattern = `${getMigrationsDirectoryPath(
-    migrationsDirectory
-  )}/**/*.{ts,js}`
+  const pattern = `${migrationsDirectory}/**/*.{ts,js}`
   const files = await globby(pattern)
 
   return files.map(file => path.basename(file))
-}
-
-export function getMigrationFilePaths(
-  migrationsDirectory: string,
-  migrationName: string
-) {
-  const directoryPath = getMigrationsDirectoryPath(migrationsDirectory)
-
-  return `${directoryPath}/${migrationName}`
-}
-
-export function getMigrationsDirectoryPath(migrationsDirectory: string) {
-  return path.join(process.cwd(), migrationsDirectory)
 }
 
 export function getNextMigrationFileName(
@@ -55,15 +40,15 @@ export function getNextMigrationFileName(
 }
 
 export function getMigrationFileData(
-  migrationsDir: string,
+  migrationDirectory: string,
   migrationFileName: string,
   useJavascript: boolean
 ) {
   const fileExtension = useJavascript ? "js" : "ts"
-  const path = `${getMigrationsDirectoryPath(
-    migrationsDir
-  )}/${migrationFileName}.${fileExtension}`
+  const migrationPath = path.resolve(
+    `${migrationDirectory}/${migrationFileName}.${fileExtension}`
+  )
   const content = useJavascript ? jsMigrationTemplate : tsMigrationTemplate
 
-  return { content, path }
+  return { content, path: migrationPath }
 }
