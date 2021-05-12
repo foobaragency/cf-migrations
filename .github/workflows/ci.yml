@@ -4,11 +4,12 @@ on: push
 
 jobs:
   build:
-    runs-on: ubuntu-latest
     continue-on-error: true
     strategy:
       matrix:
         node-version: [14.x]
+        os: [ubuntu-latest, -latest]
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Git checkout
