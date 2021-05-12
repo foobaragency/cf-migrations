@@ -7,19 +7,21 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
+        os: [ubuntu-latest, windows-latest]
         node-version: [14.x]
-        os: [ubuntu-latest, -latest]
     runs-on: ${{ matrix.os }}
-
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: yarn
+
+      - name: Install
+        uses: bahmutov/npm-install@v1
+
       - run: yarn lint:prettier --check
       - run: yarn lint
       - run: yarn build
