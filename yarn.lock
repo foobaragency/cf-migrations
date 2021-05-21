@@ -1688,9 +1688,9 @@ contentful-management@^7.14.0, contentful-management@^7.3.1:
     type-fest "1.0.2"
 
 contentful-migration@^4.0.14:
-  version "4.1.14"
-  resolved "https://registry.npmjs.org/contentful-migration/-/contentful-migration-4.1.14.tgz"
-  integrity sha512-OHbVa1UXu6dunQnHk3M6bJbKLNEDIw0xEt6oaVcaOjxsRgggE7VdlCmf5Jfnqg5a66EmAgje52Qf/WKRsNn2dQ==
+  version "4.1.17"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.1.17.tgz#72a9eafd1360786956effca62c7666ed03d06931"
+  integrity sha512-+OfW+oeRIxTMKfxuAt+TE0HpGP8pVUExW3fucUCOcFNtQxkEMQygY1wmEutLNaDAobUQBqfPdqakOmVFRdKGcg==
   dependencies:
     axios "^0.21.0"
     bluebird "^3.7.2"
