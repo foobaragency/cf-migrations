@@ -1676,9 +1676,9 @@ contains-path@^1.0.0:
     path-starts-with "^1.0.0"
 
 contentful-management@^7.14.0, contentful-management@^7.3.1:
-  version "7.19.1"
-  resolved "https://registry.npmjs.org/contentful-management/-/contentful-management-7.19.1.tgz"
-  integrity sha512-sGcp/B5dBKVzPGiuhEBGr1Q4oKE/WR9XV0UNyje6jNGXdeW0SEMbu/VFWBYfvc3zFNeU84dChGyW77igol/vHA==
+  version "7.22.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.22.0.tgz#7e6426e297183e659cd2bca985f21e696b509f5f"
+  integrity sha512-Vc4EcNTm8B4Q+l5vNge4V2MwGhEceBJWJ09NSgryANEaX3vaUe+XQplYvMTrs9xiVXvozcHDc+03JXPv1JYXmw==
   dependencies:
     "@types/json-patch" "0.0.30"
     axios "^0.21.0"
