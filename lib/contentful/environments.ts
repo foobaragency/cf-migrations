@@ -1,3 +1,4 @@
+import { info } from "../logger"
 import { ContentfulPartialOptions } from "../types"
 
 import { getClient } from "./client"
@@ -22,6 +23,10 @@ export async function getAllEnvironmentAliases(
   options: ContentfulPartialOptions
 ) {
   return getClient(options).environmentAlias.getMany(options)
+}
+
+export async function findEnvironment(options: ContentfulPartialOptions) {
+  return getClient(options).environment.get(options)
 }
 
 export async function updateEnvironmentAlias(
@@ -70,4 +75,34 @@ export async function updateEnvironmentAlias(
       },
     }
   )
+}
+
+export async function checkEnvironmentReadyStatus(
+  options: ContentfulPartialOptions,
+  environmentCreationSecondsTimeout: number
+): Promise<boolean> {
+  const environment = await findEnvironment(options)
+  const isEnvironmentReady = environment.sys.status.sys.id === "ready"
+
+  if (isEnvironmentReady) {
+    return true
+  }
+
+  if (environmentCreationSecondsTimeout === 0) {
+    throw new Error(
+      `Unable to make sure that environment "${options.environmentId}" status is ready`
+    )
+  }
+
+  info(
+    `Environment ${options.environmentId} isn't read yet. Remaining seconds ${environmentCreationSecondsTimeout}...`
+  )
+  await delay(1000)
+  const remainingSeconds = environmentCreationSecondsTimeout - 1
+
+  return checkEnvironmentReadyStatus(options, remainingSeconds)
+}
+
+function delay(milliseconds: number) {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
