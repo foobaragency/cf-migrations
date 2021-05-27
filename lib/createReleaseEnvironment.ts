@@ -1,4 +1,5 @@
 import {
+  checkEnvironmentReadyStatus,
   createEnvironment,
   getAllEnvironments,
   updateEnvironmentAlias,
@@ -17,6 +18,7 @@ export type ReleaseOptions = {
   releasePrefix: string
   availableEnvironments: number
   ignoreMigrationCheck?: boolean
+  environmentCreationSecondsTimeout?: number
   options: MigrationOptions
 }
 
@@ -24,6 +26,7 @@ export async function createReleaseEnvironment({
   releasePrefix,
   availableEnvironments,
   ignoreMigrationCheck = false,
+  environmentCreationSecondsTimeout = 1,
   options,
 }: ReleaseOptions) {
   if (options.environmentId !== "master") {
@@ -54,6 +57,13 @@ export async function createReleaseEnvironment({
   )
   const releaseEnvironmentId = getNextReleaseEnvId(releasePrefix, environments)
   await createEnvironment({ ...options, environmentId: releaseEnvironmentId })
+  await checkEnvironmentReadyStatus(
+    {
+      ...options,
+      environmentId: releaseEnvironmentId,
+    },
+    environmentCreationSecondsTimeout
+  )
   info(`Environment ${releaseEnvironmentId} was created.`)
   const deployOptions = { ...options, environmentId: releaseEnvironmentId }
   await deployMigrations({ options: deployOptions, deployedMigrations })

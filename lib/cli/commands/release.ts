@@ -17,6 +17,7 @@ type ReleaseArgs = ContentfulCredentialArgs & {
   prefix: string
   availableEnvironments: number
   ignoreMigrationCheck?: boolean
+  environmentCreationSecondsTimeout?: number
 }
 
 export const desc = "Deploy migrations"
@@ -38,6 +39,13 @@ export const builder = (yargs: Argv<{}>) =>
       type: "boolean",
       description: "Ignore pending migration check before deploying",
     })
+    .option("environmentCreationSecondsTimeout", {
+      alias: ["contentful-environment-creation-seconds-timeout"],
+      type: "number",
+      default: 1,
+      description:
+        "Maximum of seconds it should wait for the release environment creation to be ready",
+    })
     .demandOption(["prefix", "availableEnvironments"])
 
 export const handler = async (args: ReleaseArgs) => {
@@ -58,6 +66,7 @@ function getReleaseOptions(args: ReleaseArgs): ReleaseOptions {
     releasePrefix: args.prefix,
     availableEnvironments: args.availableEnvironments,
     ignoreMigrationCheck: args.ignoreMigrationCheck,
+    environmentCreationSecondsTimeout: args.environmentCreationSecondsTimeout,
     options: {
       accessToken: args.token,
       environmentId: args.env,
