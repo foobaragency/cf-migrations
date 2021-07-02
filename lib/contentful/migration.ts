@@ -3,7 +3,6 @@ import { runMigration } from "contentful-migration"
 import { info, success } from "../logger"
 import { MigrationOptions, PendingMigration } from "../types"
 
-// eslint-disable-next-line @typescript-eslint/member-delimiter-style
 export type MigrationResult = {
   successful: boolean
   fileName: string
@@ -17,6 +16,8 @@ export async function runMigrations(
   const migrationResult: MigrationResult[] = []
   for (const { filePath, fileName } of pendingMigrations) {
     info(`Deploying migration ${filePath}...`)
+
+    // disable this es-lint warning because the underlying function return "any" type and we have no control over that.
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const result = await runMigration({ ...options, filePath, yes })
     if (result) {
