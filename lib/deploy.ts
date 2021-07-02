@@ -44,12 +44,13 @@ export async function deployMigrations({
     return pendingMigrations
   }
 
+  const runMigrationsResult = await runMigrations(pendingMigrations, options)
   const migrationStates = generateMigrationStates(
     pendingMigrations.map(({ fileName }) => fileName),
+    runMigrationsResult,
     options.locale
   )
 
-  await runMigrations(pendingMigrations, options)
   await updateMigrationState(options, migrationStates)
 
   return pendingMigrations

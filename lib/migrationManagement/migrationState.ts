@@ -8,6 +8,8 @@ import { PendingMigration } from "../types"
 
 import { processMigrationFileNames } from "./migrationFiles"
 
+import { MigrationResult } from "lib/contentful/migration"
+
 export async function assessPendingMigrations(
   migrationsDirectory: string,
   deployedMigrations: string[]
@@ -27,16 +29,23 @@ export async function assessPendingMigrations(
 
 export function generateMigrationStates(
   pendingMigrations: string[],
+  runMigrationsResult: MigrationResult[],
   locale?: string
 ) {
   const migrationLocale = locale || config.contentful.defaultLocale
 
-  return pendingMigrations.map(migrationFile => {
-    const fileName: LocaleDependent = {}
-    fileName[migrationLocale] = migrationFile
+  return pendingMigrations
+    .filter(
+      migrationFile =>
+        runMigrationsResult.find(result => result?.fileName === migrationFile)
+          ?.successful
+    )
+    .map(migrationFile => {
+      const fileName: LocaleDependent = {}
+      fileName[migrationLocale] = migrationFile
 
-    return { fileName }
-  })
+      return { fileName }
+    })
 }
 
 export function getPendingMigrations(
