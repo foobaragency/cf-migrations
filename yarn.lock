@@ -2236,10 +2236,10 @@ constant-case@^3.0.4:
     tslib "^2.0.3"
     upper-case "^2.0.2"
 
-contentful-management@^7.14.0, contentful-management@^7.3.1:
-  version "7.25.1"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.25.1.tgz#03a9d6c418faaf939448c143f7624cdb77702ca9"
-  integrity sha512-V8tcSHw3MwWKWHWMW+AZB6lP31hreos+v2gtayZczWXYRcfd+owt+qVjbkLZk1pL80ewSmc8Pl1A7rM/oB2ldw==
+contentful-management@^7.14.0, contentful-management@^7.25.1:
+  version "7.27.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.27.0.tgz#9432034f8a98d06c8027fb85b273ff405f5bdbf7"
+  integrity sha512-HGwUmR0160TI9RNiqLWjlFpPmjiXGC2VAgtzqM0mXMCJKJTzLBmsETVycQ7Nwip+2+CHdDRta5a9vQEN89UNTw==
   dependencies:
     "@types/json-patch" "0.0.30"
     axios "^0.21.0"
@@ -2249,16 +2249,16 @@ contentful-management@^7.14.0, contentful-management@^7.3.1:
     type-fest "^0.20.2"
 
 contentful-migration@^4.0.14:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.2.0.tgz#fc16321a9d451f3738aba64504dee220feecdec1"
-  integrity sha512-jqmPrfvbOHPKZ6MjmInHe3baHJZ35efuG6fUn7EBAYBGwM5bxMfzgB9Ihr+if4T7diGYGq3/NKdLsJ2NpsddcA==
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.2.3.tgz#cd43aafd93990474392b4f202392e11a07e0e090"
+  integrity sha512-+VXz3U5CBcDq5PpG0EskHpehseKPzbhpA26OOGmWfP5VFrqmK8JTuDhmXiAuN7sbj8TPetqlXThRS27CSNFqTw==
   dependencies:
     axios "^0.21.0"
     bluebird "^3.7.2"
     callsites "^3.1.0"
     cardinal "^2.1.1"
     chalk "^4.0.0"
-    contentful-management "^7.3.1"
+    contentful-management "^7.25.1"
     didyoumean2 "^5.0.0"
     hoek "^6.1.3"
     https-proxy-agent "^5.0.0"
