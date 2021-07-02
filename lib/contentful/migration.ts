@@ -3,7 +3,11 @@ import { runMigration } from "contentful-migration"
 import { info, success } from "../logger"
 import { MigrationOptions, PendingMigration } from "../types"
 
-export type MigrationResult = { successful: boolean, fileName: string }
+// eslint-disable-next-line @typescript-eslint/member-delimiter-style
+export type MigrationResult = {
+  successful: boolean
+  fileName: string
+}
 
 export async function runMigrations(
   pendingMigrations: PendingMigration[],
