@@ -7,8 +7,14 @@ import { config } from "../config"
 describe("Migration State", () => {
   it("generates a valid migration state update based on the pending migrations", () => {
     const pendingMigrations = ["0001-migration", "0002-migration"]
-    const migrationStateUpdatePayload =
-      generateMigrationStates(pendingMigrations)
+    const runMigrationsResult = [
+      { successful: true, fileName: pendingMigrations[0] },
+      { successful: true, fileName: pendingMigrations[1] },
+    ]
+    const migrationStateUpdatePayload = generateMigrationStates(
+      pendingMigrations,
+      runMigrationsResult
+    )
 
     expect(migrationStateUpdatePayload).toMatchSnapshot()
   })
