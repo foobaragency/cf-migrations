@@ -23,8 +23,9 @@ export async function runMigrations(
     if (result) {
       success(`${filePath} migration deployed`)
       migrationResult.push({ successful: true, fileName })
+    } else {
+      migrationResult.push({ successful: false, fileName })
     }
-    migrationResult.push({ successful: false, fileName })
   }
 
   return migrationResult
