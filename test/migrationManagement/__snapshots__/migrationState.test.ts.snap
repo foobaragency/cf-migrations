@@ -12,5 +12,10 @@ Array [
       "en-US": "0002-migration",
     },
   },
+  Object {
+    "fileName": Object {
+      "en-US": "0004-migration",
+    },
+  },
 ]
 `;
