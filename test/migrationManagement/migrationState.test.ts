@@ -6,10 +6,17 @@ import { config } from "../config"
 
 describe("Migration State", () => {
   it("generates a valid migration state update based on the pending migrations", () => {
-    const pendingMigrations = ["0001-migration", "0002-migration"]
+    const pendingMigrations = [
+      "0001-migration",
+      "0002-migration",
+      "0003-migration",
+      "0004-migration",
+    ]
     const runMigrationsResult = [
       { successful: true, fileName: pendingMigrations[0] },
       { successful: true, fileName: pendingMigrations[1] },
+      { successful: false, fileName: pendingMigrations[2] },
+      { successful: true, fileName: pendingMigrations[3] },
     ]
     const migrationStateUpdatePayload = generateMigrationStates(
       pendingMigrations,
