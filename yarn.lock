@@ -2293,9 +2293,9 @@ contentful-management@^7.14.0, contentful-management@^7.25.1:
     type-fest "^0.20.2"
 
 contentful-migration@^4.0.14:
-  version "4.2.4"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.2.4.tgz#6d449c953668a25480c3e07bde835ccc37b0c250"
-  integrity sha512-Vr7o/sa2pNvthYJOoWZkHr1/JEJnZt67bUZS+SNVZCbwcYzPaEJbYh3dadN72tGJq5RtOISpygSzWsyH2fLmKw==
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.2.5.tgz#ff399b19335b0e7679360df68db5f3ffaaed2579"
+  integrity sha512-3aTt/XAHrlVDJ254o164Qoyr+FNrtK5nLbHdQ1T94Jtw7kRnfL91jDUk+UpkLQT/pdjkoAXx9PFHJSYU148XHA==
   dependencies:
     axios "^0.21.0"
     bluebird "^3.7.2"
