@@ -75,7 +75,7 @@
     "chalk": "^4.1.0",
     "change-case": "^4.1.2",
     "contentful-management": "^7.14.0",
-    "contentful-migration": "^4.0.14",
+    "contentful-migration": "^4.5.0",
     "dotenv": "^10.0.0",
     "fs-extra": "^10.0.0",
     "globby": "^12.0.2",
