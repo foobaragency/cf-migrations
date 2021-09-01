@@ -2,7 +2,7 @@ import path from "path"
 
 import last from "lodash/last"
 import { paramCase } from "change-case"
-import globby from "globby"
+import { globby } from "globby"
 
 import { getMigrationDetailsAndValidate } from "./migrationValidations"
 import { jsMigrationTemplate, tsMigrationTemplate } from "./fileTemplates"
