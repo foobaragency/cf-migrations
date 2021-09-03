@@ -4,7 +4,7 @@
 
 ## ⚙️ Installation
 
-Pre-requisites
+Pre-requisites:
 
 - Node LTS
 
