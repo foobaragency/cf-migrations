@@ -2280,16 +2280,16 @@ constant-case@^3.0.4:
     upper-case "^2.0.2"
 
 contentful-management@^7.14.0, contentful-management@^7.32.1:
-  version "7.33.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.33.0.tgz#fd9c7004fc59116d09c42234860746d150879b78"
-  integrity sha512-Q6Y0peBdmZUkQyrKP5rRuv2IbVpt5LflYfRdWstTQ9sERyAOgYJWBtvDCupXKw3g1oBXUxLXXU7vZY2M5jnTpQ==
+  version "7.36.1"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.36.1.tgz#4023c3fbdda404b7717a232c88f6a06a60e43d36"
+  integrity sha512-RmK1CKslvyQ9gQEMUmH2oT9EtX+AtY1nh7kqEmvA18Ye70qZtRgtYDhOoC8XnxbwZ+tEQ6vJEdLhWavpJ/FThQ==
   dependencies:
     "@types/json-patch" "0.0.30"
     axios "^0.21.0"
     contentful-sdk-core "^6.8.0"
     fast-copy "^2.1.0"
     lodash.isplainobject "^4.0.6"
-    type-fest "^0.20.2"
+    type-fest "^0.21.3"
 
 contentful-migration@^4.5.0:
   version "4.5.0"
