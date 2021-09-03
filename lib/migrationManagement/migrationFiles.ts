@@ -1,8 +1,8 @@
 import path from "path"
 
-import last from "lodash/last"
 import { paramCase } from "change-case"
-import { globby } from "globby"
+import fg from "fast-glob"
+import last from "lodash/last"
 
 import { getMigrationDetailsAndValidate } from "./migrationValidations"
 import { jsMigrationTemplate, tsMigrationTemplate } from "./fileTemplates"
@@ -10,7 +10,7 @@ import { jsMigrationTemplate, tsMigrationTemplate } from "./fileTemplates"
 export async function processMigrationFileNames(
   migrationsDir: string,
   migrationNames?: string[]
-) {
+): Promise<string[]> {
   const migrationFileNames =
     migrationNames || (await getMigrationFileNames(migrationsDir))
   migrationFileNames.sort((a, b) => a.localeCompare(b))
@@ -20,7 +20,7 @@ export async function processMigrationFileNames(
 
 async function getMigrationFileNames(migrationsDirectory: string) {
   const pattern = `${migrationsDirectory}/**/*.{ts,js}`
-  const files = await globby(pattern)
+  const files = await fg(pattern)
 
   return files.map(file => path.basename(file))
 }
