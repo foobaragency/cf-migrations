@@ -1,14 +1,12 @@
 # [1.2.0](https://github.com/foobaragency/cf-migrations/compare/v1.1.3...v1.2.0) (2021-09-07)
 
-
 ### Bug Fixes
 
-* executed prettier to fix CHANGELOG.md file ([d07defe](https://github.com/foobaragency/cf-migrations/commit/d07defe09b255efacc8e6f1e5a30153c3885a0a7))
-
+- executed prettier to fix CHANGELOG.md file ([d07defe](https://github.com/foobaragency/cf-migrations/commit/d07defe09b255efacc8e6f1e5a30153c3885a0a7))
 
 ### Features
 
-* change to use fast-glob instead of globby ([09919e8](https://github.com/foobaragency/cf-migrations/commit/09919e85bc8461fc12ade0778acef931267a8013))
+- change to use fast-glob instead of globby ([09919e8](https://github.com/foobaragency/cf-migrations/commit/09919e85bc8461fc12ade0778acef931267a8013))
 
 ## [1.1.3](https://github.com/foobaragency/cf-migrations/compare/v1.1.2...v1.1.3) (2021-09-03)
 
