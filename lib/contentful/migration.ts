@@ -1,6 +1,6 @@
 import { runMigration } from "contentful-migration"
 
-import { info, success } from "../logger"
+import { info, success, error } from "../logger"
 import { MigrationOptions, PendingMigration } from "../types"
 
 export type MigrationResult = {
@@ -17,9 +17,16 @@ export async function runMigrations(
   for (const { filePath, fileName } of pendingMigrations) {
     info(`Deploying migration ${filePath}...`)
 
-    // disable this es-lint warning because the underlying function return "any" type and we have no control over that.
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    const result = await runMigration({ ...options, filePath, yes })
+    let result
+    try {
+      // disable this es-lint warning because the underlying function return "any" type and we have no control over that.
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      result = await runMigration({ ...options, filePath, yes })
+    } catch (e) {
+      info(`${filePath} migration failed`)
+      error((e as Error).message)
+    }
+
     if (result) {
       success(`${filePath} migration deployed`)
       migrationResult.push({ successful: true, fileName })
