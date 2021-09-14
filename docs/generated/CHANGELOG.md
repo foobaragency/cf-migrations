@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/foobaragency/cf-migrations/compare/v1.2.0...v1.2.1) (2021-09-14)
+
+
+### Bug Fixes
+
+* save deployed migrations even if other migrations failed ([3bb8f29](https://github.com/foobaragency/cf-migrations/commit/3bb8f299574b9bb1f2e4700cc71c9a3ed8976d8d))
+
 # [1.2.0](https://github.com/foobaragency/cf-migrations/compare/v1.1.3...v1.2.0) (2021-09-07)
 
 ### Bug Fixes
