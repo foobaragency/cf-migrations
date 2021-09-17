@@ -1676,7 +1676,7 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
 
-axios@^0.21.0:
+axios@^0.21.0, axios@^0.21.4:
   version "0.21.4"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
   integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
@@ -2336,13 +2336,13 @@ constant-case@^3.0.4:
     upper-case "^2.0.2"
 
 contentful-management@^7.14.0, contentful-management@^7.32.1:
-  version "7.36.2"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.36.2.tgz#e3139ebb0f0b844aa35356f4fd1bb335a92543eb"
-  integrity sha512-pOyHyIuOygqQPDfF9C1MQKTAKAJcounClp4R5afhKkXDdh8jUPc34Ej9BACCtseo99Q9BftLQn49nmk9xJHylQ==
+  version "7.39.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.39.0.tgz#cd64bd51df22c83c43b94814a54974658b111ff0"
+  integrity sha512-BkzR5NTIamtSErC94Yrodt/Qwtco3zHj09lUIE+V3JlAuHpU8VgYkGsKkaLYTlTNRlTUGbr8333zJSoY/Rbwaw==
   dependencies:
     "@types/json-patch" "0.0.30"
-    axios "^0.21.0"
-    contentful-sdk-core "^6.8.0"
+    axios "^0.21.4"
+    contentful-sdk-core "^6.9.0"
     fast-copy "^2.1.0"
     lodash.isplainobject "^4.0.6"
     type-fest "^0.21.3"
@@ -2368,12 +2368,13 @@ contentful-migration@^4.5.0:
     lodash "^4.17.15"
     yargs "^15.3.1"
 
-contentful-sdk-core@^6.8.0:
-  version "6.8.0"
-  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-6.8.0.tgz#b3e24dc1c89444b021dede26062451d9e13db61f"
-  integrity sha512-X45uNrcbQ2qY2p4G/Wx2EFUdnLnoDXjw29i+d0JVTUXqCG58p3q4GHuAPzTX+uafJL4h0ZY2xPOn4nvJ83eRBQ==
+contentful-sdk-core@^6.9.0:
+  version "6.9.0"
+  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-6.9.0.tgz#732ac4d2cb83e1e6d9b8db95434ad2fca9b97235"
+  integrity sha512-fLwE0avEf81iDdJGVFUB5nC8AzI1OPg+YY33V8aFBgHkKMXpHI6zNInWnQGUekXCl2OAGKk5QkVfEAjvpkFGig==
   dependencies:
     fast-copy "^2.1.0"
+    lodash "^4.17.21"
     qs "^6.9.4"
 
 conventional-changelog-angular@^5.0.0, conventional-changelog-angular@^5.0.11:
