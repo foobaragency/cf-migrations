@@ -1,3 +1,5 @@
+import { EntryProps } from "contentful-management/dist/typings/export-types"
+
 import { config } from "../config"
 import { ContentfulPartialOptions } from "../types"
 
@@ -14,14 +16,33 @@ export async function createMigrationEntries(
   )
 }
 
-// TODO this might need pagination due to a CF limitation
 export async function getMigrationEntries(options: ContentfulPartialOptions) {
-  return getClient(options).entry.getMany({
-    ...options,
-    query: {
-      content_type: config.contentful.contentType.id,
-    },
-  })
+  const entries: EntryProps[] = []
+
+  const client = getClient(options)
+  const limit = 100
+  const query = {
+    content_type: config.contentful.contentType.id,
+    order: "sys.createdAt",
+  }
+
+  // request all items in a chunked way
+  let total = -1
+  for (let i = 0; total !== entries.length; i++) {
+    const entriesResponse = await client.entry.getMany({
+      ...options,
+      query: {
+        ...query,
+        limit,
+        skip: i * limit,
+      },
+    })
+
+    entries.push(...entriesResponse.items)
+    total = entriesResponse.total
+  }
+
+  return entries
 }
 
 export async function getContentTypes(options: ContentfulPartialOptions) {
