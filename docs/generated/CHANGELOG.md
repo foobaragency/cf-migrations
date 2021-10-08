@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/foobaragency/cf-migrations/compare/v1.2.1...v1.2.2) (2021-10-08)
+
+
+### Bug Fixes
+
+* **dependencies:** upgrade yarn.lock ([f2bd8f9](https://github.com/foobaragency/cf-migrations/commit/f2bd8f9ca27f4f694323a2559969479db206533b))
+
 ## [1.2.1](https://github.com/foobaragency/cf-migrations/compare/v1.2.0...v1.2.1) (2021-09-14)
 
 ### Bug Fixes
