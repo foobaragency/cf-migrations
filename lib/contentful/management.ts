@@ -1,4 +1,4 @@
-import { CollectionProp, EntryProps } from "contentful-management/types"
+import { EntryProps } from "contentful-management/types"
 
 import { config } from "../config"
 import { ContentfulPartialOptions } from "../types"
@@ -26,11 +26,11 @@ export async function getDeployedMigrations(options: ContentfulPartialOptions) {
 }
 
 export function getDeployedMigrationNames(
-  migrationEntries: CollectionProp<EntryProps>,
+  migrationEntries: EntryProps[],
   contentfulLocale?: string
 ) {
   const locale = contentfulLocale || config.contentful.defaultLocale
-  const deployedFiles = migrationEntries.items.map(
+  const deployedFiles = migrationEntries.map(
     item => (item.fields as MigrationEntry).fileName[locale]
   )
 
