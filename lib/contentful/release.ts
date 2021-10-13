@@ -1,4 +1,4 @@
-import { EnvironmentProps } from "contentful-management/dist/typings/export-types"
+import { EnvironmentProps } from "contentful-management/types"
 
 import { info } from "../logger"
 import { ContentfulPartialOptions } from "../types"

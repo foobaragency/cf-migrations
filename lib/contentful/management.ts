@@ -1,7 +1,4 @@
-import {
-  CollectionProp,
-  EntryProps,
-} from "contentful-management/dist/typings/export-types"
+import { CollectionProp, EntryProps } from "contentful-management/types"
 
 import { config } from "../config"
 import { ContentfulPartialOptions } from "../types"
