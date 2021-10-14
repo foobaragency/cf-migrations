@@ -19,6 +19,8 @@ extends:
 settings:
   import/resolver:
     node: { paths: ["."] }
+    typescript:
+      alwaysTryTypes: true
 rules:
   class-methods-use-this: "off"
   complexity: [warn, { max: 10 }]
