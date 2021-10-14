@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/foobaragency/cf-migrations/compare/v1.2.2...v1.2.3) (2021-10-14)
+
+
+### Bug Fixes
+
+* paginate getMigrationEntries ([12d33cb](https://github.com/foobaragency/cf-migrations/commit/12d33cbcdb49cc33107a10bbf17a3c58ba20450a))
+
 ## [1.2.2](https://github.com/foobaragency/cf-migrations/compare/v1.2.1...v1.2.2) (2021-10-08)
 
 ### Bug Fixes
