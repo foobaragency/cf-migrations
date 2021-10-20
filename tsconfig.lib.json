@@ -12,7 +12,7 @@
     "lib": ["es2019"],
     "moduleResolution": "node",
     "strict": true,
-    "module": "commonjs",
+    "module": "es2015",
     "target": "es2019",
     "strictNullChecks": true,
     "noImplicitThis": true,

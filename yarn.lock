@@ -1388,6 +1388,13 @@
   dependencies:
     "@types/yargs-parser" "*"
 
+"@types/yargs@^17.0.4":
+  version "17.0.4"
+  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-17.0.4.tgz#d7ad5c311aaca3d7daebba169e1ecf35be97ceee"
+  integrity sha512-D/wihO9WFYqwsmJI0e0qS+U09wIQtYRSBJlXWjTFGjouEuOCy0BU4N/ZK5utb00S5lW/9LO7vOpvGDd8M06NvQ==
+  dependencies:
+    "@types/yargs-parser" "*"
+
 "@typescript-eslint/eslint-plugin@^5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.0.0.tgz#ecc7cc69d1e6f342beb6ea9cf9fbc02c97a212ac"
@@ -7371,7 +7378,7 @@ typescript-transform-paths@^3.0.0:
   dependencies:
     minimatch "^3.0.4"
 
-typescript@^4.2.4, typescript@^4.4.3:
+typescript@4.4.4, typescript@^4.4.3:
   version "4.4.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.4.tgz#2cd01a1a1f160704d3101fd5a58ff0f9fcb8030c"
   integrity sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA==
