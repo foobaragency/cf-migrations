@@ -2302,13 +2302,13 @@ constant-case@^3.0.4:
     upper-case "^2.0.2"
 
 contentful-management@^7.14.0, contentful-management@^7.32.1:
-  version "7.45.2"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.45.2.tgz#60e6bca8226dcf74090b58c45dc7b2ffb574a3b2"
-  integrity sha512-NFAkV6mxqOW4SIx8pAhraQq234Gl8+Np8cxaw7+bB9DCelpxmWvySyaoDczAaYmXLZcejeOFt/NS+Rhp7hPvJA==
+  version "7.45.5"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.45.5.tgz#19ccc44464008c1182944b7b0d62d2a29b134b9e"
+  integrity sha512-1HtdEmBySFvOg9tlBdl+2SvpgVX4nB6nWy7XwVzA/6tjpp57IKLEWEa+I46JlMmw8dcl2w+Yw8i3EOKoZJktrQ==
   dependencies:
     "@types/json-patch" "0.0.30"
     axios "^0.21.4"
-    contentful-sdk-core "^6.10.1"
+    contentful-sdk-core "^6.10.4"
     fast-copy "^2.1.0"
     lodash.isplainobject "^4.0.6"
     type-fest "^2.5.3"
@@ -2334,10 +2334,10 @@ contentful-migration@^4.5.0:
     lodash "^4.17.15"
     yargs "^15.3.1"
 
-contentful-sdk-core@^6.10.1:
-  version "6.10.3"
-  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-6.10.3.tgz#983fd69257c239881c43cb83e3ce9f501acfbe4a"
-  integrity sha512-IUBkAU1sJuVaEa2Nv1NKK5ImqpBZ5Q3EmaCFmMZx/UHKa+i98nDCSTUBOL1aJnpZ/s3AaSramsh73VQ4aK2kyA==
+contentful-sdk-core@^6.10.4:
+  version "6.10.4"
+  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-6.10.4.tgz#3a077bd1017e107224101551d44834e77e62175e"
+  integrity sha512-vnivU13pKqFzs/eEugqOaDkKce6ZljBkpp6l25MsG8LA1HPCQNBnIkqP5VUbwk/ub7tkHteV9HtoTnmpdvB+Zg==
   dependencies:
     fast-copy "^2.1.0"
     lodash.isplainobject "^4.0.6"
