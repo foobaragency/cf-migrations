@@ -18,6 +18,8 @@ type ReleaseArgs = ContentfulCredentialArgs & {
   availableEnvironments: number
   ignoreMigrationCheck?: boolean
   environmentCreationSecondsTimeout?: number
+  copyScheduledActions: boolean
+  rateLimit: number
 }
 
 export const desc = "Deploy migrations"
@@ -46,6 +48,19 @@ export const builder = (yargs: Argv<{}>) =>
       description:
         "Maximum of seconds it should wait for the release environment creation to be ready",
     })
+    .option("copyScheduledActions", {
+      alias: ["copy-scheduled-actions"],
+      type: "boolean",
+      default: true,
+      description:
+        "Copy scheduled actions from previous release to new release",
+    })
+    .option("rateLimit", {
+      alias: ["contentful-api-calls-per-second", "rl"],
+      type: "number",
+      default: 7,
+      description: "Rate limit of api calls per second",
+    })
     .demandOption(["prefix", "availableEnvironments"])
 
 export const handler = async (args: ReleaseArgs) => {
@@ -67,6 +82,8 @@ function getReleaseOptions(args: ReleaseArgs): ReleaseOptions {
     availableEnvironments: args.availableEnvironments,
     ignoreMigrationCheck: args.ignoreMigrationCheck,
     environmentCreationSecondsTimeout: args.environmentCreationSecondsTimeout,
+    copyScheduledActions: args.copyScheduledActions,
+    rateLimit: args.rateLimit,
     options: {
       accessToken: args.token,
       environmentId: args.env,

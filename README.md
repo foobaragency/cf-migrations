@@ -66,6 +66,10 @@ npx cf-migrations release
 
 Since the number of available environments is limited, the oldest release that is not aliased will be removed.
 
+> 📢 Since contentful does not have a functionality yet to also copy the scheduled actions if you create a new environment from an existing one,
+> we have created a feature as a workaround to do the job.
+> The feature is by default activated and can be deactivated by setting the parameter `copy-scheduled-actions` to `false`.
+
 ## 📚 API
 
 Using `cf-migrations`' CLI isn't the only option: you can integrate its functionalities with your project by using the library's API.
