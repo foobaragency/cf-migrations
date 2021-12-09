@@ -32,6 +32,26 @@ export function getOldestUnaliasedReleaseEnvironment(
 }
 
 /**
+ * get currently active release that is aliased with aliasedEnvironment
+ */
+export function getActiveReleaseEnvId(
+  releasePrefix: string,
+  aliasedEnvironment: string,
+  environments: EnvironmentProps[]
+) {
+  const activeRelease = getReleaseEnvironmentsOldestFirst(
+    releasePrefix,
+    environments
+  )
+    .filter(
+      env => !!env.sys.aliasedEnvironment && env.sys.id === aliasedEnvironment
+    )
+    .pop()
+
+  return activeRelease?.name
+}
+
+/**
  * Create a fresh copy of the target environment for the new release.
  */
 export function getNextReleaseEnvId(

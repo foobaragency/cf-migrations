@@ -1,9 +1,8 @@
 ## [1.2.4](https://github.com/foobaragency/cf-migrations/compare/v1.2.3...v1.2.4) (2021-12-14)
 
-
 ### Bug Fixes
 
-* **lint:** changelog format ([c008248](https://github.com/foobaragency/cf-migrations/commit/c0082482a3c55675be570ea1cfcdaf97782e45a6))
+- **lint:** changelog format ([c008248](https://github.com/foobaragency/cf-migrations/commit/c0082482a3c55675be570ea1cfcdaf97782e45a6))
 
 ## [1.2.3](https://github.com/foobaragency/cf-migrations/compare/v1.2.2...v1.2.3) (2021-10-14)
 
