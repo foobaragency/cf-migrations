@@ -1,3 +1,21 @@
+# [2.0.0](https://github.com/foobaragency/cf-migrations/compare/v1.2.4...v2.0.0) (2021-12-16)
+
+
+### Bug Fixes
+
+* **package-update:** downgrade chalk ([7414359](https://github.com/foobaragency/cf-migrations/commit/741435908c5a431c5e2c7319564106eca338b98b))
+* patch yarn-lock after package update ([563e629](https://github.com/foobaragency/cf-migrations/commit/563e629654c40af8fd68e5ea69bfe76bfaa5462d))
+
+
+### Features
+
+* **copy-scheduled-actions:** copy scheduledActions from previous release ([8dc531a](https://github.com/foobaragency/cf-migrations/commit/8dc531a3fcfb014b7ea237e6c94a6864100eb33d))
+
+
+### BREAKING CHANGES
+
+* **copy-scheduled-actions:** `copyScheduledActions` and `rateLimit` are used for the scheduledActions feature.
+
 ## [1.2.4](https://github.com/foobaragency/cf-migrations/compare/v1.2.3...v1.2.4) (2021-12-14)
 
 ### Bug Fixes
