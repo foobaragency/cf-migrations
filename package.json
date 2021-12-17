@@ -73,7 +73,7 @@
     "typescript-transform-paths": "^3.0.0"
   },
   "dependencies": {
-    "chalk": "4.1.2",
+    "chalk": "5.0.0",
     "change-case": "^4.1.2",
     "contentful-management": "^7.14.0",
     "contentful-migration": "^4.5.0",
