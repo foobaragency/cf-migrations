@@ -17,22 +17,19 @@ export async function runMigrations(
   for (const { filePath, fileName } of pendingMigrations) {
     info(`Deploying migration ${filePath}...`)
 
-    let result
     try {
       // disable this es-lint warning because the underlying function return "any" type and we have no control over that.
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      result = await runMigration({ ...options, filePath, yes })
+      await runMigration({ ...options, filePath, yes })
     } catch (e) {
-      info(`${filePath} migration failed`)
       error((e as Error).message)
+      migrationResult.push({ successful: false, fileName })
+
+      return migrationResult
     }
 
-    if (result) {
-      success(`${filePath} migration deployed`)
-      migrationResult.push({ successful: true, fileName })
-    } else {
-      migrationResult.push({ successful: false, fileName })
-    }
+    success(`${filePath} migration deployed`)
+    migrationResult.push({ successful: true, fileName })
   }
 
   return migrationResult
