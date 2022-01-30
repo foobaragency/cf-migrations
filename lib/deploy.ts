@@ -2,7 +2,7 @@ import {
   getDeployedMigrations,
   updateMigrationState,
 } from "./contentful/management"
-import { runMigrations } from "./contentful/migration"
+import { runMigrations } from "./migrationManagement/runMigrations"
 import { MigrationOptions } from "./types"
 import { processMigrationFileNames } from "./migrationManagement/migrationFiles"
 import {

@@ -3,8 +3,8 @@ import { EntryProps } from "contentful-management/types"
 import { config } from "../config"
 import { ContentfulPartialOptions } from "../types"
 
-import { getClient } from "./client"
-import { MigrationEntry } from "./types"
+import { getClient } from "lib/contentful/client"
+import { MigrationEntry } from "lib/contentful/types"
 
 export async function createMigrationEntries(
   fields: MigrationEntry,

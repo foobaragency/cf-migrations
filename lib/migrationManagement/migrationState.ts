@@ -8,7 +8,7 @@ import { PendingMigration } from "../types"
 
 import { processMigrationFileNames } from "./migrationFiles"
 
-import { MigrationResult } from "lib/contentful/migration"
+import { MigrationResult } from "lib/migrationManagement/runMigrations"
 
 export async function assessPendingMigrations(
   migrationsDirectory: string,

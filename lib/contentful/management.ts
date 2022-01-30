@@ -3,12 +3,13 @@ import { EntryProps } from "contentful-management/types"
 import { config } from "../config"
 import { ContentfulPartialOptions } from "../types"
 
+import { MigrationEntry } from "./types"
+
 import {
   createMigrationEntries,
   getContentTypes,
   getMigrationEntries,
-} from "./migrationEntries"
-import { MigrationEntry } from "./types"
+} from "lib/migrationManagement/migrationEntries"
 
 export async function updateMigrationState(
   options: ContentfulPartialOptions,

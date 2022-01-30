@@ -4,8 +4,12 @@ import { paramCase } from "change-case"
 import fg from "fast-glob"
 import last from "lodash/last"
 
+import {
+  jsMigrationTemplate,
+  tsMigrationTemplate,
+} from "../fileManagement/fileTemplates"
+
 import { getMigrationDetailsAndValidate } from "./migrationValidations"
-import { jsMigrationTemplate, tsMigrationTemplate } from "./fileTemplates"
 
 export async function processMigrationFileNames(
   migrationsDir: string,
