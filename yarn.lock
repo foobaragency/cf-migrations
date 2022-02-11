@@ -1916,6 +1916,13 @@ axios@^0.21.0, axios@^0.21.4:
   dependencies:
     follow-redirects "^1.14.0"
 
+axios@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.25.0.tgz#349cfbb31331a9b4453190791760a8d35b093e0a"
+  integrity sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==
+  dependencies:
+    follow-redirects "^1.14.7"
+
 babel-jest@^27.4.6:
   version "27.4.6"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-27.4.6.tgz#4d024e69e241cdf4f396e453a07100f44f7ce314"
@@ -2493,7 +2500,7 @@ constant-case@^3.0.4:
     tslib "^2.0.3"
     upper-case "^2.0.2"
 
-contentful-management@^7.14.0, contentful-management@^7.51.5:
+contentful-management@^7.51.5:
   version "7.52.0"
   resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.52.0.tgz#ee2625d300df735afb5ba3d943a5d8313cf22c32"
   integrity sha512-p1YQlgVfStJf1AWX9R6lTAGV1qb3+X6TvfvTn/qEHAzhbIHjn+MLwGope8NTWiGORXdNzdFd3GKt0uhIswMPOg==
@@ -2504,6 +2511,17 @@ contentful-management@^7.14.0, contentful-management@^7.51.5:
     fast-copy "^2.1.0"
     lodash.isplainobject "^4.0.6"
     type-fest "^2.5.3"
+
+contentful-management@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-8.1.0.tgz#25d467182f5fe9d9139b26759ec66c9314e3e2b3"
+  integrity sha512-LYHiyF6l9Z1ozIWU65PVRXwV5ut9wWhvaod2kR4M31259nsd9WQ2avEfI4UBhIYZX+wfsYb9pSqCXRdsK780og==
+  dependencies:
+    "@types/json-patch" "0.0.30"
+    axios "^0.25.0"
+    contentful-sdk-core "^7.0.1"
+    fast-copy "^2.1.1"
+    lodash.isplainobject "^4.0.6"
 
 contentful-migration@^4.5.0:
   version "4.7.1"
@@ -2531,6 +2549,17 @@ contentful-sdk-core@^6.10.4:
   version "6.10.4"
   resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-6.10.4.tgz#3a077bd1017e107224101551d44834e77e62175e"
   integrity sha512-vnivU13pKqFzs/eEugqOaDkKce6ZljBkpp6l25MsG8LA1HPCQNBnIkqP5VUbwk/ub7tkHteV9HtoTnmpdvB+Zg==
+  dependencies:
+    fast-copy "^2.1.0"
+    lodash.isplainobject "^4.0.6"
+    lodash.isstring "^4.0.1"
+    p-throttle "^4.1.1"
+    qs "^6.9.4"
+
+contentful-sdk-core@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-7.0.1.tgz#a38e10d6742e383076f1cb031a5e43b364cecba6"
+  integrity sha512-3m3RTmQHEnlOtx6f9PvkKgrv5Qpzjo8X+NysBXshCYK8OEG/vNbsfsdOaiURAxcVMQ/9vM14Og+fc+aMx79Lsg==
   dependencies:
     fast-copy "^2.1.0"
     lodash.isplainobject "^4.0.6"
@@ -3330,7 +3359,7 @@ extsprintf@^1.2.0:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
 
-fast-copy@^2.1.0:
+fast-copy@^2.1.0, fast-copy@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/fast-copy/-/fast-copy-2.1.1.tgz#f5cbcf2df64215e59b8e43f0b2caabc19848083a"
   integrity sha512-Qod3DdRgFZ8GUIM6ygeoZYpQ0QLW9cf/FS9KhhjlYggcSZXWAemAw8BOCO5LuYCrR3Uj3qXDVTUzOUwG8C7beQ==
@@ -3478,6 +3507,11 @@ follow-redirects@^1.14.0:
   version "1.14.7"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.7.tgz#2004c02eb9436eee9a21446a6477debf17e81685"
   integrity sha512-+hbxoLbFMbRKDwohX8GkTataGqO6Jb7jGwpAlwgy2bIz25XtRm7KEzJM76R1WiNT5SwZkX4Y75SwBolkpmE7iQ==
+
+follow-redirects@^1.14.7:
+  version "1.14.8"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.8.tgz#016996fb9a11a100566398b1c6839337d7bfa8fc"
+  integrity sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==
 
 forever-agent@~0.6.1:
   version "0.6.1"
