@@ -2570,9 +2570,9 @@ contentful-management@^8.1.0:
     lodash.isplainobject "^4.0.6"
 
 contentful-migration@^4.5.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.8.0.tgz#6889c866d635069b6273a92a77d89e26d9910636"
-  integrity sha512-E6SwD+XsvDzv/GFfFHpMf7aBj2jOToE1jryJ3RFPw8AZ8Qvr1/rdCLXqtzqCXF34/rQ2FNkGHCvdBXozci4srQ==
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.8.1.tgz#fa38768843b19b7b50ce218373edf8b93c957ff5"
+  integrity sha512-2HTvnSlyjNmmjgjHLAuq0a2alnf7QZMI1nwoFvQ2E5aSH7H39GaxLwWQqUn7Xe5fnCHFLHXTM9bXEJ0XfZIg4Q==
   dependencies:
     axios "^0.21.0"
     bluebird "^3.7.2"
