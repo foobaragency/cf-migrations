@@ -2532,9 +2532,9 @@ contentful-management@^7.51.5:
     type-fest "^2.5.3"
 
 contentful-management@^8.1.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-8.2.0.tgz#0142849515bbf2eb4342fe47b686fa3525608398"
-  integrity sha512-vFZ6K5fxu+dXjENGQQ0EUqT2PjEnDzzXkcmOfTbB+05B1n9TEnl4MMo/rud27ima+E6KA5OoMDDeatnN0WdYSg==
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-8.2.2.tgz#443cb532afc64b9588a0f7f7a197db68bf42a5e5"
+  integrity sha512-BMdrV7sMpOUTEBJxL2IGd9ik9acYrtP0xNTl0q/bPwhQoLbrj2vOWMSm8mT1hh4Ow3I3OUWJwOYmDhhB8GnnOw==
   dependencies:
     "@types/json-patch" "0.0.30"
     axios "^0.26.0"
