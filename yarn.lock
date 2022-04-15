@@ -2521,9 +2521,9 @@ contentful-management@^7.51.5:
     type-fest "^2.5.3"
 
 contentful-management@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-9.0.0.tgz#23d9c5d765679b578f25aaa1dd6e4aa8f71d3872"
-  integrity sha512-Vc6zv8OAkMzgH52qpGGeev4KlLozjH8hsKtFcXrdvlDBgNUzCX6KUV6kg15zy08srncFm3CKIe4SnsxzHlxOlA==
+  version "9.3.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-9.3.0.tgz#07b402334c4433bcb858a52bbdce4275f1f33423"
+  integrity sha512-r4i7V6CXME2ftCSZvPk0k4VxUL9ORw00G5NGfaoZJ4DxDfNk8qibt9IMnEd2o0/i4UlLM43+gEaf4wjHPWpU1Q==
   dependencies:
     "@types/json-patch" "0.0.30"
     axios "^0.26.0"
