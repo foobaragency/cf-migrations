@@ -2515,9 +2515,9 @@ constant-case@^3.0.4:
     upper-case "^2.0.2"
 
 contentful-management@^10.0.0:
-  version "10.3.1"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-10.3.1.tgz#924db409da961704ad77f62aa441229146e8efc0"
-  integrity sha512-WhpVdhWuOyCXEEXSTtoxbtD0lkDkHs0HDfDQPa+V8FTSbhn9c241jh2WvX1g8HiK/0Bh1pN9pjgymZ0HZ7L9dQ==
+  version "10.6.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-10.6.0.tgz#d3f62ad981832a5aa19e61f3e2f8cb9f7767a354"
+  integrity sha512-uc9ovuhXmgDtd6PVXsNQidMaiAv1mhSFMKUsiAvM37SsP7t7cQY0EoTtsuEvOv7bp16ezTndTQrswQd1rVRIRA==
   dependencies:
     "@types/json-patch" "0.0.30"
     axios "^0.27.1"
