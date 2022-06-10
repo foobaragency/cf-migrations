@@ -61,7 +61,7 @@
     "husky": "^8.0.1",
     "jest": "^27.2.5",
     "prettier": "^2.2.1",
-    "semantic-release": "^18.0.0",
+    "semantic-release": "^19.0.3",
     "timekeeper": "^2.2.0",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.3.0",
