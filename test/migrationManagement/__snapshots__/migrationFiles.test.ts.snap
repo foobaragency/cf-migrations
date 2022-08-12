@@ -19,3 +19,43 @@ export = up
 
 "
 `;
+
+exports[`Migration Files when getting migration file data with sequence number when creating a javascript migration file returns the expected data 1`] = `
+"module.exports = function (migration) {
+  // Write your migration here
+}
+
+"
+`;
+
+exports[`Migration Files when getting migration file data with sequence number when creating a typescript migration file returns the expected data 1`] = `
+"import { MigrationFunction } from \\"contentful-migration\\"
+
+const up: MigrationFunction = (migration, context) => {
+  // Write your migration here
+}
+
+export = up
+
+"
+`;
+
+exports[`Migration Files when getting migration file data with timestamp when creating a javascript migration file returns the expected data 1`] = `
+"module.exports = function (migration) {
+  // Write your migration here
+}
+
+"
+`;
+
+exports[`Migration Files when getting migration file data with timestamp when creating a typescript migration file returns the expected data 1`] = `
+"import { MigrationFunction } from \\"contentful-migration\\"
+
+const up: MigrationFunction = (migration, context) => {
+  // Write your migration here
+}
+
+export = up
+
+"
+`;

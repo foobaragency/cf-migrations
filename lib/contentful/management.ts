@@ -4,7 +4,7 @@ import { config } from "../config"
 import { ContentfulPartialOptions } from "../types"
 
 import {
-  createMigrationEntries,
+  createMigrationEntry,
   getContentTypes,
   getMigrationEntries,
 } from "./migrationEntries"
@@ -15,7 +15,7 @@ export async function updateMigrationState(
   migrationStates: MigrationEntry[]
 ) {
   for (const stateFields of migrationStates) {
-    await createMigrationEntries(stateFields, options)
+    await createMigrationEntry(stateFields, options)
   }
 }
 

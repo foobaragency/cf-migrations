@@ -45,7 +45,6 @@ export const handler = async (args: DeployArgs) => {
   })
 }
 
-// TODO this verification should be executed when deploying as well
 async function assureEnvironmentIsInitialized(
   options: ContentfulPartialOptions
 ) {
