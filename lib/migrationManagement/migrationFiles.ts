@@ -2,7 +2,6 @@ import path from "path"
 
 import { paramCase } from "change-case"
 import fg from "fast-glob"
-import last from "lodash/last"
 
 import { getMigrationDetailsAndValidate } from "./migrationValidations"
 import { jsMigrationTemplate, tsMigrationTemplate } from "./fileTemplates"
@@ -29,14 +28,10 @@ export function getNextMigrationFileName(
   name: string,
   migrationFileNames: string[]
 ) {
-  const lastValidMigration = last(
-    getMigrationDetailsAndValidate(migrationFileNames)
-  )
-  const lastSequence = lastValidMigration?.sequence
-  const sequence = lastSequence ? lastSequence + 1 : 1
-  const sequenceString = String(sequence).padStart(4, "0")
+  getMigrationDetailsAndValidate(migrationFileNames)
+  const timestamp = new Date().getTime()
 
-  return `${sequenceString}-${paramCase(name)}`
+  return `${timestamp}-${paramCase(name)}`
 }
 
 export function getMigrationFileData(

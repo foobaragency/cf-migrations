@@ -40,9 +40,9 @@ After initializing your contentful environment, it's time to write some migratio
 npx cf-migrations create create-foo --migrationsDir src/migrations
 ```
 
-It will create a typescript migration file, `src/migrations/0001-create-foo.ts` for example. Use the flag `--useJavascript` or `--js` to create a javascript file instead.
+It will create a typescript migration file, `src/migrations/1660225580514-create-foo.ts` for example. Use the flag `--useJavascript` or `--js` to create a javascript file instead.
 
-Note that the migrations should have a proper sequence number.
+Note that the migrations should have a proper timestamp.
 
 ### 🚚 Deploy migration
 
@@ -88,13 +88,13 @@ Suppose you have the following project where there is a typescript compilation t
 │   ├── tsconfig.json
 │   ├── src/
 │       ├── migrations/
-│           ├── 0001-create-contenty-type.ts
-│           ├── 0002-add-field.ts
+│           ├── 1660225580514-create-contenty-type.ts
+│           ├── 1660225721863-add-field.ts
             ...
 │   ├── dist/
 │       ├── migrations/
-│           ├── 0001-create-contenty-type.js
-│           ├── 0002-add-field.js
+│           ├── 1660225580514-create-contenty-type.js
+│           ├── 1660225721863-add-field.js
             ...
 ...
 ```

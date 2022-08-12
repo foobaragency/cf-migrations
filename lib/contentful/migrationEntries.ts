@@ -6,7 +6,7 @@ import { ContentfulPartialOptions } from "../types"
 import { getClient } from "./client"
 import { MigrationEntry } from "./types"
 
-export async function createMigrationEntries(
+export async function createMigrationEntry(
   fields: MigrationEntry,
   options: ContentfulPartialOptions
 ) {
