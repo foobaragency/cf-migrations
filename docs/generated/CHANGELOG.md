@@ -1,3 +1,14 @@
+## [3.0.0](https://github.com/foobaragency/cf-migrations/compare/v2.0.0...v3.0.0) (2022-08-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate from sequence number to timestamp
+
+### Features
+
+* migrate from sequence number to timestamp ([e3f612f](https://github.com/foobaragency/cf-migrations/commit/e3f612f11bb37453e4962e2abb587b056d31848e))
+
 # [2.0.0](https://github.com/foobaragency/cf-migrations/compare/v1.2.4...v2.0.0) (2021-12-16)
 
 ### Bug Fixes
