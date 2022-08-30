@@ -5,6 +5,13 @@
 
 * docs changelog ([2e83c05](https://github.com/foobaragency/cf-migrations/commit/2e83c05cc253be96ad3fad5c799875f7db5139a4))
 
+## [3.0.1](https://github.com/foobaragency/cf-migrations/compare/v3.0.0...v3.0.1) (2022-08-30)
+
+
+### Bug Fixes
+
+* docs changelog ([2e83c05](https://github.com/foobaragency/cf-migrations/commit/2e83c05cc253be96ad3fad5c799875f7db5139a4))
+
 ## [3.0.0](https://github.com/foobaragency/cf-migrations/compare/v2.0.0...v3.0.0) (2022-08-25)
 
 ### ⚠ BREAKING CHANGES
