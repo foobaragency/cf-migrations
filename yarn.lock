@@ -7594,9 +7594,9 @@ typedoc@^0.23.2:
     shiki "^0.11.1"
 
 typescript-transform-paths@^3.0.0:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/typescript-transform-paths/-/typescript-transform-paths-3.4.1.tgz#5736fbb5a30f0b401e9d292e1a134b99c6af3c3e"
-  integrity sha512-SgCILd/7MMGpOgIt0e0ldTGJmsAZOKr9/Aj74JQfwtV0V2E7fqce5tQV+Ll9jRFgrw5Uiup3QeTFpdv6kST/zA==
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/typescript-transform-paths/-/typescript-transform-paths-3.4.4.tgz#fecb7d441fc96216eb04a17b87847ffbfaeaf54d"
+  integrity sha512-b+6JTpJbO9CxVyt9+fIKXpLNUEyzrKXdflsVo/nXbQqelCYkpSsRdI+ikg3SelyE04rUeKlb+Kdt1D8Doa9JoQ==
   dependencies:
     minimatch "^3.0.4"
 
