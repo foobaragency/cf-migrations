@@ -714,6 +714,11 @@
   dependencies:
     chalk "^4.1.0"
 
+"@contentful/rich-text-types@^16.0.3":
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.0.3.tgz#c590268483e07881fb01b6799e837337093e42bf"
+  integrity sha512-BsUtXj93jo5XUt0YeUwfCkMWRoZIzJDPUIY4vMy9SwGIO9olTsMoQKadjA2ktlmK+Gg6710WH3eFKZxj2q39Iw==
+
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz#00629c35a688e05a88b1cda684fb9d5e73f000a1"
@@ -2982,10 +2987,11 @@ constant-case@^3.0.4:
     upper-case "^2.0.2"
 
 contentful-management@^10.0.0:
-  version "10.30.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-10.30.0.tgz#48edbe726155ed257ab2fc67d8499f7c3b95fc33"
-  integrity sha512-CYeZqezYP7q++EuHgCHKakemsJqCHC784uOWyYp00Rc6+iMw5glK8GjwksbgUsbnZFfCywGyZCj4Xsd4lZ0ZaQ==
+  version "10.31.1"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-10.31.1.tgz#cafff83d72a9cb08b2cdba81b0bde5247c1ae875"
+  integrity sha512-9mC1yVuxv26zufuDhjNHmSxxObDuPI43hEvC85rpgeKhxurd25tbCkRgU84EmfO6+BEHsb8qilknO2Kj7xHy+Q==
   dependencies:
+    "@contentful/rich-text-types" "^16.0.3"
     "@types/json-patch" "0.0.30"
     axios "^0.27.1"
     contentful-sdk-core "^7.0.1"
