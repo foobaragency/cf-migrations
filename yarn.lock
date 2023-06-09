@@ -2783,9 +2783,9 @@ contentful-management@^7.51.5:
     type-fest "^2.5.3"
 
 contentful-migration@^4.5.0:
-  version "4.12.9"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.12.9.tgz#f85104dfe43dec1ea4d32c33840455983661529b"
-  integrity sha512-YIdZjqSpdFzQMhFuDRg3U8+atzTGBY93c+kMRSR7lNmV0Gvf8IXgAOsC81OUJjSPSMXfkeaWOam460y7LRVSww==
+  version "4.13.0"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.13.0.tgz#360c44003458750dd6d3b1b58e3840f0aa12fd4c"
+  integrity sha512-4zxKJykjGuv6ro4RsDH5qQ0B+B/WjulKuAJCrmyyGyt6NT2AyWkElt77NT3crYlphdmmf/qPOQ1e8gl9rkPKBw==
   dependencies:
     "@hapi/hoek" "^10.0.1"
     axios "^0.21.0"
@@ -2801,7 +2801,7 @@ contentful-migration@^4.5.0:
     kind-of "^6.0.3"
     listr2 "^3.13.5"
     lodash "^4.17.15"
-    uuid "^8.3.2"
+    uuid "^9.0.0"
     yargs "^15.3.1"
 
 contentful-sdk-core@^6.10.4:
@@ -8365,10 +8365,10 @@ util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-uuid@^8.3.2:
-  version "8.3.2"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
-  integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+uuid@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
+  integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
 
 v8-compile-cache-lib@^3.0.1:
   version "3.0.1"
