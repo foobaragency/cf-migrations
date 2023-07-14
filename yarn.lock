@@ -2758,9 +2758,9 @@ contentful-management@^7.51.5:
     type-fest "^2.5.3"
 
 contentful-migration@^4.5.0:
-  version "4.14.0"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.14.0.tgz#470c3d0dfa59945188c3fffd8542caefe30443f1"
-  integrity sha512-B/QPjknkLQ+UF+b3si7tjR106FD8p4HJJxJtbRls8BMRNQzGLTnOboIUaqZ/rb6gBtcYh8y4s7iD5+j1YG2P1g==
+  version "4.14.1"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.14.1.tgz#b70043f26e4e9ee8275f956bd9358f931d3fc36f"
+  integrity sha512-QJ/jMU/ybXp2/iThp5LeFdlQRob+zX6+vPmjHNDM1b5Rowj96L8o+Dws8L9gGtTkQ4oYG3iX1grXxAL55q8TNQ==
   dependencies:
     "@hapi/hoek" "^10.0.1"
     axios "^0.21.0"
