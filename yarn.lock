@@ -7964,9 +7964,9 @@ through@2, "through@>=2.2.7 <3", through@^2.3.6, through@^2.3.8:
   integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
 
 timekeeper@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/timekeeper/-/timekeeper-2.2.0.tgz#9645731fce9e3280a18614a57a9d1b72af3ca368"
-  integrity sha512-W3AmPTJWZkRwu+iSNxPIsLZ2ByADsOLbbLxe46UJyWj3mlYLlwucKiq+/dPm0l9wTzqoF3/2PH0AGFCebjq23A==
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/timekeeper/-/timekeeper-2.3.1.tgz#2deb6e0b95d93625fda84c18d47f84a99e4eba01"
+  integrity sha512-LeQRS7/4JcC0PgdSFnfUiStQEdiuySlCj/5SJ18D+T1n9BoY7PxKFfCwLulpHXoLUFr67HxBddQdEX47lDGx1g==
 
 tiny-glob@^0.2.9:
   version "0.2.9"
