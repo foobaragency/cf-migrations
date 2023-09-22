@@ -740,10 +740,10 @@
   dependencies:
     chalk "^4.1.0"
 
-"@contentful/rich-text-types@^16.0.3":
-  version "16.0.3"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.0.3.tgz#c590268483e07881fb01b6799e837337093e42bf"
-  integrity sha512-BsUtXj93jo5XUt0YeUwfCkMWRoZIzJDPUIY4vMy9SwGIO9olTsMoQKadjA2ktlmK+Gg6710WH3eFKZxj2q39Iw==
+"@contentful/rich-text-types@^16.3.0":
+  version "16.3.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.3.0.tgz#d44145a43b32d61eb4d6a82d3001cdfddbbda42e"
+  integrity sha512-OfQmAu5bxE0CgQA3WlUleVej+ifFG/iXmB2DmUl4EyWyFue1aiIvfjxQhcDRSH4n1jUNMJ6L1wInZL8uV5m3TQ==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -2739,11 +2739,11 @@ constant-case@^3.0.4:
     upper-case "^2.0.2"
 
 contentful-management@^10.0.0:
-  version "10.45.1"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-10.45.1.tgz#7d88ac7634d5543d24686610da26555609fb5ba6"
-  integrity sha512-jErN1sgxQRwbJ2l/B9CWvwPjp7T1JZuhyD1YPB+WUxp8mcF8iYXtot0Gf24kDb2Qcct55NkAP9TQgbHjMBvlTw==
+  version "10.46.2"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-10.46.2.tgz#0cb5a35c6ac789f8a0d29012a5c41ddc6d5e5f2b"
+  integrity sha512-2ob6epeYI0iCKSortNBnxhJKJtHKIUn63cZJODSELCW60ZNPWtWx279kRD68hLLD/NSxnbW4/rqxepBO2EPeUA==
   dependencies:
-    "@contentful/rich-text-types" "^16.0.3"
+    "@contentful/rich-text-types" "^16.3.0"
     "@types/json-patch" "0.0.30"
     axios "^1.4.0"
     contentful-sdk-core "^8.1.0"
