@@ -1687,9 +1687,9 @@
     "@babel/types" "^7.3.0"
 
 "@types/fs-extra@^11.0.1":
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-11.0.2.tgz#23dc1ed7b2eba8ccd75568ac34e7a4e48aa2d087"
-  integrity sha512-c0hrgAOVYr21EX8J0jBMXGLMgJqVf/v6yxi0dLaJboW9aQPh16Id+z6w2Tx1hm+piJOLv8xPfVKZCLfjPw/IMQ==
+  version "11.0.3"
+  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-11.0.3.tgz#72c3a247c8dd5703c93d900c584e006476146866"
+  integrity sha512-sF59BlXtUdzEAL1u0MSvuzWd7PdZvZEtnaVkzX5mjpdWTJ8brG0jUqve3jPCzSzvAKKMHTG8F8o/WMQLtleZdQ==
   dependencies:
     "@types/jsonfile" "*"
     "@types/node" "*"
@@ -1773,12 +1773,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.2.tgz#ee771e2ba4b3dc5b372935d549fd9617bf345b8c"
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
-"@types/node@*":
-  version "20.4.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.7.tgz#74d323a93f1391a63477b27b9aec56669c98b2ab"
-  integrity sha512-bUBrPjEry2QUTsnuEjzjbS7voGWCc30W0qzgMf90GPeDGFRakvrz47ju+oqDAKCXLUCe39u57/ORMl/O/04/9g==
-
-"@types/node@20.5.1":
+"@types/node@*", "@types/node@20.5.1":
   version "20.5.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.5.1.tgz#178d58ee7e4834152b0e8b4d30cbfab578b9bb30"
   integrity sha512-4tT2UrL5LBqDwoed9wZ6N3umC4Yhz3W3FloMmiiG4JwmUJWpie0c7lcnUNd4gtMKuDEO4wRVS8B6Xa0uMRsMKg==
