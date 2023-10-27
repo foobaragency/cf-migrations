@@ -2606,9 +2606,9 @@ chalk@^5.3.0:
   integrity sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==
 
 change-case@^5.0.2:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/change-case/-/change-case-5.1.0.tgz#49754b58fdbda90547c696b69233e6fa2795464f"
-  integrity sha512-YLRzoiIO62vpoI8Qy2Jfy3gLu++QfhIcNtMOAwCbIel5UQGp6/KbL7Yu309dwNQHwbI1ZW39uBFyhrwVzXJSJQ==
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/change-case/-/change-case-5.1.2.tgz#1a1feb43f88b7595c6e8db44b5a27b24fa8a9ebd"
+  integrity sha512-CAtbGEDulyjzs05RXy3uKcwqeztz/dMEuAc1Xu9NQBsbrhuGMneL0u9Dj5SoutLKBFYun8txxYIwhjtLNfUmCA==
 
 char-regex@^1.0.2:
   version "1.0.2"
