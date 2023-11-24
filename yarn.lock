@@ -2891,9 +2891,9 @@ console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 contentful-management@^11.2.0:
-  version "11.5.3"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.5.3.tgz#a15b218423dff4117c0daae607cd35267ae39bd8"
-  integrity sha512-pcF7gR8kwLqGH4E41SwZ7IBxKI+hS0BmEx7gY1UOFnFldiCxfZ0EKNN+6zxeZEjkFLUeZ762nfQjkxhJMFmjFA==
+  version "11.5.4"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.5.4.tgz#074279b343a1ddaf10a2156112397fa5ff31923b"
+  integrity sha512-VopfVqyzE+U5MBsDkwbrP+v9+vOZzx6q4cNTpcJWLmXU1CXcOhU9oFWbwlQXhkr+GYYpvnU9nPlU2R1KLxguIg==
   dependencies:
     "@contentful/rich-text-types" "^16.3.0"
     "@types/json-patch" "0.0.30"
