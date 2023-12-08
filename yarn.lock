@@ -2271,10 +2271,10 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-axios@^1.4.0, axios@^1.5.1:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.0.tgz#f1e5292f26b2fd5c2e66876adc5b06cdbd7d2102"
-  integrity sha512-EZ1DYihju9pwVB+jg67ogm+Tmqc6JmhamRN6I4Zt8DfZu5lbcQGw3ozH9lFejSJgs/ibaef3A9PMXPLeefFGJg==
+axios@^1.5.1, axios@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.2.tgz#de67d42c755b571d3e698df1b6504cde9b0ee9f2"
+  integrity sha512-7i24Ri4pmDRfJTR7LDBhsOTtcm+9kjX5WiY1X3wIisx6G9So3pfMkEiU7emUBe46oceVImccTEM3k6C5dbVW8A==
   dependencies:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
@@ -2891,13 +2891,13 @@ console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 contentful-management@^11.2.0:
-  version "11.5.4"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.5.4.tgz#074279b343a1ddaf10a2156112397fa5ff31923b"
-  integrity sha512-VopfVqyzE+U5MBsDkwbrP+v9+vOZzx6q4cNTpcJWLmXU1CXcOhU9oFWbwlQXhkr+GYYpvnU9nPlU2R1KLxguIg==
+  version "11.6.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.6.0.tgz#ac03e66cfb41f221c683e5b23cccc115a33a78c7"
+  integrity sha512-rx95DhTSLQBJTCos5jd0GTitY3PyJRHI+h+EKr/wfbaxqrYl+o7Wopr8Lgl3QGlkt3DtuHMwF8fc+6tlmSnL1A==
   dependencies:
     "@contentful/rich-text-types" "^16.3.0"
     "@types/json-patch" "0.0.30"
-    axios "^1.4.0"
+    axios "^1.6.2"
     contentful-sdk-core "^8.1.0"
     fast-copy "^3.0.0"
     lodash.isplainobject "^4.0.6"
