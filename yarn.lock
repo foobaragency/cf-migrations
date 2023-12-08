@@ -813,10 +813,10 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
-"@hapi/hoek@^10.0.1":
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-10.0.1.tgz#ee9da297fabc557e1c040a0f44ee89c266ccc306"
-  integrity sha512-CvlW7jmOhWzuqOqiJQ3rQVLMcREh0eel4IBnxDx2FAcK8g7qoJRQK4L1CPBASoCY6y8e6zuCy3f2g+HWdkzcMw==
+"@hapi/hoek@^11.0.4":
+  version "11.0.4"
+  resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-11.0.4.tgz#42a7f244fd3dd777792bfb74b8c6340ae9182f37"
+  integrity sha512-PnsP5d4q7289pS2T2EgGz147BFJ2Jpb4yrEdkpz2IhgEUzos1S7HTl7ezWh1yfYzYlj89KzLdCRkqsP6SIryeQ==
 
 "@hapi/hoek@^9.0.0":
   version "9.2.1"
@@ -2271,7 +2271,7 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-axios@^1.5.1, axios@^1.6.2:
+axios@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.2.tgz#de67d42c755b571d3e698df1b6504cde9b0ee9f2"
   integrity sha512-7i24Ri4pmDRfJTR7LDBhsOTtcm+9kjX5WiY1X3wIisx6G9So3pfMkEiU7emUBe46oceVImccTEM3k6C5dbVW8A==
@@ -2890,7 +2890,7 @@ console-control-strings@^1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
-contentful-management@^11.2.0:
+contentful-management@^11.2.0, contentful-management@^11.5.7:
   version "11.6.0"
   resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.6.0.tgz#ac03e66cfb41f221c683e5b23cccc115a33a78c7"
   integrity sha512-rx95DhTSLQBJTCos5jd0GTitY3PyJRHI+h+EKr/wfbaxqrYl+o7Wopr8Lgl3QGlkt3DtuHMwF8fc+6tlmSnL1A==
@@ -2904,17 +2904,17 @@ contentful-management@^11.2.0:
     type-fest "^4.0.0"
 
 contentful-migration@^4.5.0:
-  version "4.17.4"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.17.4.tgz#3912ba5b19c03bd91699e09fd5e143305b503ba9"
-  integrity sha512-VlTPKOd/QefE6VN0P7vz/OaSm0BaMaTiNVCxmrHh9xPvDYakLE30HqgbZU1GsxEfmBVEHggWM5UAfKWLj44EDw==
+  version "4.18.1"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.18.1.tgz#289a293df549d43f60e25c9ca71451a80a8837d3"
+  integrity sha512-8egTg1UszUg6oCVj6RUjp47O6ZRPP+XlSes0wuAga0sF+FJa7gaRx6lm1Ipt8n1r8w83kqwjFVPcidu5HkeFVA==
   dependencies:
-    "@hapi/hoek" "^10.0.1"
-    axios "^1.5.1"
+    "@hapi/hoek" "^11.0.4"
+    axios "^1.6.2"
     bluebird "^3.7.2"
     callsites "^3.1.0"
     cardinal "^2.1.1"
     chalk "^4.0.0"
-    contentful-management "^11.2.0"
+    contentful-management "^11.5.7"
     didyoumean2 "^5.0.0"
     https-proxy-agent "^5.0.0"
     inquirer "^8.1.2"
