@@ -2879,10 +2879,10 @@ console-control-strings@^1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
-contentful-management@^11.2.0, contentful-management@^11.5.7:
-  version "11.16.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.16.0.tgz#9708ffaa2063e70079b6a064ef92d88b2cc68821"
-  integrity sha512-NIo8MxDDNLKiUvqWDcW1Zga3h6Y06hDt7jPgh4jPyit3Q3zNeBjkpMqrLcUdsJsiXZ8hdZ23rF3Pi0HDyy5opA==
+contentful-management@^11.15.0, contentful-management@^11.2.0:
+  version "11.19.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.19.0.tgz#5ae523c09df6735963ba4b7a96b3f0d91969e50a"
+  integrity sha512-orkum+K2adRaljfANI0XgoxYO8e0f+YPCjRlBLK0xDiSAcMbfXMf3zXP3BL6g/TtK25P4J/FMxIr1s/Lh4vs1w==
   dependencies:
     "@contentful/rich-text-types" "^16.3.0"
     "@types/json-patch" "0.0.30"
@@ -2893,9 +2893,9 @@ contentful-management@^11.2.0, contentful-management@^11.5.7:
     type-fest "^4.0.0"
 
 contentful-migration@^4.5.0:
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.20.0.tgz#f159cbee07d44442f954845ec0ac4423d2cc1c02"
-  integrity sha512-/ArjAAsK7ImpTl9mJGXg8uwyrVFJz25O8nsIgvC+841FcH/MSypo9cJhtevXgVb7cOx80NV/WVtKzsGeKouoDw==
+  version "4.20.1"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.20.1.tgz#987076c9a82636c266e6d358ad24691cfb8a244a"
+  integrity sha512-ltExuTO/8FFWpOHl9i2SkTW7jp3SE91iF1Oj7V9bqBf2WhUGNzgLfizi90NLyJcIAymo/h1TzrZP8dRCsY0x+A==
   dependencies:
     "@hapi/hoek" "^11.0.4"
     axios "^1.6.2"
@@ -2903,7 +2903,7 @@ contentful-migration@^4.5.0:
     callsites "^3.1.0"
     cardinal "^2.1.1"
     chalk "^4.0.0"
-    contentful-management "^11.5.7"
+    contentful-management "^11.15.0"
     didyoumean2 "^5.0.0"
     https-proxy-agent "^5.0.0"
     inquirer "^8.1.2"
