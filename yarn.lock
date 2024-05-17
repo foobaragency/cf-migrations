@@ -3833,14 +3833,7 @@ figures@^3.0.0:
   dependencies:
     escape-string-regexp "^1.0.5"
 
-figures@^6.0.0:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/figures/-/figures-6.0.1.tgz#75a2baf3ca8c63e2ea253179e9f1157833587ea4"
-  integrity sha512-0oY/olScYD4IhQ8u//gCPA4F3mlTn2dacYmiDm/mbDQvpmLjV4uH+zhsQ5IyXRyvqkvtUkXkNdGvg5OFJTCsuQ==
-  dependencies:
-    is-unicode-supported "^2.0.0"
-
-figures@^6.1.0:
+figures@^6.0.0, figures@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/figures/-/figures-6.1.0.tgz#935479f51865fa7479f6fa94fc6fc7ac14e62c4a"
   integrity sha512-d+l3qxjSesT4V7v2fh+QnmFnUWv9lSpjarhShNTgBOfA0ttejbQUAlHLitbjkoRiDulW0OPoQPYIGhIC8ohejg==
@@ -7605,9 +7598,9 @@ saxes@^5.0.1:
     xmlchars "^2.2.0"
 
 semantic-release@^23.0.0:
-  version "23.0.8"
-  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-23.0.8.tgz#4a7d0b6de75d983082583502a257cc5646165800"
-  integrity sha512-yZkuWcTTfh5h/DrR4Q4QvJSARJdb6wjwn/sN0qKMYEkvwaVFek8YWfrgtL8oWaRdl0fLte0Y1wWMzLbwoaII1g==
+  version "23.1.1"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-23.1.1.tgz#5c1a058748f4001f1c730716134a70b9e8e5b311"
+  integrity sha512-qqJDBhbtHsjUEMsojWKGuL5lQFCJuPtiXKEIlFKyTzDDGTAE/oyvznaP8GeOr5PvcqBJ6LQz4JCENWPLeehSpA==
   dependencies:
     "@semantic-release/commit-analyzer" "^12.0.0"
     "@semantic-release/error" "^4.0.0"
@@ -7618,7 +7611,7 @@ semantic-release@^23.0.0:
     cosmiconfig "^9.0.0"
     debug "^4.0.0"
     env-ci "^11.0.0"
-    execa "^8.0.0"
+    execa "^9.0.0"
     figures "^6.0.0"
     find-versions "^6.0.0"
     get-stream "^6.0.0"
