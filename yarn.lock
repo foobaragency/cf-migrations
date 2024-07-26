@@ -740,10 +740,10 @@
     "@types/conventional-commits-parser" "^5.0.0"
     chalk "^5.3.0"
 
-"@contentful/rich-text-types@^16.3.0":
-  version "16.3.0"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.3.0.tgz#d44145a43b32d61eb4d6a82d3001cdfddbbda42e"
-  integrity sha512-OfQmAu5bxE0CgQA3WlUleVej+ifFG/iXmB2DmUl4EyWyFue1aiIvfjxQhcDRSH4n1jUNMJ6L1wInZL8uV5m3TQ==
+"@contentful/rich-text-types@^16.6.1":
+  version "16.8.2"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.8.2.tgz#0ee44036a90fe382ce857c3270ed6a0d9e00de57"
+  integrity sha512-telNNx+VLVS78KcgN+HO2zj7HCGTokV3HRzjsD6oqXQEy863zB4nkDFc0cxCO5uDouGJfs0e7O+wX7HZQ30yaQ==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -1807,11 +1807,6 @@
   dependencies:
     jest-matcher-utils "^27.0.0"
     pretty-format "^27.0.0"
-
-"@types/json-patch@0.0.30":
-  version "0.0.30"
-  resolved "https://registry.yarnpkg.com/@types/json-patch/-/json-patch-0.0.30.tgz#7c562173216c50529e70126ceb8e7a533f865e9b"
-  integrity sha512-MhCUjojzDhVLnZnxwPwa+rETFRDQ0ffjxYdrqOP6TBO2O0/Z64PV5tNeYApo4bc4y4frbWOrRwv/eEkXlI13Rw==
 
 "@types/json-schema@^7.0.9":
   version "7.0.9"
@@ -2936,17 +2931,14 @@ console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 contentful-management@^11.15.0, contentful-management@^11.2.0:
-  version "11.29.1"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.29.1.tgz#958e79a4da650b44f7a5904dfa931aa42ce8862d"
-  integrity sha512-0o5IiKf0xUrz6XVl4cLJAxtBFNKWgpReqr+aCTjvvwIac82gkJT0j8JQKblOUHvfiUkr2fxRiJKIEf6I7jsSfg==
+  version "11.30.2"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.30.2.tgz#a0fdcb0732fe5213cafd36373c84930939bf4ea7"
+  integrity sha512-x/pWyxH9LfenRVN7H9vnx/JDShWz/L960KW9WrkyNZzisEyAZJYwp/TVHzqvNqxL8rZZgJLUA6lFm/2Z/KGKAw==
   dependencies:
-    "@contentful/rich-text-types" "^16.3.0"
-    "@types/json-patch" "0.0.30"
+    "@contentful/rich-text-types" "^16.6.1"
     axios "^1.7.2"
     contentful-sdk-core "^8.3.1"
     fast-copy "^3.0.0"
-    lodash.isplainobject "^4.0.6"
-    type-fest "^4.0.0"
 
 contentful-migration@^4.5.0:
   version "4.23.0"
@@ -8584,7 +8576,7 @@ type-fest@^3.0.0:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-3.13.1.tgz#bb744c1f0678bea7543a2d1ec24e83e68e8c8706"
   integrity sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==
 
-type-fest@^4.0.0, type-fest@^4.6.0:
+type-fest@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.6.0.tgz#9c575f7e20530defef4f9cdc5e2c85d6e4ea0fc9"
   integrity sha512-rLjWJzQFOq4xw7MgJrCZ6T1jIOvvYElXT12r+y0CC6u67hegDHaxcPqb2fZHOGlqxugGQPNB1EnTezjBetkwkw==
