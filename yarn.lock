@@ -8644,11 +8644,11 @@ typedoc@^0.26.3:
     yaml "^2.4.5"
 
 typescript-transform-paths@^3.0.0:
-  version "3.4.7"
-  resolved "https://registry.yarnpkg.com/typescript-transform-paths/-/typescript-transform-paths-3.4.7.tgz#1deaf976fb1b7a70fb26b541356017057c0c17a5"
-  integrity sha512-1Us1kdkdfKd2unbkBAOV2HHRmbRBYpSuk9nJ7cLD2hP4QmfToiM/VpxNlhJc1eezVwVqSKSBjNSzZsK/fWR/9A==
+  version "3.4.10"
+  resolved "https://registry.yarnpkg.com/typescript-transform-paths/-/typescript-transform-paths-3.4.10.tgz#c8e538a6cb662eeabac43555e02829ff59e0a0a9"
+  integrity sha512-OPBjXDnwX/B4JzewvRAzEzcNK+hQn/JonCfUN93VARsFQcj/wk//4RJ3FPp/SgzsT1s1EJJhOass5grxy8Y2yA==
   dependencies:
-    minimatch "^3.0.4"
+    minimatch "^3.1.2"
 
 typescript@^4.2.4:
   version "4.9.5"
