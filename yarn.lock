@@ -3056,9 +3056,9 @@ contentful-management@^11.15.0, contentful-management@^11.2.0:
     fast-copy "^3.0.0"
 
 contentful-migration@^4.5.0:
-  version "4.23.2"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.23.2.tgz#0ca0bf9c900e836d5759eabf3ea4db037388d1ba"
-  integrity sha512-AL4Ol4uPg7M5gJkKOzPYhlRGbihosJTvLdFxATvf2ssZ7y05wOU3ELoOM9mxpOgLz2A5O03jdCDupgBzDgy2Bg==
+  version "4.24.0"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.24.0.tgz#25e68e6b3baa0a5df366f633d5af3352566226fb"
+  integrity sha512-5lIIgmAYpMrjfGA/tc4PnVRKhtLq8NXSPGtJcuMFW2sQrHMW/jiTiAbjJbdmYP/Y0MtbTqP0FzCQEgVmECmIuA==
   dependencies:
     "@hapi/hoek" "^11.0.4"
     axios "^1.6.2"
