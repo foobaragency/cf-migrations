@@ -2400,10 +2400,10 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-axios@^1.6.2, axios@^1.7.4:
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.4.tgz#4c8ded1b43683c8dd362973c393f3ede24052aa2"
-  integrity sha512-DukmaFRnY6AzAALSH4J2M3k6PkaC+MfaAGdEERRWcC9q3/TWQwLpHR8ZRLKTdQ3aBDL64EdluRDjJqKw+BPZEw==
+axios@^1.7.4, axios@^1.7.7:
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.7.tgz#2f554296f9892a72ac8d8e4c5b79c14a91d0a47f"
+  integrity sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
@@ -3045,7 +3045,7 @@ console-control-strings@^1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
-contentful-management@^11.15.0, contentful-management@^11.2.0:
+contentful-management@^11.2.0, contentful-management@^11.35.1:
   version "11.35.1"
   resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.35.1.tgz#0a99d3ea4b5ff7c0191bcf3a5f0bd0a99a2575db"
   integrity sha512-PBOFpeOCzwx7+PQtHhgFRNB8wnlgUKUj+3rTucaMIYot5l9YA4804P9VYWq6Mg8/PJnFjavQrtay6HtqWDyYMw==
@@ -3056,17 +3056,17 @@ contentful-management@^11.15.0, contentful-management@^11.2.0:
     fast-copy "^3.0.0"
 
 contentful-migration@^4.5.0:
-  version "4.25.0"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.25.0.tgz#e935295f348d6b8b2d1e801c355a3c0744e603a4"
-  integrity sha512-fhOXzIF8ZeP0pEpw2bhAiTrxgiJ6h+rq867Wke5q5/1IcXZUXkuMGA3BkYMbsbBazpbtk20Eb9onfBflZwYERw==
+  version "4.25.2"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.25.2.tgz#c98b745a8475b95d2e22aef59ea9eb42e6b4d069"
+  integrity sha512-wL3nTLYH1ogcEZN0XYumdgGTVjjd8+D/abWTS7QfH5P4CvXl5blkTfm/JeLyruJm6X9p/hJAMFKOOmj8NeDjcQ==
   dependencies:
     "@hapi/hoek" "^11.0.4"
-    axios "^1.6.2"
+    axios "^1.7.7"
     bluebird "^3.7.2"
     callsites "^3.1.0"
     cardinal "^2.1.1"
     chalk "^4.0.0"
-    contentful-management "^11.15.0"
+    contentful-management "^11.35.1"
     didyoumean2 "^5.0.0"
     https-proxy-agent "^5.0.0"
     inquirer "^8.1.2"
