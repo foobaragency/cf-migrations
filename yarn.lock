@@ -2405,7 +2405,7 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-axios@^1.7.7, axios@^1.7.9:
+axios@^1.7.9:
   version "1.7.9"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.9.tgz#d7d071380c132a24accda1b2cfc1535b79ec650a"
   integrity sha512-LhLcE7Hbiryz8oMDdDptSrWowmB4Bl6RCt6sIJKpRB4XtVf0iEgewX3au/pJqm+Py1kCASkb/FFKjxQaLtxJvw==
@@ -3050,7 +3050,7 @@ console-control-strings@^1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
-contentful-management@^11.2.0, contentful-management@^11.35.1:
+contentful-management@^11.2.0, contentful-management@^11.40.3:
   version "11.40.5"
   resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.40.5.tgz#f6e97b46ff6316bdcf2bd2c7528c060ba28e63a2"
   integrity sha512-wTYaV5Cq5xszSfhbiAArnjZviV5uVo3Be5qTO2LE6uQCaB2NzLykGNxDP4EHR1VPehAhSPjsxx6wLYByaBarrw==
@@ -3061,17 +3061,17 @@ contentful-management@^11.2.0, contentful-management@^11.35.1:
     fast-copy "^3.0.0"
 
 contentful-migration@^4.5.0:
-  version "4.26.1"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.26.1.tgz#c6ac3302e97da8b229074f0d09fac011b7a18bb6"
-  integrity sha512-oHZVgtCSh+I5t3uCe9OVlQYAX3+wAiefJRBWWf49TA0Uc1yfS9+skF8ceXsPO8twXTuU9H29vSWHb1S8HGcX+w==
+  version "4.26.3"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.26.3.tgz#1f4ec867f701d2b2f9e7ffac32df06047408561f"
+  integrity sha512-BROeeJMeZ1uNPseCLMYApbM8kGkBd2Y6VWQhnxCiNq5rwllY4xtvtEO/Jxx4XOW+WuvWZ9vS4EF3VVqM8PdXnQ==
   dependencies:
     "@hapi/hoek" "^11.0.4"
-    axios "^1.7.7"
+    axios "^1.7.9"
     bluebird "^3.7.2"
     callsites "^3.1.0"
     cardinal "^2.1.1"
     chalk "^4.0.0"
-    contentful-management "^11.35.1"
+    contentful-management "^11.40.3"
     didyoumean2 "^5.0.0"
     https-proxy-agent "^5.0.0"
     inquirer "^8.1.2"
