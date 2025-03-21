@@ -9248,9 +9248,9 @@ typedoc@^0.26.3:
     yaml "^2.5.1"
 
 typescript-transform-paths@^3.0.0:
-  version "3.5.4"
-  resolved "https://registry.yarnpkg.com/typescript-transform-paths/-/typescript-transform-paths-3.5.4.tgz#b7ea606813c7dd4769266d37abfafdb352cff04b"
-  integrity sha512-Yw/cLiwAlaTIYvO3wbCqiBIppTzsY45CBi1y+oedjtgcGMIy4xmI9ylkFiDlX2jqMqA1SY58vFPI4Y8VKkBCpA==
+  version "3.5.5"
+  resolved "https://registry.yarnpkg.com/typescript-transform-paths/-/typescript-transform-paths-3.5.5.tgz#72f473017a687a08ac72177e72926349d53ff436"
+  integrity sha512-RMK86wKe/4+ad+3kMT9SKAs3K0tUHLe7hF+MLbD6VpC9VUmFuKorhf3pHz+qO5GdS4mUp2ncNUo14j6ws9UvBQ==
   dependencies:
     minimatch "^9.0.5"
 
