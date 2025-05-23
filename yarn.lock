@@ -499,12 +499,10 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/runtime@^7.10.2":
-  version "7.26.10"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.26.10.tgz#a07b4d8fa27af131a633d7b3524db803eb4764c2"
-  integrity sha512-2WJMeRQPHKSPemqk/awGrAiuFfzBmOIPXKizAsVhWH9YJqLZ0H+HS4c8loHGgW6utJ3E/ejXQUsiGaQy2NZ9Fw==
-  dependencies:
-    regenerator-runtime "^0.14.0"
+"@babel/runtime@^7.24.8":
+  version "7.27.1"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.27.1.tgz#9fce313d12c9a77507f264de74626e87fd0dc541"
+  integrity sha512-1x3D2xEk2fRo3PAhwQwu5UubzgiVWSXTBfWpVd2Mx2AzRqJuDJCsgaDVZ7HB5iGzDW1Hl1sWN2mFyKjmR9uAog==
 
 "@babel/template@^7.15.4", "@babel/template@^7.3.3":
   version "7.15.4"
@@ -731,7 +729,7 @@
   dependencies:
     find-up "^7.0.0"
 
-"@commitlint/types@^19.8.0", "@commitlint/types@^19.8.1":
+"@commitlint/types@^19.8.1":
   version "19.8.1"
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-19.8.1.tgz#7971fbd56b0cfb31692a4e1941b74ac8217c44e5"
   integrity sha512-/yCrWGCoA1SVKOks25EGadP9Pnj0oAIHGpl2wH2M2Y46dPM2ueb8wyCVOD7O3WCTkaJ0IkKvzhl1JY7+uCT2Dw==
@@ -3183,9 +3181,9 @@ contentful-management@^11.2.0, contentful-management@^11.48.1:
     globals "^15.15.0"
 
 contentful-migration@^4.5.0:
-  version "4.28.4"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.28.4.tgz#d4bdd898d7712d8461d1fca6dbcf00a8ac282804"
-  integrity sha512-NoOBPjIogmiG/mJyglS+hn6EUCYJsquUR8qFZR8ZDlob6ExjXuXJKmvMYpZDAvJ1ryTsJj2MFPyWg62d6ATx3w==
+  version "4.28.6"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.28.6.tgz#bcde92938f807ab2a6c7db793d1e17b1f3bb1434"
+  integrity sha512-QBxpyzMZikB+33drG6T5yND4ZLv497KYqg8cZTIk4lF5IfIJBJU6obrlxOs8UCFZe1qPZCxCmLz0Yop/05g5lA==
   dependencies:
     "@hapi/hoek" "^11.0.4"
     axios "^1.8.4"
@@ -3194,7 +3192,7 @@ contentful-migration@^4.5.0:
     cardinal "^2.1.1"
     chalk "^4.0.0"
     contentful-management "^11.48.1"
-    didyoumean2 "^5.0.0"
+    didyoumean2 "^7.0.4"
     https-proxy-agent "^5.0.0"
     inquirer "^8.1.2"
     joi "^17.4.0"
@@ -3571,13 +3569,13 @@ devlop@^1.0.0:
   dependencies:
     dequal "^2.0.0"
 
-didyoumean2@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/didyoumean2/-/didyoumean2-5.0.0.tgz#84cc03b42f1b04beff13f3f69edca2a0daf3e998"
-  integrity sha512-Plha9WCF08aSGB39IsOhlk0AHecwcXtq/gMbHgylRNEv7JV3lnlt7akfdax7mnUHndEuuh57CmBaKSSXns7+YA==
+didyoumean2@^7.0.4:
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/didyoumean2/-/didyoumean2-7.0.4.tgz#fa9f63c0435823aa5e3f08aab25fd0328f47576b"
+  integrity sha512-+yW4SNY7W2DOWe2Jx5H4c2qMTFbLGM6wIyoDPkAPy66X+sD1KfYjBPAIWPVsYqMxelflaMQCloZDudELIPhLqA==
   dependencies:
-    "@babel/runtime" "^7.10.2"
-    fastest-levenshtein "^1.0.12"
+    "@babel/runtime" "^7.24.8"
+    fastest-levenshtein "^1.0.16"
     lodash.deburr "^4.1.0"
 
 diff-sequences@^27.5.1:
@@ -4203,11 +4201,6 @@ fast-levenshtein@^2.0.6, fast-levenshtein@~2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
-
-fastest-levenshtein@^1.0.12:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/fastest-levenshtein/-/fastest-levenshtein-1.0.12.tgz#9990f7d3a88cc5a9ffd1f1745745251700d497e2"
-  integrity sha512-On2N+BpYJ15xIC974QNVuYGMOlEVt4s0EOI3wwMqOmK1fdDY+FN/zltPV8vosq4ad4c/gJ1KHScUn/6AWIgiow==
 
 fastest-levenshtein@^1.0.16:
   version "1.0.16"
@@ -8057,11 +8050,6 @@ redeyed@~2.1.0:
   integrity sha1-iYS1gV2ZyyIEacme7v/jiRPmzAs=
   dependencies:
     esprima "~4.0.0"
-
-regenerator-runtime@^0.14.0:
-  version "0.14.1"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz#356ade10263f685dda125100cd862c1db895327f"
-  integrity sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==
 
 regex@^4.3.2:
   version "4.3.2"
