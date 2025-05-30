@@ -81,7 +81,7 @@
     "fast-glob": "^3.2.7",
     "fs-extra": "^11.1.0",
     "lodash": "^4.17.21",
-    "yargs": "^17.0.1"
+    "yargs": "^18.0.0"
   },
   "release": {
     "branches": [
