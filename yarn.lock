@@ -2449,13 +2449,13 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-axios@^1.8.4:
-  version "1.8.4"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.8.4.tgz#78990bb4bc63d2cae072952d374835950a82f447"
-  integrity sha512-eBSYY4Y68NNlHbHBMdeDmKNtDgXWhQsJcGqzO3iLUM0GraQFSS9cVgPX5I9b3lbdFKyYoAEGAZF1DwhTaljNAw==
+axios@^1.11.0, axios@^1.8.4:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.11.0.tgz#c2ec219e35e414c025b2095e8b8280278478fdb6"
+  integrity sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==
   dependencies:
     follow-redirects "^1.15.6"
-    form-data "^4.0.0"
+    form-data "^4.0.4"
     proxy-from-env "^1.1.0"
 
 babel-jest@^27.5.1:
@@ -3071,12 +3071,12 @@ config-chain@^1.1.11:
     proto-list "~1.2.1"
 
 contentful-management@^11.2.0, contentful-management@^11.48.1:
-  version "11.54.3"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.54.3.tgz#7fa25a36f64a7077b2a5d91bbf295ac32dca9f29"
-  integrity sha512-/2aGKLBW5pUytB4Q3mpza80wgs5rf9Rg+q/ps0txrWgWQBbE1ZSeX5Yg6e+ogVIKvV28JgfBKRndAVZE4LFdaw==
+  version "11.54.4"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.54.4.tgz#0bf338cae388e9af4ac8d0f6e0f93bda91572501"
+  integrity sha512-h1+aIj0xHVK3aDn6KkDOmCGO5kqwElgEEELel6EZC4skJkBOHU5DACdHc3thkhua5hbSufExNjmwdmN4TLFb8w==
   dependencies:
     "@contentful/rich-text-types" "^16.6.1"
-    axios "^1.8.4"
+    axios "^1.11.0"
     contentful-sdk-core "^9.0.1"
     fast-copy "^3.0.0"
     globals "^15.15.0"
@@ -4413,13 +4413,15 @@ form-data@^3.0.0:
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
-form-data@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
-  integrity sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==
+form-data@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.4.tgz#784cdcce0669a9d68e94d11ac4eea98088edd2c4"
+  integrity sha512-KrGhL9Q4zjj0kiUt5OO4Mr/A/jlI2jDYs5eHBpYHPcBEVSiipAvn2Ko2HnPe20rmcuuvMHNdZFp+4IlGTMF0Ow==
   dependencies:
     asynckit "^0.4.0"
     combined-stream "^1.0.8"
+    es-set-tostringtag "^2.1.0"
+    hasown "^2.0.2"
     mime-types "^2.1.12"
 
 from2@^2.3.0:
