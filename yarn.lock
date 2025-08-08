@@ -2449,7 +2449,7 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-axios@^1.11.0, axios@^1.8.4:
+axios@^1.11.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.11.0.tgz#c2ec219e35e414c025b2095e8b8280278478fdb6"
   integrity sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==
@@ -3077,9 +3077,9 @@ contentful-management@^11.2.0, contentful-management@^11.48.1:
     globals "^15.15.0"
 
 contentful-migration@^4.5.0:
-  version "4.29.1"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.29.1.tgz#e15e42a5649094a8288d8bc9f87ac5c951500906"
-  integrity sha512-A0tw/mZqgPSjMV5qmdO/P4+OuPd3CX3uqE91u8TxmqsxAeg5jo8T+n5Cn5zytlwrmbbIIuDLfMHAxVcEDpM+oQ==
+  version "4.30.0"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.30.0.tgz#78b43ee8159834a5559b7656e666044891711240"
+  integrity sha512-yLGHpNF5QGpzKelRQ2or5JnUEKGv0vWJRl2ZzJcMzMm/89Sb8j+XUWKnFigNTYJL1I22k5v1L4a8OTQ6rOHUIg==
   dependencies:
     "@hapi/hoek" "^11.0.4"
     axios "^1.11.0"
