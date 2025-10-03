@@ -2452,10 +2452,10 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-axios@^1.11.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.12.0.tgz#11248459be05a5ee493485628fa0e4323d0abfc3"
-  integrity sha512-oXTDccv8PcfjZmPGlWsPSwtOJCZ/b6W5jAMCNcfwJbCzDckwG0jrYJFaWH1yvivfCXjVzV/SPDEhMB3Q+DSurg==
+axios@^1.11.0, axios@^1.12.2:
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.12.2.tgz#6c307390136cf7a2278d09cec63b136dfc6e6da7"
+  integrity sha512-vMJzPewAlRyOgxV2dU0Cuz2O8zzzx9VYtbJOaBgXFeLc4IV/Eg50n4LowmehOOR61S8ZMpc2K5Sa7g6A4jfkUw==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.4"
@@ -3080,12 +3080,12 @@ contentful-management@^11.2.0, contentful-management@^11.48.1:
     globals "^15.15.0"
 
 contentful-migration@^4.5.0:
-  version "4.31.2"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.31.2.tgz#6be9615f73e6e22ce66477fae1b99d892abb0cca"
-  integrity sha512-xYCWZRL1qCF7IcXAhAEf5p0zefvOrtQq992OmbjUG20UHzJxLyCF6E6Xt+MARdX/7N48gZVJFqMU0RiICEAxYw==
+  version "4.31.5"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.31.5.tgz#b6a5b6bc090938d3341e0a85ed119c9de39445cd"
+  integrity sha512-iwW7UEqv6CeZLGRKCU0gKqZRkT4dCKrFDOhFtIInaRw5DExy12unGbfvoeAKRN7OPY9JFwoe8qGQOyow1XIk+Q==
   dependencies:
     "@hapi/hoek" "^11.0.4"
-    axios "^1.11.0"
+    axios "^1.12.2"
     bluebird "^3.7.2"
     callsites "^3.1.0"
     cardinal "^2.1.1"
