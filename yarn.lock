@@ -9700,9 +9700,9 @@ typedoc@^0.26.3:
     yaml "^2.5.1"
 
 typescript-transform-paths@^3.0.0:
-  version "3.5.5"
-  resolved "https://registry.yarnpkg.com/typescript-transform-paths/-/typescript-transform-paths-3.5.5.tgz#72f473017a687a08ac72177e72926349d53ff436"
-  integrity sha512-RMK86wKe/4+ad+3kMT9SKAs3K0tUHLe7hF+MLbD6VpC9VUmFuKorhf3pHz+qO5GdS4mUp2ncNUo14j6ws9UvBQ==
+  version "3.5.6"
+  resolved "https://registry.yarnpkg.com/typescript-transform-paths/-/typescript-transform-paths-3.5.6.tgz#17338781a6d44e5159e6f4590f8ddceefdee3acb"
+  integrity sha512-3eQTG6Ogt+pgPEh45uX2s9OwcfAVjWnyNO+osjYcOqYaWDVMIFUkqW8e0O1cOaVwdMqQFQf6alDT+76xmeS2Ag==
   dependencies:
     minimatch "^9.0.5"
 
