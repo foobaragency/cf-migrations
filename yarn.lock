@@ -771,7 +771,7 @@
   dependencies:
     find-up "^7.0.0"
 
-"@commitlint/types@^20.2.0", "@commitlint/types@^20.3.1":
+"@commitlint/types@^20.3.1":
   version "20.3.1"
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-20.3.1.tgz#084cf4cb142826d7a0eab378f838514e3e75f048"
   integrity sha512-VmIFV/JkBRhDRRv7N5B7zEUkNZIx9Mp+8Pe65erz0rKycXLsi8Epcw0XJ+btSeRXgTzE7DyOyA9bkJ9mn/yqVQ==
@@ -3159,13 +3159,13 @@ config-chain@^1.1.11:
     proto-list "~1.2.1"
 
 contentful-management@^11.2.0, contentful-management@^11.48.1:
-  version "11.67.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.67.0.tgz#b98edb1c3214d497e6dbe5de80591f76125e6aa2"
-  integrity sha512-Al6Dm9eBoLfBERl1nkYWLHGMSR98CCTPdsh466k2tjjlSGDAT3B2D/BnNTzpzidW5vYGIoVjRezGvcedV3vxfg==
+  version "11.67.2"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.67.2.tgz#b0b5ceb61f471e12df954bee572f77ba522a602c"
+  integrity sha512-QBcQMcGo2rHcEpRq3hIK2nflhQc4AH+g8nlBhnVkOJueGhwQ+kcfY6dnN2x9mQqvp4vGXM0hPWiooPS1cfS1Cg==
   dependencies:
     "@contentful/rich-text-types" "^16.6.1"
     axios "^1.12.2"
-    contentful-sdk-core "^9.0.1"
+    contentful-sdk-core "^9.4.1"
     fast-copy "^3.0.0"
     globals "^15.15.0"
 
@@ -3192,16 +3192,15 @@ contentful-migration@^4.5.0:
     uuid "^10.0.0"
     yargs "^15.3.1"
 
-contentful-sdk-core@^9.0.1:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-9.0.1.tgz#13460882fe58a0e507227831f5596c6d9f27233e"
-  integrity sha512-Ao/5Y74ERPn6kjzb/8okYPuQJnikMtR+dnv0plLw8IvPomwXonLq3qom0rLSyo5KuvQkBMa9AApy1izunxW4mw==
+contentful-sdk-core@^9.4.1:
+  version "9.4.1"
+  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-9.4.1.tgz#4379189f98fff0b6902f9f77bfe4029a8b5fba73"
+  integrity sha512-l/DRjiabawlX4fb5WZoClWZfNynSNeN/+xnP5qaNAxnBZYtDMXQcEvRDKb4S7qn7aBehNWKhhajnidbBL8n7HA==
   dependencies:
     fast-copy "^3.0.2"
     lodash "^4.17.21"
-    p-throttle "^6.1.0"
     process "^0.11.10"
-    qs "^6.12.3"
+    qs "^6.14.1"
   optionalDependencies:
     "@rollup/rollup-linux-x64-gnu" "^4.18.0"
 
@@ -7773,11 +7772,6 @@ p-throttle@^4.1.1:
   resolved "https://registry.yarnpkg.com/p-throttle/-/p-throttle-4.1.1.tgz#80b1fbd358af40a8bfa1667f9dc8b72b714ad692"
   integrity sha512-TuU8Ato+pRTPJoDzYD4s7ocJYcNSEZRvlxoq3hcPI2kZDZ49IQ1Wkj7/gDJc3X7XiEAAvRGtDzdXJI0tC3IL1g==
 
-p-throttle@^6.1.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/p-throttle/-/p-throttle-6.2.0.tgz#bc75ff1f128680bec15568cbf7312ae34a9d35ed"
-  integrity sha512-NCKkOVj6PZa6NiTmfvGilDdf6vO1rFCD3KDnkHko8dTOtkpk4cSR/VTAhhLMG9aiQ7/A9HYgEDNmxzf6hxzR3g==
-
 p-try@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
@@ -8144,7 +8138,7 @@ qrcode-terminal@^0.12.0:
   resolved "https://registry.yarnpkg.com/qrcode-terminal/-/qrcode-terminal-0.12.0.tgz#bb5b699ef7f9f0505092a3748be4464fe71b5819"
   integrity sha512-EXtzRZmC+YGmGlDFbXKxQiMZNwCLEO6BANKXG4iCtSIM0yqc/pappSx3RIKr4r0uh5JsBckOXeKrB3Iz7mdQpQ==
 
-qs@^6.12.3:
+qs@^6.14.1:
   version "6.14.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.14.1.tgz#a41d85b9d3902f31d27861790506294881871159"
   integrity sha512-4EK3+xJl8Ts67nLYNwqw/dsFVnCf+qR7RgXSK9jEEm9unao3njwMDdmsdvoKBKHzxd7tCYz5e5M+SnMjdtXGQQ==
