@@ -3159,13 +3159,13 @@ config-chain@^1.1.11:
     proto-list "~1.2.1"
 
 contentful-management@^11.2.0, contentful-management@^11.48.1:
-  version "11.68.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.68.0.tgz#640482a65783616b30c0bb97082961a15a952d15"
-  integrity sha512-5TYJ0zsfvkGWGPQXMCmJeIrWAdhHu2W8TxOzeSSXpvFlek/+1WeOlv8EoE0Gc9KWxYG11BjM9JKn5g1bypDnkw==
+  version "11.68.1"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-11.68.1.tgz#a7916f3ce8604a68fca1aa7b388a6a6933efecf9"
+  integrity sha512-ZXfOC+bn+dpdh4R6+KavoVgGsxM7Zx00IuV6EaKtYDl+DdfY4JoKQ4mrCS+d9B7mllN5yXTqUw1C6/oLRuIbkA==
   dependencies:
     "@contentful/rich-text-types" "^16.6.1"
     axios "^1.12.2"
-    contentful-sdk-core "^9.4.1"
+    contentful-sdk-core "^9.4.2"
     fast-copy "^3.0.0"
     globals "^15.15.0"
 
@@ -3192,13 +3192,13 @@ contentful-migration@^4.5.0:
     uuid "^10.0.0"
     yargs "^15.3.1"
 
-contentful-sdk-core@^9.4.1:
-  version "9.4.1"
-  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-9.4.1.tgz#4379189f98fff0b6902f9f77bfe4029a8b5fba73"
-  integrity sha512-l/DRjiabawlX4fb5WZoClWZfNynSNeN/+xnP5qaNAxnBZYtDMXQcEvRDKb4S7qn7aBehNWKhhajnidbBL8n7HA==
+contentful-sdk-core@^9.4.2:
+  version "9.4.2"
+  resolved "https://registry.yarnpkg.com/contentful-sdk-core/-/contentful-sdk-core-9.4.2.tgz#b430fc4a4418e06eb055971395ea078b0a8b6730"
+  integrity sha512-G/8cEs3ggeMrUtT8ywXlzoSCKNpmUo2ZXq/pBCnxcM6JP7isfk8nYDHL0xRR9qTwlNs3XCmCf20iApOQeR6Qsg==
   dependencies:
     fast-copy "^3.0.2"
-    lodash "^4.17.21"
+    lodash "^4.17.23"
     process "^0.11.10"
     qs "^6.14.1"
   optionalDependencies:
@@ -6772,7 +6772,7 @@ lodash.upperfirst@^4.3.1:
   resolved "https://registry.yarnpkg.com/lodash.upperfirst/-/lodash.upperfirst-4.3.1.tgz#1365edf431480481ef0d1c68957a5ed99d49f7ce"
   integrity sha512-sReKOYJIJf74dhJONhU4e0/shzi1trVbSWDOhKYE5XV2O+H7Sb2Dihwuc7xWxVl+DgFPyTqIN3zMfT9cq5iWDg==
 
-lodash@^4.17.12, lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4, lodash@^4.7.0:
+lodash@^4.17.12, lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.23, lodash@^4.17.4, lodash@^4.7.0:
   version "4.17.23"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.23.tgz#f113b0378386103be4f6893388c73d0bde7f2c5a"
   integrity sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==
