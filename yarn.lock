@@ -3157,12 +3157,12 @@ contentful-management@^11.2.0, contentful-management@^11.68.1:
     globals "^15.15.0"
 
 contentful-migration@^4.5.0:
-  version "4.31.7"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.31.7.tgz#fdd1f1bcd98c198744cd76c482620f437a595b8d"
-  integrity sha512-WDV259eMyorkIlEn2praDpkNrSnDH5eId1pBx7acvdGDhk3ObmRBIxAquxARUOL+ccvi1F4zfc0HXCwI3cNC1g==
+  version "4.31.8"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.31.8.tgz#5ff48ee4c2840361dfe1eb4186c04ad8b8655af1"
+  integrity sha512-uFdEZHr3UbHhmpLEUHjOK1mrHK18IrDGvthEWw/7JWlY/Pmy9QMwSFvl3uWWHI1mV99XtBkt/ihl1yYY6rPwFw==
   dependencies:
     "@hapi/hoek" "^11.0.4"
-    axios "^1.12.2"
+    axios "^1.13.5"
     bluebird "^3.7.2"
     callsites "^3.1.0"
     cardinal "^2.1.1"
