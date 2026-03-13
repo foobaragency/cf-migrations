@@ -3162,9 +3162,9 @@ contentful-management@^11.2.0, contentful-management@^11.72.2:
     globals "^15.15.0"
 
 contentful-migration@^4.5.0:
-  version "4.31.9"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.31.9.tgz#184db93d77c22dd7c91fe35c2d6bccc0cf16ea0c"
-  integrity sha512-AUDGgNHjzgFzoKHHNtPlvZ50rFoXrPIntgkZzSJufwPdT9P+PXnJEqZMLg3501R4EWqUJAwJ4Z3bEE2fLGVWSQ==
+  version "4.32.0"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-4.32.0.tgz#c9488813771d4535ae5c3f474e9fff8c62c1d190"
+  integrity sha512-vTBhaCwTjc4Zp2+VopCIYVtboSVYd2Y2Mm4iYpYAcqjral7qoDE8GmR8EJjKv8HjNHeL8d/W2jIH4zNUoZ28Vw==
   dependencies:
     "@hapi/hoek" "^11.0.4"
     axios "^1.13.5"
