@@ -1,4 +1,4 @@
-import { EntryProps } from "contentful-management/types"
+import type { EntryProps } from "contentful-management"
 
 import { getDeployedMigrationNames } from "../../lib/contentful/management"
 

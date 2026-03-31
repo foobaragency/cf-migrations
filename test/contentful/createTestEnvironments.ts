@@ -1,4 +1,4 @@
-import { EnvironmentProps } from "contentful-management/dist/typings/export-types"
+import type { EnvironmentProps } from "contentful-management"
 import dayjs from "dayjs"
 import timekeeper from "timekeeper"
 

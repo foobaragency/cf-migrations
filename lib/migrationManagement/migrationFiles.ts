@@ -1,6 +1,6 @@
 import path from "path"
 
-import { paramCase } from "change-case"
+import { kebabCase } from "change-case"
 import fg from "fast-glob"
 
 import { getMigrationDetailsAndValidate } from "./migrationValidations"
@@ -31,7 +31,7 @@ export function getNextMigrationFileName(
   getMigrationDetailsAndValidate(migrationFileNames)
   const timestamp = new Date().getTime()
 
-  return `${timestamp}-${paramCase(name)}`
+  return `${timestamp}-${kebabCase(name)}`
 }
 
 export function getMigrationFileData(

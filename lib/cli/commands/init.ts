@@ -40,5 +40,6 @@ function mapMigrationOptions(args: ContentfulCredentialArgs) {
     environmentId: args.env,
     spaceId: args.space,
     locale: args.locale,
+    host: args.host,
   }
 }

@@ -3,6 +3,7 @@ export type ContentfulPartialOptions = {
   spaceId: string
   accessToken: string
   locale?: string
+  host?: string
 }
 
 export type MigrationOptions = ContentfulPartialOptions & {
