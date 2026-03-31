@@ -6,7 +6,10 @@ let client: PlainClientAPI | undefined
 
 export function getClient({ accessToken, host }: ContentfulPartialOptions) {
   if (!client) {
-    client = createClient({ accessToken, ...(host && { host }) }, { type: "plain" })
+    client = createClient(
+      { accessToken, ...(host && { host }) },
+      { type: "plain" }
+    )
   }
 
   return client

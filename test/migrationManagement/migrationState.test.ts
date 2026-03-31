@@ -29,7 +29,14 @@ describe("Migration State", () => {
       runMigrationsResult
     )
 
-    expect(migrationStateUpdatePayload).toMatchSnapshot()
+    expect(migrationStateUpdatePayload).toEqual([
+      { fileName: { "en-US": "0001-migration" } },
+      { fileName: { "en-US": "1660226256621-migration" } },
+      { fileName: { "en-US": "0002-migration" } },
+      { fileName: { "en-US": "0004-migration" } },
+      { fileName: { "en-US": "1660226254499-migration" } },
+      { fileName: { "en-US": "1660226255228-migration" } },
+    ])
   })
 
   it("filters the pending migrations", () => {

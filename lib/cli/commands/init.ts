@@ -16,9 +16,8 @@ export const builder = (yargs: Argv<{}>) => contentfulCredentialOptions(yargs)
 export const handler = async (args: ContentfulCredentialArgs) => {
   await executeHandler(async () => {
     const options = mapMigrationOptions(args)
-    const isEnvironmentInitialized = await assessMigrationsTypeExistence(
-      options
-    )
+    const isEnvironmentInitialized =
+      await assessMigrationsTypeExistence(options)
 
     if (isEnvironmentInitialized) {
       info(

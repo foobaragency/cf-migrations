@@ -1,7 +1,7 @@
 import path from "path"
 
-import { kebabCase } from "change-case"
 import fg from "fast-glob"
+import kebabCase from "lodash/kebabCase"
 
 import { getMigrationDetailsAndValidate } from "./migrationValidations"
 import { jsMigrationTemplate, tsMigrationTemplate } from "./fileTemplates"

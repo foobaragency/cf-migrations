@@ -24,6 +24,7 @@ describe("Contentful Management", () => {
     },
     version: 1,
     contentType: { sys: { type: "", linkType: "", id: "" } },
+    automationTags: [],
   }
 
   const migrationEntries: EntryProps[] = [
@@ -48,6 +49,11 @@ describe("Contentful Management", () => {
   it("extracts deployed migration names from the Migration entries", () => {
     const deployedMigrations = getDeployedMigrationNames(migrationEntries)
 
-    expect(deployedMigrations).toMatchSnapshot()
+    expect(deployedMigrations).toEqual([
+      "0004-migration.ts",
+      "0003-migration.ts",
+      "0002-migration.ts",
+      "0001-migration.ts",
+    ])
   })
 })

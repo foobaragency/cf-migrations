@@ -67,7 +67,7 @@ describe("Migration Files", () => {
       it("throws an error", () => {
         expect(() =>
           getNextMigrationFileName("migration", migrationFileNames)
-        ).toThrowError()
+        ).toThrow()
       })
     })
   })

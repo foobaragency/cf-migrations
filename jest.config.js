@@ -1,5 +1,4 @@
 module.exports = {
-  preset: "ts-jest",
   testEnvironment: "node",
   clearMocks: true,
   coverageDirectory: "coverage",
@@ -7,11 +6,11 @@ module.exports = {
   moduleFileExtensions: ["js", "json", "ts"],
   testRegex: ".test.ts$",
   transform: {
-    "^.+\\.(t|j)s$": "ts-jest",
-  },
-  globals: {
-    "ts-jest": {
-      tsconfig: "tsconfig.test.json",
-    },
+    "^.+\\.(t|j)s$": [
+      "ts-jest",
+      {
+        tsconfig: "tsconfig.test.json",
+      },
+    ],
   },
 }

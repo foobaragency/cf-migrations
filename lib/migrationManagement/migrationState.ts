@@ -9,14 +9,12 @@ import type { MigrationResult } from "../contentful/migration"
 
 import { processMigrationFileNames } from "./migrationFiles"
 
-
 export async function assessPendingMigrations(
   migrationsDirectory: string,
   deployedMigrations: string[]
 ) {
-  const migrationFileNames = await processMigrationFileNames(
-    migrationsDirectory
-  )
+  const migrationFileNames =
+    await processMigrationFileNames(migrationsDirectory)
 
   const pendingMigrations = getPendingMigrations(
     migrationsDirectory,
