@@ -13,9 +13,7 @@ describe("Migration Validation", () => {
     ]
 
     it("throws no error", () => {
-      expect(() =>
-        getMigrationDetailsAndValidate(migrations)
-      ).not.toThrowError()
+      expect(() => getMigrationDetailsAndValidate(migrations)).not.toThrow()
     })
   })
 
@@ -30,7 +28,7 @@ describe("Migration Validation", () => {
         "1660226256621-migration",
       ]
 
-      expect(() => getMigrationDetailsAndValidate(migrations)).toThrowError(
+      expect(() => getMigrationDetailsAndValidate(migrations)).toThrow(
         errorMessages.migration.invalidNameFormat("invalid-migration")
       )
     })
@@ -46,7 +44,7 @@ describe("Migration Validation", () => {
           "1660226254499-migration",
         ]
 
-        expect(() => getMigrationDetailsAndValidate(migrations)).toThrowError(
+        expect(() => getMigrationDetailsAndValidate(migrations)).toThrow(
           [
             errorMessages.migration.invalidNameFormat("invalid-migration"),
             errorMessages.migration.invalidNameFormat(
@@ -66,7 +64,7 @@ describe("Migration Validation", () => {
     ]
 
     it("throws an error showing the duplicated migration sequence", () => {
-      expect(() => getMigrationDetailsAndValidate(migrations)).toThrowError(
+      expect(() => getMigrationDetailsAndValidate(migrations)).toThrow(
         errorMessages.migration.duplicatedTimestamp(
           "0003-duplicated-migration-sequence"
         )
@@ -82,7 +80,7 @@ describe("Migration Validation", () => {
     ]
 
     it("throws an error showing the duplicated migration timestamp", () => {
-      expect(() => getMigrationDetailsAndValidate(migrations)).toThrowError(
+      expect(() => getMigrationDetailsAndValidate(migrations)).toThrow(
         errorMessages.migration.duplicatedTimestamp(
           "1660226255228-duplicated-migration-timestamp"
         )

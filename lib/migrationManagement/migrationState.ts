@@ -5,18 +5,16 @@ import difference from "lodash/difference"
 import { config } from "../config"
 import { LocaleDependent } from "../contentful/types"
 import { PendingMigration } from "../types"
+import type { MigrationResult } from "../contentful/migration"
 
 import { processMigrationFileNames } from "./migrationFiles"
-
-import { MigrationResult } from "lib/contentful/migration"
 
 export async function assessPendingMigrations(
   migrationsDirectory: string,
   deployedMigrations: string[]
 ) {
-  const migrationFileNames = await processMigrationFileNames(
-    migrationsDirectory
-  )
+  const migrationFileNames =
+    await processMigrationFileNames(migrationsDirectory)
 
   const pendingMigrations = getPendingMigrations(
     migrationsDirectory,

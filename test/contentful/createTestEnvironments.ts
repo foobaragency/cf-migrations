@@ -1,4 +1,4 @@
-import { EnvironmentProps } from "contentful-management/dist/typings/export-types"
+import type { EnvironmentProps } from "contentful-management"
 import dayjs from "dayjs"
 import timekeeper from "timekeeper"
 
@@ -17,7 +17,7 @@ export function createTestEnvironments(
             .subtract(names.length - index, "day")
             .toISOString(),
           aliases: Object.entries(aliases)
-            .filter(([key, value]) => value === name)
+            .filter(([_, value]) => value === name)
             .map(([key]) => ({
               sys: {
                 id: key,
@@ -27,7 +27,7 @@ export function createTestEnvironments(
             })),
         },
         name,
-      } as EnvironmentProps)
+      }) as EnvironmentProps
   )
 
   timekeeper.reset()

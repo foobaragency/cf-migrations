@@ -1,13 +1,18 @@
-import { CursorPaginatedCollectionProp } from "contentful-management/dist/typings/common-types"
-import { ScheduledActionProps } from "contentful-management"
-import { CreateUpdateScheduledActionProps } from "contentful-management/dist/typings/entities/scheduled-action"
+import type {
+  CursorPaginatedCollectionProp,
+  ScheduledActionProps,
+} from "contentful-management"
 import chunk from "lodash/chunk"
 
 import { info, warn } from "../logger"
+import type { ContentfulPartialOptions } from "../types"
 
 import { getClient } from "./client"
 
-import { ContentfulPartialOptions } from "lib/types"
+type CreateUpdateScheduledActionProps = Pick<
+  ScheduledActionProps,
+  "action" | "entity" | "environment" | "scheduledFor" | "payload"
+>
 
 export async function getScheduledActionsFromEnvironment(
   options: ContentfulPartialOptions,

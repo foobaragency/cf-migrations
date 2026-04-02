@@ -1,4 +1,4 @@
-import { EntryProps } from "contentful-management/types"
+import type { EntryProps } from "contentful-management"
 
 import { config } from "../config"
 import { ContentfulPartialOptions } from "../types"

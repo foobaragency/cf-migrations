@@ -15,7 +15,9 @@ export async function createEnvironment(options: ContentfulPartialOptions) {
   })
 }
 
-export async function deleteEnvironment(options: ContentfulPartialOptions) {
+export async function deleteEnvironment(
+  options: ContentfulPartialOptions
+): Promise<unknown> {
   return getClient(options).environment.delete(options)
 }
 

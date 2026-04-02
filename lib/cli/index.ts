@@ -1,4 +1,4 @@
-import yargs from "yargs"
+import * as yargs from "yargs"
 import dotenv from "dotenv"
 
 dotenv.config()

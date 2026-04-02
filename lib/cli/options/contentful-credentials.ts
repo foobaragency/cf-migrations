@@ -5,6 +5,7 @@ export type ContentfulCredentialArgs = {
   space: string
   token: string
   locale?: string
+  host?: string
 }
 
 export function contentfulCredentialOptions(yargs: Argv<{}>) {
@@ -29,6 +30,11 @@ export function contentfulCredentialOptions(yargs: Argv<{}>) {
       alias: ["contentful-locale", "l"],
       type: "string",
       description: "Contentful locale",
+    })
+    .option("host", {
+      alias: ["contentful-host", "h"],
+      type: "string",
+      description: "Contentful host",
     })
     .demandOption(["env", "space", "token"])
 }

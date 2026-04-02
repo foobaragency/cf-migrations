@@ -13,9 +13,8 @@ import {
 import { deployMigrations } from "./deploy"
 import { info, success, warn } from "./logger"
 import { assessPendingMigrations } from "./migrationManagement/migrationState"
-import { MigrationOptions } from "./types"
-
-import { copyScheduledActionsBetweenReleases } from "lib/contentful/scheduledActions"
+import type { MigrationOptions } from "./types"
+import { copyScheduledActionsBetweenReleases } from "./contentful/scheduledActions"
 
 export type ReleaseOptions = {
   releasePrefix: string

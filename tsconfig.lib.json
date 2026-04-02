@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "rootDir": "lib",
     "outDir": "dist",
     "typeRoots": ["node_modules/@types"],
@@ -10,7 +9,6 @@
     "declarationMap": true,
     "esModuleInterop": true,
     "lib": ["es2019"],
-    "moduleResolution": "node",
     "strict": true,
     "module": "commonjs",
     "target": "es2019",
@@ -21,8 +19,7 @@
     "strictPropertyInitialization": false,
     "plugins": [{ "transform": "typescript-transform-paths" }],
     "types": ["node"],
-    "resolveJsonModule": true,
-    "paths": { "lib/*": ["lib/*"] }
+    "resolveJsonModule": true
   },
   "include": ["lib/**/*"]
 }

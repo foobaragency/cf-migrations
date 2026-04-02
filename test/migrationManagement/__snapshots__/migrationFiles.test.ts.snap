@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Migration Files when getting migration file data with sequence number when creating a javascript migration file returns the expected data 1`] = `
 "module.exports = function (migration) {
@@ -9,7 +9,7 @@ exports[`Migration Files when getting migration file data with sequence number w
 `;
 
 exports[`Migration Files when getting migration file data with sequence number when creating a typescript migration file returns the expected data 1`] = `
-"import { MigrationFunction } from \\"contentful-migration\\"
+"import { MigrationFunction } from "contentful-migration"
 
 const up: MigrationFunction = (migration, context) => {
   // Write your migration here
@@ -29,7 +29,7 @@ exports[`Migration Files when getting migration file data with timestamp when cr
 `;
 
 exports[`Migration Files when getting migration file data with timestamp when creating a typescript migration file returns the expected data 1`] = `
-"import { MigrationFunction } from \\"contentful-migration\\"
+"import { MigrationFunction } from "contentful-migration"
 
 const up: MigrationFunction = (migration, context) => {
   // Write your migration here
