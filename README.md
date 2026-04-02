@@ -42,7 +42,7 @@ npx cf-migrations create create-foo --migrationsDir src/migrations
 
 It will create a typescript migration file, `src/migrations/1660225580514-create-foo.ts` for example. Use the flag `--useJavascript` or `--js` to create a javascript file instead.
 
-Note that the migrations should have a proper timestamp.
+Note that the migrations should always have a proper timestamp.
 
 ### 🚚 Deploy migration
 
