@@ -3000,9 +3000,9 @@ contentful-management@^11.72.2:
     globals "^15.15.0"
 
 contentful-management@^12.1.0:
-  version "12.1.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-12.1.0.tgz#69f68c989d07eb3b2a9ae24c2df4c8f5c9707601"
-  integrity sha512-QieEOom70IF50j1LkVnj3m1g1knsCBwSDKGBLio4GHhJCnDHg7LnqaoYqsnGTYMGwmsITUNqB/hTg1mTvgEzpQ==
+  version "12.2.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-12.2.0.tgz#723de15dc1f791c32c70ed1768d0d8730872e7de"
+  integrity sha512-C+kdm6fP+WiGPkDIQ5TO56XF7kL9qsDjb4Gjxv2TdwwX8gX8e5P7yCynGIvHXuuEMG435ot+nuRzfZIGc6aU0g==
   dependencies:
     "@contentful/rich-text-types" "^16.6.1"
     axios "^1.13.5"
