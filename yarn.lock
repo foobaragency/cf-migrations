@@ -2346,7 +2346,7 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-axios@^1.13.5:
+axios@^1.13.5, axios@^1.15.0:
   version "1.15.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.15.0.tgz#0fcee91ef03d386514474904b27863b2c683bf4f"
   integrity sha512-wWyJDlAatxk30ZJer+GeCWS209sA42X+N5jU2jy6oHTp7ufw8uzUTVFBX9+wTfAlhiJXGS0Bq7X6efruWjuK9Q==
@@ -2961,12 +2961,12 @@ contentful-management@^11.72.2:
     globals "^15.15.0"
 
 contentful-management@^12.1.0:
-  version "12.2.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-12.2.0.tgz#723de15dc1f791c32c70ed1768d0d8730872e7de"
-  integrity sha512-C+kdm6fP+WiGPkDIQ5TO56XF7kL9qsDjb4Gjxv2TdwwX8gX8e5P7yCynGIvHXuuEMG435ot+nuRzfZIGc6aU0g==
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-12.3.1.tgz#dc45a47740a9d5fa1ce4f3ee66a0e7d194c4b31d"
+  integrity sha512-Lnx6ieod2z88AhZwcV2kDhN5stctq+0ifflX+xepphPJ1a2RsPNonCAcySabPETuoNox8G0kXo5ebNybrPjOYw==
   dependencies:
     "@contentful/rich-text-types" "^16.6.1"
-    axios "^1.13.5"
+    axios "^1.15.0"
     contentful-sdk-core "^9.4.4"
     fast-copy "^3.0.0"
     globals "^15.15.0"
