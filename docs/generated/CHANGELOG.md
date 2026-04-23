@@ -1,3 +1,9 @@
+## [3.4.0](https://github.com/foobaragency/cf-migrations/compare/v3.3.0...v3.4.0) (2026-04-23)
+
+### Features
+
+* update yargs package ([#1360](https://github.com/foobaragency/cf-migrations/issues/1360)) ([b8ef21b](https://github.com/foobaragency/cf-migrations/commit/b8ef21b56a82f8b62f743041a1a2447a6442b6dc))
+
 ## [3.3.0](https://github.com/foobaragency/cf-migrations/compare/v3.2.0...v3.3.0) (2026-04-02)
 
 ### Features
