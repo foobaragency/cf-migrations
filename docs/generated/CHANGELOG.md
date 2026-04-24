@@ -1,3 +1,9 @@
+## [3.6.0](https://github.com/foobaragency/cf-migrations/compare/v3.5.0...v3.6.0) (2026-04-24)
+
+### Features
+
+* enable release ([#1374](https://github.com/foobaragency/cf-migrations/issues/1374)) ([7bbc642](https://github.com/foobaragency/cf-migrations/commit/7bbc642f1bb2e8c6fc2d8248de8a042c476a848a))
+
 ## [3.5.0](https://github.com/foobaragency/cf-migrations/compare/v3.4.0...v3.5.0) (2026-04-23)
 
 ### Features
