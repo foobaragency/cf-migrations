@@ -78,7 +78,7 @@
   "dependencies": {
     "chalk": "4.1.2",
     "contentful-management": "^12.1.0",
-    "contentful-migration": "^4.32.0",
+    "contentful-migration": "^5.0.0",
     "dotenv": "^17.3.1",
     "fast-glob": "^3.3.3",
     "fs-extra": "^11.3.4",
