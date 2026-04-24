@@ -30,7 +30,7 @@ In order for you to use `cf-migrations` deploy or release commands, you should r
 npx cf-migrations init
 ```
 
-It creates a new content model named cf-migrations that will store every deployed migration file name. `cf-migrations` uses these names to assess if there're pending migrations yet to be deployed.
+It creates a new content model named `cf-migrations` that will store every deployed migration file name. `cf-migrations` uses these names to assess if there're pending migrations yet to be deployed.
 
 ### 🏗 Create migration
 
