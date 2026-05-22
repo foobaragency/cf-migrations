@@ -6614,7 +6614,7 @@ mimic-fn@^4.0.0:
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-4.0.0.tgz#60a90550d5cb0b239cca65d893b1a53b29871ecc"
   integrity sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==
 
-minimatch@^10.0.3, minimatch@^10.2.2, minimatch@^10.2.4, minimatch@^10.2.5:
+minimatch@^10.0.3, minimatch@^10.1.1, minimatch@^10.2.2, minimatch@^10.2.4, minimatch@^10.2.5:
   version "10.2.5"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-10.2.5.tgz#bd48687a0be38ed2961399105600f832095861d1"
   integrity sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg==
@@ -9048,12 +9048,12 @@ typedoc@^0.28.18:
     minimatch "^10.2.5"
     yaml "^2.8.3"
 
-typescript-transform-paths@^3.5.6:
-  version "3.5.6"
-  resolved "https://registry.yarnpkg.com/typescript-transform-paths/-/typescript-transform-paths-3.5.6.tgz#17338781a6d44e5159e6f4590f8ddceefdee3acb"
-  integrity sha512-3eQTG6Ogt+pgPEh45uX2s9OwcfAVjWnyNO+osjYcOqYaWDVMIFUkqW8e0O1cOaVwdMqQFQf6alDT+76xmeS2Ag==
+typescript-transform-paths@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/typescript-transform-paths/-/typescript-transform-paths-4.0.0.tgz#4da369c967de69ea9390d03e4db9d6b5cfbdb341"
+  integrity sha512-cQ5MbIFApCsQ2dWL9bkjLJCaV+QnKmkm5thu6yRCmZEkXBmQRIWcwXFDA5kBIUiA5p2tZSweNaE34a7WlHdBsw==
   dependencies:
-    minimatch "^9.0.5"
+    minimatch "^10.1.1"
 
 typescript@^6.0.2:
   version "6.0.3"
