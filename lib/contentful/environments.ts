@@ -10,9 +10,12 @@ export async function getAllEnvironments(options: ContentfulPartialOptions) {
 }
 
 export async function createEnvironment(options: ContentfulPartialOptions) {
-  return getClient(options).environment.createWithId(options, {
-    name: options.environmentId,
-  })
+  return getClient(options).environment.createWithId(
+    { ...options, sourceEnvironmentId: options.sourceEnvironmentId },
+    {
+      name: options.environmentId,
+    }
+  )
 }
 
 export async function deleteEnvironment(

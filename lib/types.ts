@@ -4,6 +4,7 @@ export type ContentfulPartialOptions = {
   accessToken: string
   locale?: string
   host?: string
+  sourceEnvironmentId?: string
 }
 
 export type MigrationOptions = ContentfulPartialOptions & {
