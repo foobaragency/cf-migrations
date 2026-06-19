@@ -67,7 +67,11 @@ export async function createReleaseEnvironment({
     environments
   )
   const releaseEnvironmentId = getNextReleaseEnvId(releasePrefix, environments)
-  await createEnvironment({ ...options, environmentId: releaseEnvironmentId })
+  await createEnvironment({
+    ...options,
+    environmentId: releaseEnvironmentId,
+    sourceEnvironmentId: options.environmentId,
+  })
   await checkEnvironmentReadyStatus(
     {
       ...options,

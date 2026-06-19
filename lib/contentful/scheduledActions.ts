@@ -187,7 +187,7 @@ export async function copyScheduledActionsBetweenReleases(
         },
       },
       scheduledFor: scheduledAction.scheduledFor,
-    } as CreateUpdateScheduledActionProps
+    }
   })
 
   const { reasons } = await createScheduledActionsForEnvironment(

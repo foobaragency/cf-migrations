@@ -67,7 +67,7 @@ export function getNextReleaseEnvId(
     return `${releasePrefix}1`
   }
 
-  const i = +lastAlias.name.split("-")[1]
+  const i = +lastAlias.name.split("-").pop()!
   const releaseEnvId = `${releasePrefix}${i + 1}`
 
   return releaseEnvId
@@ -82,7 +82,6 @@ export async function freeUpEnvironmentIfNeeded(
   if (environments.length < maxEnvironments) {
     return true
   }
-
   const envIdToDelete = getOldestUnaliasedReleaseEnvironment(
     releasePrefix,
     options.environmentId,
