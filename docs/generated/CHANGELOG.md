@@ -4,6 +4,12 @@
 
 * release improvments ([#1422](https://github.com/foobaragency/cf-migrations/issues/1422)) ([9f7b499](https://github.com/foobaragency/cf-migrations/commit/9f7b499b6cdd20f3e3ffc0fa0fc1015f300b59fc))
 
+## [3.7.0](https://github.com/foobaragency/cf-migrations/compare/v3.6.0...v3.7.0) (2026-06-19)
+
+### Features
+
+* release improvments ([#1422](https://github.com/foobaragency/cf-migrations/issues/1422)) ([9f7b499](https://github.com/foobaragency/cf-migrations/commit/9f7b499b6cdd20f3e3ffc0fa0fc1015f300b59fc))
+
 ## [3.6.0](https://github.com/foobaragency/cf-migrations/compare/v3.5.0...v3.6.0) (2026-04-24)
 
 ### Features
@@ -123,4 +129,3 @@
 
 - don't save migrations that were aborted ([7352809](https://github.com/foobaragency/cf-migrations/commit/73528099e7ae087fd6d0900c02202cb17a45bf97))
 - duplicate entry in migrationResults ([e18d159](https://github.com/foobaragency/cf-migrations/commit/e18d1598b63f495e5a8d5f5e628515c6dcff77b4))
-
