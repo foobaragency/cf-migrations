@@ -2,13 +2,13 @@
 
 ### Features
 
-* release improvments ([#1422](https://github.com/foobaragency/cf-migrations/issues/1422)) ([9f7b499](https://github.com/foobaragency/cf-migrations/commit/9f7b499b6cdd20f3e3ffc0fa0fc1015f300b59fc))
+- release improvments ([#1422](https://github.com/foobaragency/cf-migrations/issues/1422)) ([9f7b499](https://github.com/foobaragency/cf-migrations/commit/9f7b499b6cdd20f3e3ffc0fa0fc1015f300b59fc))
 
 ## [3.7.0](https://github.com/foobaragency/cf-migrations/compare/v3.6.0...v3.7.0) (2026-06-19)
 
 ### Features
 
-* release improvments ([#1422](https://github.com/foobaragency/cf-migrations/issues/1422)) ([9f7b499](https://github.com/foobaragency/cf-migrations/commit/9f7b499b6cdd20f3e3ffc0fa0fc1015f300b59fc))
+- release improvments ([#1422](https://github.com/foobaragency/cf-migrations/issues/1422)) ([9f7b499](https://github.com/foobaragency/cf-migrations/commit/9f7b499b6cdd20f3e3ffc0fa0fc1015f300b59fc))
 
 ## [3.6.0](https://github.com/foobaragency/cf-migrations/compare/v3.5.0...v3.6.0) (2026-04-24)
 

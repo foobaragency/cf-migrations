@@ -11,7 +11,7 @@ import {
   getNextReleaseEnvId,
 } from "./contentful/release"
 import { deployMigrations } from "./deploy"
-import { info, success, warn } from "./logger"
+import { error, info, success } from "./logger"
 import { assessPendingMigrations } from "./migrationManagement/migrationState"
 import type { MigrationOptions } from "./types"
 import { copyScheduledActionsBetweenReleases } from "./contentful/scheduledActions"
@@ -35,25 +35,88 @@ export async function createReleaseEnvironment({
   rateLimit = 7,
   options,
 }: ReleaseOptions) {
-  if (options.environmentId !== "master") {
-    warn(
-      `Releases are intended to work with 'master' aliases. It might not work when running it against another environment`
-    )
-  }
-
   const deployedMigrations = await getDeployedMigrations(options)
-  if (!ignoreMigrationCheck) {
-    const hasPendingMigrations = await assessPendingMigrations(
-      options.migrationsDirectory,
-      deployedMigrations
-    )
-    if (!hasPendingMigrations) {
-      info(`Skipping release since no pending migration was found.`)
+  const shouldSkip = await shouldSkipRelease(
+    ignoreMigrationCheck,
+    options,
+    deployedMigrations
+  )
 
-      return
-    }
+  if (shouldSkip) {
+    return
   }
 
+  const { activeEnvironmentId, releaseEnvironmentId } =
+    await prepareReleaseEnvironment(
+      releasePrefix,
+      availableEnvironments,
+      environmentCreationSecondsTimeout,
+      options
+    )
+
+  const deployOptions = { ...options, environmentId: releaseEnvironmentId }
+  const hasFailedMigrations = await deployReleaseEnvironmentMigrations(
+    deployOptions,
+    deployedMigrations
+  )
+
+  if (hasFailedMigrations) {
+    return
+  }
+
+  await copyScheduledActionsIfNeeded(
+    copyScheduledActions,
+    activeEnvironmentId,
+    releaseEnvironmentId,
+    rateLimit,
+    options
+  )
+
+  await updateEnvironmentAlias(
+    options.environmentId,
+    releaseEnvironmentId,
+    options
+  )
+  info(
+    `Alias for the environment ${options.environmentId} was updated to ${releaseEnvironmentId}`
+  )
+
+  success(
+    `Release '${releaseEnvironmentId}' based on the '${options.environmentId}' was created`
+  )
+
+  return releaseEnvironmentId
+}
+
+async function shouldSkipRelease(
+  ignoreMigrationCheck: boolean,
+  options: MigrationOptions,
+  deployedMigrations: string[]
+) {
+  if (ignoreMigrationCheck) {
+    return false
+  }
+
+  const hasPendingMigrations = await assessPendingMigrations(
+    options.migrationsDirectory,
+    deployedMigrations
+  )
+
+  if (hasPendingMigrations) {
+    return false
+  }
+
+  info(`Skipping release since no pending migration was found.`)
+
+  return true
+}
+
+async function prepareReleaseEnvironment(
+  releasePrefix: string,
+  availableEnvironments: number,
+  environmentCreationSecondsTimeout: number,
+  options: MigrationOptions
+) {
   const environments = await getAllEnvironments(options)
   await freeUpEnvironmentIfNeeded(
     releasePrefix,
@@ -67,6 +130,7 @@ export async function createReleaseEnvironment({
     environments
   )
   const releaseEnvironmentId = getNextReleaseEnvId(releasePrefix, environments)
+
   await createEnvironment({
     ...options,
     environmentId: releaseEnvironmentId,
@@ -80,9 +144,40 @@ export async function createReleaseEnvironment({
     environmentCreationSecondsTimeout
   )
   info(`Environment ${releaseEnvironmentId} was created.`)
-  const deployOptions = { ...options, environmentId: releaseEnvironmentId }
-  await deployMigrations({ options: deployOptions, deployedMigrations })
 
+  return {
+    activeEnvironmentId,
+    releaseEnvironmentId,
+  }
+}
+
+async function deployReleaseEnvironmentMigrations(
+  options: MigrationOptions,
+  deployedMigrations: string[]
+) {
+  const deployMigrationResult = await deployMigrations({
+    options,
+    deployedMigrations,
+  })
+
+  const hasFailedMigrations = deployMigrationResult?.some(
+    ({ successful }) => !successful
+  )
+
+  if (hasFailedMigrations) {
+    error(`Skipping release since some migrations failed.`)
+  }
+
+  return hasFailedMigrations
+}
+
+async function copyScheduledActionsIfNeeded(
+  copyScheduledActions: boolean | undefined,
+  activeEnvironmentId: string | undefined,
+  releaseEnvironmentId: string,
+  rateLimit: number,
+  options: MigrationOptions
+) {
   if (copyScheduledActions && activeEnvironmentId !== undefined) {
     info(`Copying scheduledActions from previous active release`)
     await copyScheduledActionsBetweenReleases(
@@ -92,19 +187,4 @@ export async function createReleaseEnvironment({
       rateLimit
     )
   }
-
-  await updateEnvironmentAlias(
-    options.environmentId,
-    releaseEnvironmentId,
-    options
-  )
-  info(
-    `Alias for the environment ${options.environmentId} was updated to ${releaseEnvironmentId}`
-  )
-
-  success(
-    `Release '${releaseEnvironmentId}' based on the '${options.environmentId}' environment in the space id '${options.spaceId}' was created`
-  )
-
-  return releaseEnvironmentId
 }
