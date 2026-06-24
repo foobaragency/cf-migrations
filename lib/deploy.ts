@@ -41,7 +41,7 @@ export async function deployMigrations({
   if (pendingMigrations.length === 0) {
     info(`Skipping migration deploy since there's no pending migrations`)
 
-    return pendingMigrations
+    return
   }
 
   const runMigrationsResult = await runMigrations(pendingMigrations, options)
@@ -53,5 +53,5 @@ export async function deployMigrations({
 
   await updateMigrationState(options, migrationStates)
 
-  return pendingMigrations
+  return runMigrationsResult
 }
