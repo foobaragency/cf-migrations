@@ -1,3 +1,9 @@
+## [3.8.0](https://github.com/foobaragency/cf-migrations/compare/v3.7.0...v3.8.0) (2026-06-24)
+
+### Features
+
+* release improvements ([#1423](https://github.com/foobaragency/cf-migrations/issues/1423)) ([d2b5add](https://github.com/foobaragency/cf-migrations/commit/d2b5addba2aa1f08cd30f5c63b500410c73f0186))
+
 ## [3.7.0](https://github.com/foobaragency/cf-migrations/compare/v3.6.0...v3.7.0) (2026-06-19)
 
 ### Features
