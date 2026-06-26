@@ -3090,9 +3090,9 @@ config-chain@^1.1.11:
     proto-list "~1.2.1"
 
 contentful-management@^12.1.0, contentful-management@^12.2.0:
-  version "12.6.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-12.6.0.tgz#b553da16069bb26c187fc891d4cd1267ce580cea"
-  integrity sha512-E8Uiy3VyV6JoQHDqf7V3ziIMHIaXNQtQTcFBOc4UROYoSOULSl7ug4Qx6VrEr3yNrcOdiF82wtrr6f4+zyQdZw==
+  version "12.8.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-12.8.0.tgz#fda3242b9630652241e74012f3aff00ecd504480"
+  integrity sha512-lARtEZYn2MYf80hz9nCYiLbJWvg95TTnOWmCZouMZtgNS1273dN27Vaz7weHQ3oSQuk7LeYXaXdGFhFPKlpilw==
   dependencies:
     "@contentful/rich-text-types" "^16.6.1"
     axios "^1.15.0"
