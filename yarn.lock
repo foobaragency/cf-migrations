@@ -694,12 +694,7 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-11.0.4.tgz#42a7f244fd3dd777792bfb74b8c6340ae9182f37"
   integrity sha512-PnsP5d4q7289pS2T2EgGz147BFJ2Jpb4yrEdkpz2IhgEUzos1S7HTl7ezWh1yfYzYlj89KzLdCRkqsP6SIryeQ==
 
-"@hapi/hoek@^9.0.0":
-  version "9.2.1"
-  resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.2.1.tgz#9551142a1980503752536b5050fd99f4a7f13b17"
-  integrity sha512-gfta+H8aziZsm8pZa0vj04KO6biEiisppNgA1kbJvFrrWu9Vm7eaUEy76DIxsuTaWvti5fkJVhllWc6ZTE+Mdw==
-
-"@hapi/hoek@^9.3.0":
+"@hapi/hoek@^9.0.0", "@hapi/hoek@^9.3.0":
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.3.0.tgz#8368869dcb735be2e7f5cb7647de78e167a251fb"
   integrity sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==
@@ -3139,9 +3134,9 @@ contentful-management@^12.1.0, contentful-management@^12.2.0:
     process "^0.11.10"
 
 contentful-migration@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-5.0.0.tgz#89a4858dbb16946a93b3049da4f0be22ca1f6079"
-  integrity sha512-eiNIMDDsSKTWXOHD8akN0ZSmhh7JyZRsQJYWDDnEepOTTTklGYBbSoTCfWc4UCqXp5UQ0SG9pJ2cFi3nGJ8e5Q==
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-5.1.0.tgz#af9b0073debaaf1ef2a8948be442c38dc4d71ab8"
+  integrity sha512-RXMTuLl/AFsiD7grXr5bPQpzajM6yoD99VRNRaFZbEc08BxGrpBl8dPZepYEE4cghN5bVPllni8b8ZoiwsQXVg==
   dependencies:
     "@hapi/hoek" "^11.0.4"
     axios "^1.13.5"
