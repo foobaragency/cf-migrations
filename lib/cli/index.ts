@@ -1,7 +1,7 @@
 import yargs from "yargs"
-import dotenv from "dotenv"
+import { config as loadEnv } from "dotenv"
 
-dotenv.config()
+loadEnv()
 
 export default yargs
   .commandDir("commands")

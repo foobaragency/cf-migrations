@@ -5,7 +5,6 @@ import difference from "lodash/difference"
 import { config } from "../config"
 import { LocaleDependent } from "../contentful/types"
 import { PendingMigration } from "../types"
-import type { MigrationResult } from "../contentful/migration"
 
 import { processMigrationFileNames } from "./migrationFiles"
 
@@ -25,25 +24,12 @@ export async function assessPendingMigrations(
   return pendingMigrations.length > 0
 }
 
-export function generateMigrationStates(
-  pendingMigrations: string[],
-  runMigrationsResult: MigrationResult[],
-  locale?: string
-) {
+export function toMigrationState(fileName: string, locale?: string) {
   const migrationLocale = locale || config.contentful.defaultLocale
+  const state: LocaleDependent = {}
+  state[migrationLocale] = fileName
 
-  return pendingMigrations
-    .filter(
-      migrationFile =>
-        runMigrationsResult.find(result => result?.fileName === migrationFile)
-          ?.successful
-    )
-    .map(migrationFile => {
-      const fileName: LocaleDependent = {}
-      fileName[migrationLocale] = migrationFile
-
-      return { fileName }
-    })
+  return { fileName: state }
 }
 
 export function getPendingMigrations(

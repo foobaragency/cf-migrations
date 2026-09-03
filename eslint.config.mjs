@@ -1,6 +1,6 @@
 import tsParser from "@typescript-eslint/parser";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
-import importPlugin from "eslint-plugin-import";
+import importPlugin from "eslint-plugin-import-x";
 import eslintConfigPrettier from "eslint-config-prettier";
 import { defineConfig } from "eslint/config";
 import { dirname } from "node:path";
@@ -55,7 +55,7 @@ export default defineConfig([
       globals,
     },
     settings: {
-      "import/resolver": {
+      "import-x/resolver": {
         node: { paths: ["."] },
         typescript: {
           alwaysTryTypes: true,
@@ -146,9 +146,9 @@ export default defineConfig([
       "@typescript-eslint/require-await": "off",
       "@typescript-eslint/explicit-module-boundary-types": "off",
 
-      "import/no-named-as-default": "off",
-      "import/namespace": "off",
-      "import/order": ["error", { "newlines-between": "always" }],
+      "import-x/no-named-as-default": "off",
+      "import-x/namespace": "off",
+      "import-x/order": ["error", { "newlines-between": "always" }],
     },
   },
 ]);

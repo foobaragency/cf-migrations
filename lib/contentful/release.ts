@@ -58,19 +58,15 @@ export function getNextReleaseEnvId(
   releasePrefix: string,
   environments: EnvironmentProps[]
 ) {
-  const lastAlias = getReleaseEnvironmentsOldestFirst(
+  const highestReleaseNumber = getReleaseEnvironmentsOldestFirst(
     releasePrefix,
     environments
-  ).pop()
+  )
+    .map(env => Number(env.name.slice(releasePrefix.length)))
+    .filter(number => Number.isFinite(number))
+    .reduce((highest, number) => Math.max(highest, number), 0)
 
-  if (!lastAlias) {
-    return `${releasePrefix}1`
-  }
-
-  const i = +lastAlias.name.split("-").pop()!
-  const releaseEnvId = `${releasePrefix}${i + 1}`
-
-  return releaseEnvId
+  return `${releasePrefix}${highestReleaseNumber + 1}`
 }
 
 export async function freeUpEnvironmentIfNeeded(
@@ -79,7 +75,12 @@ export async function freeUpEnvironmentIfNeeded(
   environments: EnvironmentProps[],
   options: ContentfulPartialOptions
 ) {
-  if (environments.length < maxEnvironments) {
+  const releaseEnvironments = getReleaseEnvironmentsOldestFirst(
+    releasePrefix,
+    environments
+  )
+
+  if (releaseEnvironments.length < maxEnvironments) {
     return true
   }
   const envIdToDelete = getOldestUnaliasedReleaseEnvironment(
