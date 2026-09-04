@@ -39,9 +39,16 @@ export async function updateEnvironmentAlias(
   targetEnvironmentId: string,
   options: ContentfulPartialOptions
 ) {
-  const releases = await getAllEnvironmentAliases(options)
-  const currentAliasVersion =
-    releases.items[releases.items.length - 1].sys.version
+  const aliases = await getAllEnvironmentAliases(options)
+  const currentAlias = aliases.items.find(
+    alias => alias.sys.id === aliasEnvironmentId
+  )
+
+  if (!currentAlias) {
+    throw new Error(`Environment alias "${aliasEnvironmentId}" not found`)
+  }
+
+  const currentAliasVersion = currentAlias.sys.version
   const { spaceId } = options
 
   return getClient(options).environmentAlias.update(
@@ -100,7 +107,7 @@ export async function checkEnvironmentReadyStatus(
   }
 
   info(
-    `Environment ${options.environmentId} isn't read yet. Remaining seconds ${environmentCreationSecondsTimeout}...`
+    `Environment ${options.environmentId} isn't ready yet. Remaining seconds ${environmentCreationSecondsTimeout}...`
   )
   await delay(1000)
   const remainingSeconds = environmentCreationSecondsTimeout - 1

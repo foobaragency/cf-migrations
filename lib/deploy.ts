@@ -1,14 +1,8 @@
-import {
-  getDeployedMigrations,
-  updateMigrationState,
-} from "./contentful/management"
+import { getDeployedMigrations } from "./contentful/management"
 import { runMigrations } from "./contentful/migration"
 import { MigrationOptions } from "./types"
 import { processMigrationFileNames } from "./migrationManagement/migrationFiles"
-import {
-  generateMigrationStates,
-  getPendingMigrations,
-} from "./migrationManagement/migrationState"
+import { getPendingMigrations } from "./migrationManagement/migrationState"
 import { getMigrationDetailsAndValidate } from "./migrationManagement/migrationValidations"
 import { info } from "./logger"
 
@@ -32,6 +26,7 @@ export async function deployMigrations({
 
   const deployedMigrationNames =
     deployedMigrations || (await getDeployedMigrations(options))
+
   const pendingMigrations = getPendingMigrations(
     options.migrationsDirectory,
     deployedMigrationNames,
@@ -45,13 +40,6 @@ export async function deployMigrations({
   }
 
   const runMigrationsResult = await runMigrations(pendingMigrations, options)
-  const migrationStates = generateMigrationStates(
-    pendingMigrations.map(({ fileName }) => fileName),
-    runMigrationsResult,
-    options.locale
-  )
-
-  await updateMigrationState(options, migrationStates)
 
   return runMigrationsResult
 }

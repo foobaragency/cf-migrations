@@ -26,6 +26,12 @@ export type ReleaseOptions = {
   options: MigrationOptions
 }
 
+type CreateReleaseEnvironmentResult = {
+  skipped?: boolean
+  failed?: boolean
+  success?: boolean
+}
+
 export async function createReleaseEnvironment({
   releasePrefix,
   availableEnvironments,
@@ -34,7 +40,7 @@ export async function createReleaseEnvironment({
   copyScheduledActions,
   rateLimit = 7,
   options,
-}: ReleaseOptions) {
+}: ReleaseOptions): Promise<CreateReleaseEnvironmentResult> {
   const deployedMigrations = await getDeployedMigrations(options)
   const shouldSkip = await shouldSkipRelease(
     ignoreMigrationCheck,
@@ -43,7 +49,7 @@ export async function createReleaseEnvironment({
   )
 
   if (shouldSkip) {
-    return
+    return { skipped: true }
   }
 
   const { activeEnvironmentId, releaseEnvironmentId } =
@@ -61,7 +67,7 @@ export async function createReleaseEnvironment({
   )
 
   if (hasFailedMigrations) {
-    return
+    return { failed: true }
   }
 
   await copyScheduledActionsIfNeeded(
@@ -85,7 +91,7 @@ export async function createReleaseEnvironment({
     `Release '${releaseEnvironmentId}' based on the '${options.environmentId}' was created`
   )
 
-  return releaseEnvironmentId
+  return { success: true }
 }
 
 async function shouldSkipRelease(
