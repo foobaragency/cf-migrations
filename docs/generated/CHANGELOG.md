@@ -1,3 +1,5 @@
+## [4.0.0](https://github.com/foobaragency/cf-[secure]/compare/v3.8.0...v4.0.0) (2026-09-04)
+
 ## [3.8.0](https://github.com/foobaragency/cf-migrations/compare/v3.7.0...v3.8.0) (2026-06-24)
 
 ### Features
