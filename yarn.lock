@@ -8003,9 +8003,9 @@ type-fest@^5.2.0:
     tagged-tag "^1.0.0"
 
 typedoc-plugin-markdown@^4.0.1:
-  version "4.13.0"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-4.13.0.tgz#a3757c57207e4ecee85f00e971636d04b9d3359f"
-  integrity sha512-OHaOLoMTS0wL2ud73WXvxv486mrUEtgXxW4iKiTOGJVipT/VBWY76rlVRMQGes7aVonoIf5roWRe1UvHbufLlQ==
+  version "4.13.1"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-4.13.1.tgz#9c5351cfc34ed2c249ffbaf395f6ca8752a5d344"
+  integrity sha512-d3jchJ4CyIrV9w9uozTSkfMYG8IEM1RvvGOaybJ/3rRporzoX7p0lprffo95GOGUviQqP0phjHJE3bY8PQbilA==
 
 typedoc@^0.28.18:
   version "0.28.20"
