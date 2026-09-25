@@ -70,6 +70,20 @@ Since the number of available environments is limited, the oldest release that i
 > we have created a feature as a workaround to do the job.
 > The feature is by default activated and can be deactivated by setting the parameter `copy-scheduled-actions` to `false`.
 
+> 📢 Contentful also does not copy workflow definitions when a new environment is created from an existing one.
+> The release command copies them from the source environment to the new release environment as a workaround.
+> The feature is by default activated and can be deactivated by setting the parameter `copy-workflows` to `false`.
+
+### 🔀 Copy workflows
+
+Contentful does not copy workflow definitions when you create a new environment from an existing one. If you need to copy the workflow definitions between two existing environments, use the following command:
+
+```bash
+npx cf-migrations copy-workflows --target-env <target-environment-id>
+```
+
+The source environment is the one provided through the contentful credentials (`--env`), and `--target-env` (alias `--te`) is the environment the workflow definitions will be copied to.
+
 ## 📚 API
 
 Using `cf-migrations`' CLI isn't the only option: you can integrate its functionalities with your project by using the library's API.

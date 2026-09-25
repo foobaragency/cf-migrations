@@ -22,7 +22,9 @@ type ReleaseArgs = ContentfulCredentialArgs & {
   rateLimit: number
 }
 
-export const desc = "Deploy migrations"
+export const command = "release"
+
+export const desc = "Create a new release environment"
 
 export const builder = (yargs: Argv<{}>) =>
   contentfulCredentialOptions(migrationsPathOptions(yargs))

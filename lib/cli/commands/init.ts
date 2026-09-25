@@ -9,6 +9,8 @@ import {
 import { executeHandler } from "../executeHandler"
 import { info, success } from "../../logger"
 
+export const command = "init"
+
 export const desc = "Init Contentful environment to support migrations"
 
 export const builder = (yargs: Argv<{}>) => contentfulCredentialOptions(yargs)
