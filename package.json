@@ -79,7 +79,7 @@
     "chalk": "4.1.2",
     "contentful-management": "^12.1.0",
     "contentful-migration": "^5.0.0",
-    "dotenv": "^17.3.1",
+    "dotenv": "^18.0.2",
     "fast-glob": "^3.3.3",
     "fs-extra": "^11.3.4",
     "lodash": "^4.17.21",
