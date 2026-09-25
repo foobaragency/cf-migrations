@@ -19,10 +19,13 @@ type ReleaseArgs = ContentfulCredentialArgs & {
   ignoreMigrationCheck?: boolean
   environmentCreationSecondsTimeout?: number
   copyScheduledActions: boolean
+  copyWorkflows: boolean
   rateLimit: number
 }
 
-export const desc = "Deploy migrations"
+export const command = "release"
+
+export const desc = "Create a new release environment"
 
 export const builder = (yargs: Argv<{}>) =>
   contentfulCredentialOptions(migrationsPathOptions(yargs))
@@ -55,6 +58,13 @@ export const builder = (yargs: Argv<{}>) =>
       description:
         "Copy scheduled actions from previous release to new release",
     })
+    .option("copyWorkflows", {
+      alias: ["copy-workflows"],
+      type: "boolean",
+      default: true,
+      description:
+        "Copy workflow definitions from the source environment to the new release",
+    })
     .option("rateLimit", {
       alias: ["contentful-api-calls-per-second", "rl"],
       type: "number",
@@ -83,6 +93,7 @@ function getReleaseOptions(args: ReleaseArgs): ReleaseOptions {
     ignoreMigrationCheck: args.ignoreMigrationCheck,
     environmentCreationSecondsTimeout: args.environmentCreationSecondsTimeout,
     copyScheduledActions: args.copyScheduledActions,
+    copyWorkflows: args.copyWorkflows,
     rateLimit: args.rateLimit,
     options: {
       accessToken: args.token,
@@ -90,6 +101,7 @@ function getReleaseOptions(args: ReleaseArgs): ReleaseOptions {
       spaceId: args.space,
       migrationsDirectory: args.migrationsDir,
       locale: args.locale,
+      host: args.host,
     },
   }
 }
