@@ -6,7 +6,7 @@ import * as create from "./commands/create"
 import * as deploy from "./commands/deploy"
 import * as init from "./commands/init"
 import * as release from "./commands/release"
-import * as copyWorkflows from "./commands/copy-workflows"
+import * as copy from "./commands/copy"
 
 loadEnv()
 
@@ -15,11 +15,12 @@ const commands = [
   deploy,
   init,
   release,
-  copyWorkflows,
+  copy,
 ] as unknown as CommandModule[]
 
 export default yargs(hideBin(process.argv))
   .command(commands)
   .demandCommand(1, "You need to specify a command")
+  .strictCommands()
   .help("h")
   .alias("h", "help").argv

@@ -79,7 +79,7 @@ Since the number of available environments is limited, the oldest release that i
 Contentful does not copy workflow definitions when you create a new environment from an existing one. If you need to copy the workflow definitions between two existing environments, use the following command:
 
 ```bash
-npx cf-migrations copy-workflows --target-env <target-environment-id>
+npx cf-migrations copy workflows --target-env <target-environment-id>
 ```
 
 The source environment is the one provided through the contentful credentials (`--env`), and `--target-env` (alias `--te`) is the environment the workflow definitions will be copied to.
