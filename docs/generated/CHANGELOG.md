@@ -1,3 +1,5 @@
+## [4.1.1](https://github.com/foobaragency/cf-[secure]/compare/v4.1.0...v4.1.1) (2026-10-01)
+
 ## [4.1.0](https://github.com/foobaragency/cf-[secure]/compare/v4.0.0...v4.1.0) (2026-10-01)
 
 ## [4.1.0](https://github.com/foobaragency/cf-[secure]/compare/v4.0.0...v4.1.0) (2026-10-01)
