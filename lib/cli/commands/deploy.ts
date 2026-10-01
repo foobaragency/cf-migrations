@@ -65,6 +65,7 @@ function getMigrationOptions(args: DeployArgs): MigrationOptions {
     spaceId: args.space,
     migrationsDirectory: args.migrationsDir,
     locale: args.locale,
+    host: args.host,
     yes: args.yes,
   }
 }

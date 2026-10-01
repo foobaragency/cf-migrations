@@ -32,7 +32,7 @@ export function contentfulCredentialOptions(yargs: Argv<{}>) {
       description: "Contentful locale",
     })
     .option("host", {
-      alias: ["contentful-host", "h"],
+      alias: ["contentful-host"],
       type: "string",
       description: "Contentful host",
     })

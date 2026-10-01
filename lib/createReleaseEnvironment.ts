@@ -15,6 +15,7 @@ import { error, info, success } from "./logger"
 import { assessPendingMigrations } from "./migrationManagement/migrationState"
 import type { MigrationOptions } from "./types"
 import { copyScheduledActionsBetweenReleases } from "./contentful/scheduledActions"
+import { copyWorkflowDefinitionsBetweenEnvironments } from "./contentful/workflows"
 
 export type ReleaseOptions = {
   releasePrefix: string
@@ -22,6 +23,7 @@ export type ReleaseOptions = {
   ignoreMigrationCheck?: boolean
   environmentCreationSecondsTimeout?: number
   copyScheduledActions?: boolean
+  copyWorkflows?: boolean
   rateLimit?: number
   options: MigrationOptions
 }
@@ -38,6 +40,7 @@ export async function createReleaseEnvironment({
   ignoreMigrationCheck = false,
   environmentCreationSecondsTimeout = 1,
   copyScheduledActions,
+  copyWorkflows = true,
   rateLimit = 7,
   options,
 }: ReleaseOptions): Promise<CreateReleaseEnvironmentResult> {
@@ -75,6 +78,13 @@ export async function createReleaseEnvironment({
     activeEnvironmentId,
     releaseEnvironmentId,
     rateLimit,
+    options
+  )
+
+  await copyWorkflowsIfNeeded(
+    copyWorkflows,
+    options.environmentId,
+    releaseEnvironmentId,
     options
   )
 
@@ -175,6 +185,26 @@ async function deployReleaseEnvironmentMigrations(
   }
 
   return hasFailedMigrations
+}
+
+async function copyWorkflowsIfNeeded(
+  copyWorkflows: boolean,
+  sourceEnvironmentId: string,
+  releaseEnvironmentId: string,
+  options: MigrationOptions
+) {
+  if (!copyWorkflows) {
+    return
+  }
+
+  info(
+    `Copying workflow definitions from ${sourceEnvironmentId} to ${releaseEnvironmentId}`
+  )
+  await copyWorkflowDefinitionsBetweenEnvironments(
+    options,
+    sourceEnvironmentId,
+    releaseEnvironmentId
+  )
 }
 
 async function copyScheduledActionsIfNeeded(

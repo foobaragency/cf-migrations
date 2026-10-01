@@ -5,12 +5,14 @@
 ### Type aliases
 
 - [ContentfulPartialOptions](modules.md#contentfulpartialoptions)
+- [CopyWorkflowOptions](modules.md#copyworkflowoptions)
 - [DeployOptions](modules.md#deployoptions)
 - [MigrationOptions](modules.md#migrationoptions)
 - [ReleaseOptions](modules.md#releaseoptions)
 
 ### Functions
 
+- [copyWorkflow](modules.md#copyworkflow)
 - [createReleaseEnvironment](modules.md#createreleaseenvironment)
 - [deployMigrations](modules.md#deploymigrations)
 - [initEnvironment](modules.md#initenvironment)
@@ -31,6 +33,22 @@
 | `spaceId`       | _string_ |
 
 Defined in: [types.ts:1](https://github.com/foobaragency/cf-migrations/blob/14c0f58/lib/types.ts#L1)
+
+---
+
+### CopyWorkflowOptions
+
+Ƭ **CopyWorkflowOptions**: _object_
+
+#### Type declaration:
+
+| Name                  | Type                                                              |
+| :-------------------- | :--------------------------------------------------------------- |
+| `options`             | [_ContentfulPartialOptions_](modules.md#contentfulpartialoptions) |
+| `sourceEnvironmentId` | _string_                                                         |
+| `targetEnvironmentId` | _string_                                                         |
+
+Defined in: [copyWorkflow.ts:5](https://github.com/foobaragency/cf-migrations/blob/14c0f58/lib/copyWorkflow.ts#L5)
 
 ---
 
@@ -74,6 +92,22 @@ Defined in: [types.ts:8](https://github.com/foobaragency/cf-migrations/blob/14c0
 Defined in: [createReleaseEnvironment.ts:16](https://github.com/foobaragency/cf-migrations/blob/14c0f58/lib/createReleaseEnvironment.ts#L16)
 
 ## Functions
+
+### copyWorkflow
+
+▸ **copyWorkflow**(`__namedParameters`: [_CopyWorkflowOptions_](modules.md#copyworkflowoptions)): _Promise_<void\>
+
+#### Parameters:
+
+| Name                | Type                                                    |
+| :------------------ | :------------------------------------------------------ |
+| `__namedParameters` | [_CopyWorkflowOptions_](modules.md#copyworkflowoptions) |
+
+**Returns:** _Promise_<void\>
+
+Defined in: [copyWorkflow.ts:11](https://github.com/foobaragency/cf-migrations/blob/14c0f58/lib/copyWorkflow.ts#L11)
+
+---
 
 ### createReleaseEnvironment
 
