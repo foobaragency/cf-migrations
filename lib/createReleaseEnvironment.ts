@@ -83,7 +83,7 @@ export async function createReleaseEnvironment({
 
   await copyWorkflowsIfNeeded(
     copyWorkflows,
-    options.environmentId,
+    activeEnvironmentId,
     releaseEnvironmentId,
     options
   )
@@ -189,11 +189,11 @@ async function deployReleaseEnvironmentMigrations(
 
 async function copyWorkflowsIfNeeded(
   copyWorkflows: boolean,
-  sourceEnvironmentId: string,
+  sourceEnvironmentId: string | undefined,
   releaseEnvironmentId: string,
   options: MigrationOptions
 ) {
-  if (!copyWorkflows) {
+  if (!copyWorkflows || !sourceEnvironmentId) {
     return
   }
 
