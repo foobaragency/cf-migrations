@@ -3207,9 +3207,9 @@ contentful-management@^12.1.0, contentful-management@^12.2.0:
     process "^0.11.10"
 
 contentful-migration@^5.0.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-5.1.0.tgz#af9b0073debaaf1ef2a8948be442c38dc4d71ab8"
-  integrity sha512-RXMTuLl/AFsiD7grXr5bPQpzajM6yoD99VRNRaFZbEc08BxGrpBl8dPZepYEE4cghN5bVPllni8b8ZoiwsQXVg==
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/contentful-migration/-/contentful-migration-5.1.1.tgz#06f9708abc6879dcd25c0a9229852e7b90c876c4"
+  integrity sha512-Bdd+aAZC7JWu2G/VncSfeJ5KHYxeE7EU0HQN6xLIDvwFCKWSWGRnR0WzplLuMdAdF5Ve3bnWWg6h/kbR1dqYGQ==
   dependencies:
     "@hapi/hoek" "^11.0.4"
     axios "^1.13.5"
@@ -3226,7 +3226,7 @@ contentful-migration@^5.0.0:
     listr2 "^3.13.5"
     lodash "^4.17.23"
     p-throttle "^4.1.1"
-    uuid "^10.0.0"
+    uuid "^11.0.0"
     yargs "^15.3.1"
 
 contentful-sdk-core@^10.0.0:
@@ -8131,10 +8131,10 @@ util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-uuid@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-10.0.0.tgz#5a95aa454e6e002725c79055fd42aaba30ca6294"
-  integrity sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==
+uuid@^11.0.0:
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-11.1.1.tgz#f6d81d2e1c65d00762e5e29b16c5d2d995e208ad"
+  integrity sha512-vIYxrBCC/N/K+Js3qSN88go7kIfNPssr/hHCesKCQNAjmgvYS2oqr69kIufEG+O4+PfezOH4EbIeHCfFov8ZgQ==
 
 v8-compile-cache-lib@^3.0.1:
   version "3.0.1"
