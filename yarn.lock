@@ -1649,9 +1649,9 @@
     p-reduce "^2.0.0"
 
 "@semantic-release/github@^12.0.0", "@semantic-release/github@^12.0.6":
-  version "12.0.10"
-  resolved "https://registry.yarnpkg.com/@semantic-release/github/-/github-12.0.10.tgz#a0489f6a2d30a977e38b680ae2ef7524b59be8ad"
-  integrity sha512-QskygvpX8hFx9UEbqJ+C46OIhaJjsysNQ8PYJPuRDc/ek5+dh8WYGD1ofUahCcGLAOmnnwZTcmCJCEXM8XxhRw==
+  version "12.0.11"
+  resolved "https://registry.yarnpkg.com/@semantic-release/github/-/github-12.0.11.tgz#23fc813ef8771baa9362c97619851cae87f63435"
+  integrity sha512-/8JPlFOV8he+gs+kS8Gx0tNWBboCRBd1q3y7pQhYwtrBL0CzDe9yzguZZAfnjGM2duWYB3rEYn9BdYLu9x00cg==
   dependencies:
     "@octokit/core" "^7.0.0"
     "@octokit/plugin-paginate-rest" "^15.0.0"
